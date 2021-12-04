@@ -1,0 +1,238 @@
+{
+    Texts = [
+        "_append"
+        {
+            Id = "ModifiedSwordCriticalParryTrait"
+            DisplayName = "Aspect of Nemesis"
+            Description = "For {#BoldFormat}{$TooltipData.TooltipDuration} {#PreviousFormat}Sec. after your {$Keywords.Special}, you may deal {$Keywords.Crit} damage. \n {!Icons.Bullet}{#PropertyFormat}Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{#AltUpgradeFormat}{$TooltipData.TooltipPercentChance:P} \n\n {#ItalicFormatDark}One of Nyx's daughters once brandished the blade against the arrogant."
+        }
+        {
+            Id = "ModifiedSwordCriticalParryTrait_Delta"
+            InheritFrom = "ModifiedSwordCriticalParryTrait"
+            Description = "For {#BoldFormat}{$TooltipData.TooltipDuration} {#PreviousFormat}Sec. after your {$Keywords.Special}, you may deal {$Keywords.Crit} damage. \n {!Icons.Bullet}{#PropertyFormat}Bonus {$Keywords.Crit} Chance: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n\n {#ItalicFormatDark}One of Nyx's daughters once brandished the blade against the arrogant."
+        }
+        {
+            Id = "ModifiedSwordCriticalParryTrait_Tray"
+            InheritFrom = "ModifiedSwordCriticalParryTrait"
+            Description = "For {#BoldFormat}{$TooltipData.TooltipDuration} {#PreviousFormat}Sec. after your {$Keywords.Special}, you may deal {$Keywords.Crit} damage. \n {!Icons.Bullet}{#PropertyFormat}Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{#AltUpgradeFormat}{$TooltipData.TooltipPercentChance:P}"
+        }
+        {
+            Id = "ModifiedDislodgeAmmoTrait"
+            DisplayName = "Aspect of Poseidon"
+            Description = "Your {$Keywords.Special} dislodges {!Icons.Ammo} from foes. After picking up or regenerating {!Icons.Ammo_Small}, deal more damage. \n {!Icons.Bullet}{#PropertyFormat}Bonus Damage: \Column 380 {#UpgradeFormat}{#AltUpgradeFormat}{$TooltipData.TooltipDamage:P} \n {#ItalicFormatDark}Even before he ruled the seas, the blade's first bearer liked making a splash."
+        }
+        {
+            Id = "ModifiedDislodgeAmmoTrait_Delta"
+            InheritFrom = "ModifiedDislodgeAmmoTrait"
+            Description = "Your {$Keywords.Special} dislodges {!Icons.Ammo} from foes. After picking up or regenerating {!Icons.Ammo_Small}, deal more damage. \n {!Icons.Bullet}{#PropertyFormat}Bonus Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n {#ItalicFormatDark}Even before he ruled the seas, the blade's first bearer liked making a splash."
+        }
+        {
+            Id = "ModifiedDislodgeAmmoTrait_Tray"
+            InheritFrom = "ModifiedDislodgeAmmoTrait"
+            Description = "Your {$Keywords.Special} dislodges {!Icons.Ammo} from foes. After picking up or regenerating {!Icons.Ammo_Small}, deal more damage. \n {!Icons.Bullet}{#PropertyFormat}Bonus Damage: \Column 380 {#UpgradeFormat}{#AltUpgradeFormat}{$TooltipData.TooltipDamage:P}"
+        }
+        {
+            Id = "ModifiedSpearTeleportTrait"
+            DisplayName = "Aspect of Achilles"
+            Description = "After your {$Keywords.Special}, you can use {$Keywords.AchillesAspect}, leaving a spear behind. Hold {$Keywords.Special} to throw, tap {$Keywords.Special} to rush. \n {!Icons.Bullet}{#PropertyFormat}Post-Rush Bonus Damage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipDamage:p} \n {#ItalicFormatDark}The greatest of the Greeks was peerless in battle, up close and from afar."
+        }
+        {
+            Id = "ModifiedSpearTeleportTrait_Delta"
+            InheritFrom = "ModifiedSpearTeleportTrait"
+            Description = "After your {$Keywords.Special}, you can use {$Keywords.AchillesAspect}, leaving a spear behind. Hold {$Keywords.Special} to throw, tap {$Keywords.Special} to rush. \n {!Icons.Bullet}{#PropertyFormat}Post-Rush Bonus Damage: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {#ItalicFormatDark}The greatest of the Greeks was peerless in battle, up close and from afar."
+        }
+        {
+            Id = "ModifiedSpearTeleportTrait_Tray"
+            InheritFrom = "ModifiedSpearTeleportTrait"
+            Description = "After your {$Keywords.Special}, you can use {$Keywords.AchillesAspect}, leaving a spear behind. Hold {$Keywords.Special} to throw, tap {$Keywords.Special} to rush. \n {!Icons.Bullet}{#PropertyFormat}Post-Rush Bonus Damage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipDamage:p}"
+        }
+        {
+            Id = "ModifiedSpearWeaveTrait"
+            DisplayName = "Aspect of Hades"
+            Description = "Your {$Keywords.Cast} loads {!Icons.Ammo} into your next {$Keywords.Special}, firing repeatedly on recall or pickup. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Cast} Speed: \Column 380 {#AltUpgradeFormat}{$TooltipData.TooltipSpeedIncrease}% \n {#ItalicFormatDark}The god of the dead discarded the eternal spear for a larger counterpart."
+        }
+        {
+            Id = "ModifiedSpearWeaveTrait_Delta"
+            InheritFrom = "ModifiedSpearWeaveTrait"
+            Description = "Your {$Keywords.Cast} loads {!Icons.Ammo} into your next {$Keywords.Special}, firing repeatedly on recall or pickup. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Cast} Speed: \Column 380 {#OldFormat}{$TooltipData.Additional[1]}%{#PreviousFormat}{!Icons.RightArrow}{#AltUpgradeFormat}{$TooltipData.NewTotal[1]}%{#PreviousFormat} \n {#ItalicFormatDark}The god of the dead discarded the eternal spear for a larger counterpart."
+        }
+        {
+            Id = "ModifiedSpearWeaveTrait_Tray"
+            InheritFrom = "ModifiedSpearWeaveTrait"
+            Description = "Your {$Keywords.Cast} loads {!Icons.Ammo} into your next {$Keywords.Special}, firing repeatedly on recall or pickup. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Cast} Speed: \Column 380 {#AltUpgradeFormat}{$TooltipData.TooltipSpeedIncrease}%"
+        }
+        {
+            Id = "SpearLoadAphroditeRangedTrait"
+            DisplayName = "Affection Snare"
+            Description = "Your {$Keywords.Cast} is stronger and inflicts {$Keywords.Weak}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "SpearLoadAphroditeRangedTrait_Tray"
+            InheritFrom = "SpearLoadAphroditeRangedTrait"
+            Description = "Your {$Keywords.Cast} is stronger and inflicts {$Keywords.Weak}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadAphroditeRangedTrait_Initial"
+            InheritFrom = "SpearLoadAphroditeRangedTrait"
+            Description = "Your {$Keywords.Cast} is stronger and inflicts {$Keywords.Weak}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadAresRangedTrait"
+            DisplayName = "Slicing Snare"
+            Description = "Your {$Keywords.Cast} creates stationary {$Keywords.BladeRift}s. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "SpearLoadAresRangedTrait_Tray"
+            InheritFrom = "SpearLoadAresRangedTrait"
+            Description = "Your {$Keywords.Cast} creates stationary {$Keywords.BladeRift}s. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadAresRangedTrait_Initial"
+            InheritFrom = "SpearLoadAresRangedTrait"
+            Description = "Your {$Keywords.Cast} creates stationary {$Keywords.BladeRift}s.. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadAthenaRangedTrait"
+            DisplayName = "Phalanx Snare"
+            Description = "Your {$Keywords.Cast} fires a much larger area, and can {$Keywords.Deflect}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "SpearLoadAthenaRangedTrait_Tray"
+            InheritFrom = "SpearLoadAthenaRangedTrait"
+            Description = "Your {$Keywords.Cast} fires a much larger area, and can {$Keywords.Deflect}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadAthenaRangedTrait_Initial"
+            InheritFrom = "SpearLoadAthenaRangedTrait"
+            Description = "Your {$Keywords.Cast} fires a much larger area, and can {$Keywords.Deflect}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadArtemisRangedTrait"
+            DisplayName = "Hunter's Snare"
+            Description = "Your {$Keywords.Cast} fires less often in a smaller area, with a {#AltUpgradeFormat}{$TooltipData.TooltipCritChance:P} {#PreviousFormat}{$Keywords.Crit} chance. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "SpearLoadArtemisRangedTrait_Tray"
+            InheritFrom = "SpearLoadArtemisRangedTrait"
+            Description = "Your {$Keywords.Cast} fires less often in a smaller area, with a {#AltUpgradeFormat}{$TooltipData.TooltipCritChance:P} {#PreviousFormat}{$Keywords.Crit} chance. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadArtemisRangedTrait_Initial"
+            InheritFrom = "SpearLoadArtemisRangedTrait"
+            Description = "Your {$Keywords.Cast} fires less often in a smaller area, with a {#AltUpgradeFormat}{$TooltipData.TooltipCritChance:P} {#PreviousFormat}{$Keywords.Crit} chance. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadDionysusRangedTrait"
+            DisplayName = "Trippy Snare"
+            Description = "Your {$Keywords.Cast} fires less often in a larger area, leaving behind {$Keywords.Cloud}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta3}"
+        }
+        {
+            Id = "SpearLoadDionysusRangedTrait_Tray"
+            InheritFrom = "SpearLoadDionysusRangedTrait"
+            Description = "Your {$Keywords.Cast} fires less often in a larger area, leaving behind {$Keywords.Cloud}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal3}"
+        }
+        {
+            Id = "SpearLoadDionysusRangedTrait_Initial"
+            InheritFrom = "SpearLoadDionysusRangedTrait"
+            Description = "Your {$Keywords.Cast} fires less often in a larger area, leaving behind {$Keywords.Cloud}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal3}"
+        }
+        {
+            Id = "SpearLoadDemeterRangedTrait"
+            DisplayName = "Icy Snare"
+            Description = "Your {$Keywords.Cast} fires faster and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "SpearLoadDemeterRangedTrait_Tray"
+            InheritFrom = "SpearLoadDemeterRangedTrait"
+            Description = "Your {$Keywords.Cast} fires faster and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadDemeterRangedTrait_Initial"
+            InheritFrom = "SpearLoadDemeterRangedTrait"
+            Description = "Your {$Keywords.Cast} fires faster and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadPoseidonRangedTrait"
+            DisplayName = "Flood Snare"
+            Description = "Your {$Keywords.Cast} fires faster and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "SpearLoadPoseidonRangedTrait_Tray"
+            InheritFrom = "SpearLoadPoseidonRangedTrait"
+            Description = "Your {$Keywords.Cast} fires faster and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadPoseidonRangedTrait_Initial"
+            InheritFrom = "SpearLoadPoseidonRangedTrait"
+            Description = "Your {$Keywords.Cast} fires faster and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadZeusRangedTrait"
+            DisplayName = "Thunder Snare"
+            Description = "Your {$Keywords.Cast} fires faster and causes lightning bolts to strike nearby foes. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "SpearLoadZeusRangedTrait_Tray"
+            InheritFrom = "SpearLoadZeusRangedTrait"
+            Description = "Your {$Keywords.Cast} fires faster and causes lightning bolts to strike nearby foes. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "SpearLoadZeusRangedTrait_Initial"
+            InheritFrom = "SpearLoadZeusRangedTrait"
+            Description = "Your {$Keywords.Cast} fires faster and causes lightning bolts to strike nearby foes. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal2}"
+        }
+        {
+            Id = "Increase3"
+            DisplayName = "{$TooltipData.OldTotal3}{!Icons.RightArrow}{$TooltipData.NewTotal3}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "PercentIncrease3"
+            DisplayName = "{#UpgradeFormat}{$TooltipData.Additional[3]:P}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "NewTotal3"
+            DisplayName = "{#UpgradeFormat}{$TooltipData.NewTotal[3]}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "PercentNewTotal3"
+            DisplayName = "{#UpgradeFormat}{$TooltipData.NewTotal[3]:P}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "OldTotal3"
+            DisplayName = "{#OldFormat}{$TooltipData.OldTotal[3]}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "PercentOldTotal3"
+            DisplayName = "{#OldFormat}{$TooltipData.OldTotal[3]:P}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "TotalPercentIncrease3"
+            DisplayName = "{#UpgradeFormat}{$TooltipData.PercentIncrease[3]:P}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "Total3"
+            DisplayName = "{#UpgradeFormat}{$TooltipData.OldTotal[3]}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "PercentTotal3"
+            DisplayName = "{#UpgradeFormat}{$TooltipData.OldTotal[3]:P}{#PreviousFormat}"
+            OverwriteLocalization = true
+        }
+        {
+            Id = "BoonInfo_AllOfTheFollowing"
+            DisplayName = "{!Icons.Bullet}All of the Following:"
+        }
+        {
+            Id = "BoonInfo_NoBulletPoint"
+            DisplayName = "{$TempTextData.TraitName}"
+        }
+    ]
+}

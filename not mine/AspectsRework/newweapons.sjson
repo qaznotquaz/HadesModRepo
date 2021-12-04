@@ -1,0 +1,11 @@
+{
+    Weapons = [
+        "_append"
+        {
+            Name = "SpearLoadAmmoApplicator"
+            InheritFrom = "LoadAmmoApplicator"
+            Projectile = "null"
+            Effects = []
+        }
+    ]
+}

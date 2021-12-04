@@ -1,0 +1,13 @@
+{
+    Animations = [
+        "_append"
+		{
+		  Name = "SwarmMissileImmolation"
+		  InheritFrom = "Immolation"
+		  AngleMax = "null"
+		  AngleMin = "null"
+		  Sound = "/SFX/BurnDamageSizzle"
+		  Hue = 0.75
+		}
+    ]
+}

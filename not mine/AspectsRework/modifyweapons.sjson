@@ -1,0 +1,8 @@
+{
+    Weapons = {
+        "_sequence" = true
+        4 = {
+            SpeedMultiplier = 1.0
+        }
+    }
+}

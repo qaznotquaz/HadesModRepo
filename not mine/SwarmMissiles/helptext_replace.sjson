@@ -1,0 +1,29 @@
+{
+    Texts = {
+        _sequence=true
+        687={
+        _replace=true
+		  Id = "GunWeapon_Unequipped"
+		  DisplayName = "Aspect of Zagreus"
+		  Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage_Unequipped}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#OldFormat}+0 \n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#OldFormat}0 \n {#ItalicFormatDark}The image of the noble gryphon belies its true intent but not its power."
+		}
+        688={
+        _replace=true
+		  Id = "GunBaseUpgradeTrait"
+		  DisplayName = "Aspect of Zagreus"
+		  Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#UpgradeFormat}+{$TooltipData.TooltipAmmo} \n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipMaxMissile} \n {#ItalicFormatDark}The image of the noble gryphon belies its true intent but not its power."
+		}		
+        689={
+        _replace=true
+		  Id = "GunBaseUpgradeTrait_Delta"
+		  InheritFrom = "GunBaseUpgradeTrait"
+		  Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#PreviousFormat}{#OldFormat}+{$TooltipData.OldTotal2}{!Icons.RightArrow}{#UpgradeFormat}+{$TooltipData.NewTotal2} \n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n {#ItalicFormatDark}The image of the noble gryphon belies its true intent but not its power."
+		}
+        690={
+        _replace=true
+		  Id = "GunBaseUpgradeTrait_Tray"
+		  InheritFrom = "GunBaseUpgradeTrait"
+		  Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#UpgradeFormat}+{$TooltipData.TooltipAmmo}\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipMaxMissile}"
+		}		
+    }
+}

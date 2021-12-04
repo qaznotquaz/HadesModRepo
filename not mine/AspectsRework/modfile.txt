@@ -1,0 +1,8 @@
+Import "AspectsRework.lua"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "modifyweapons.sjson"
+SJSON "newweapons.sjson"
+
+To "Game/Text/en/HelpText.en.sjson"
+SJSON "text.en.sjson"

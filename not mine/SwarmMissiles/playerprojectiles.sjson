@@ -1,0 +1,23 @@
+{
+    Projectiles = {
+        _sequence=true
+        62={
+			Effects = [
+			"_append"
+			  {
+				Name = "BurnDot"
+				IgnoreName = "_PlayerUnit"
+				Type = "DAMAGE_OVER_TIME"
+				Amount = 1
+				Cooldown = 0.24
+				Duration = 8
+				Stacks = true
+				MaxStacks = 10
+				ExtendDurationOnReapply = true
+				DamageFx = "SwarmMissileImmolation"
+				Active = false
+			  }
+			]
+		}
+    }
+}

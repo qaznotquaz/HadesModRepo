@@ -1,0 +1,62 @@
+{
+    Texts = [
+        "_append"
+		{
+		  Id = "Objective_GunWeaponGunWeave"
+		  DisplayName = "Land enough {A2} Shots then Press {A3} for a maximized Missile Swarm"
+		  OverwriteLocalization = true
+		}
+		{
+		  Id = "Objective_GunGrenadeMissile"
+		  DisplayName = "Press {A3} to Barrage"
+		  OverwriteLocalization = true
+		}
+		{
+		  Id = "MissileCombo_Ready"
+		  DisplayName = "{#CombatTextHighlightFormat}Missiles {#PreviousFormat}Full!"
+		  OverwriteLocalization = true
+		}
+	    {
+		  Id = "MissileBarrage_Unequipped"
+		  DisplayName = "Missile Barrage"
+		  Description = "Your {$Keywords.Special} launches a swarm of seeking missiles in all directions. Land {$Keywords.Attack}s to add more missiles."
+  		  OverwriteLocalization = true
+		}
+	    {
+		  Id = "MissileBarrage"
+		  DisplayName = "Missile Barrage"
+		  Description = "Your {$Keywords.Special} launches up to {#BoldFormatGraft}{$TooltipData.TooltipMaxMissile} {#PreviousFormat} seeking missiles in all directions. Land {$Keywords.Attack}s to add more missiles."
+  		  OverwriteLocalization = true
+		}
+	    {
+		  Id = "MissileBarrage2"
+		  DisplayName = "Missile Barrage"
+		  Description = "Your {$Keywords.Special} launches up to {#BoldFormatGraft}{$CurrentRun.Hero.MissileMax} {#PreviousFormat} seeking missiles in all directions. Land {$Keywords.Attack}s to add more missiles."
+  		  OverwriteLocalization = true
+		}
+		{
+		  Id = "GunGrenadeGhostTrait"
+		  DisplayName = "Ghost Swarm"
+		  Description = "Your {$Keywords.MissileBarrage2} ignores collision with obstacles."
+		  OverwriteLocalization = true
+		}
+		{
+		  Id = "GunGrenadeCircusTrait"
+		  DisplayName = "Circus Swarm"
+		  Description = "Your {$Keywords.MissileBarrage2} gains missiles {#AltUpgradeFormat}{$TooltipData.TooltipMissileChargeRate:P} {#PreviousFormat}faster and can store {#AltUpgradeFormat} {$TooltipData.TooltipMissileMaxIncrease:P} {#PreviousFormat}more."
+		  OverwriteLocalization = true
+		}
+		{
+		  Id = "GunGrenadeBurnTrait"
+		  DisplayName = "Incendiary Swarm"
+		  Description = "Your {$Keywords.MissileBarrage2} inflicts {$Keywords.Burn} dealing {#AltUpgradeFormat}{$TooltipData.TooltipBurnDamage} {#PreviousFormat}damage every {#AltUpgradeFormat}{$TooltipData.TooltipBurnRate} {#PreviousFormat}Sec."
+		  OverwriteLocalization = true
+		}
+	    {
+		  Id = "Burn"
+		  DisplayName = "Burn"
+		  Description = "For {#BoldFormatGraft}{$TooltipData.TooltipBurnDuration} Sec{#PreviousFormat}., victim keeps taking damage. Effect can stack up to {#BoldFormatGraft}{$TooltipData.TooltipBurnStacks} {#PreviousFormat}times."
+  		  OverwriteLocalization = true
+		}
+    ]
+}

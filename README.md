@@ -1,6 +1,6 @@
-# PonyWarrior's Hades mods repository
+## Jess' Fork of Pony's mod repo
 
-Hello and welcome to my repository. You can find all of my mods here, including the ones I haven't released.
+Using this as a base for mods I'll be writing, and for taking a closer look at several mods to learn how to implement a weapon aspect and boon giver of my own.
 
-If you're here you're probably interested in modding, so if you haven't done so already you should join the hades modding discord :
+Please do check out the Hades modding discord!
 https://discord.gg/KuMbyrN 

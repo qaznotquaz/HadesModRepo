@@ -29,8 +29,8 @@ Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 - [ ] Look for QA and balance testers?
 
 ## Credits for mods heavily referenced:
-[PonyWarrior's **AspectFusion**](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion)
-[raisins' **Swarm Missiles**](https://www.nexusmods.com/hades/mods/92)
+- [PonyWarrior's **AspectFusion**](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion)
+- [raisins' **Swarm Missiles**](https://www.nexusmods.com/hades/mods/92)
 <!--
 Commented out since I haven't used this /yet/, but leaving it here because I suspect I /will/.
 [Shy's Aspects Rework](https://www.nexusmods.com/hades/mods/65)

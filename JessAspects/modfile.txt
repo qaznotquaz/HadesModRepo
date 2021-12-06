@@ -1,0 +1,6 @@
+-: Jess' Aspects ★ WIP :-
+
+Top Include "ExtendAspectUI/modfile.txt"
+Import "config.lua"
+
+Import "LittleSureshot/LittleSureshot.lua"

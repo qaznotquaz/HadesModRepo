@@ -5,12 +5,12 @@ Did you know that weapon aspects are traits, and are thus in the same category a
 Unfortunately, these boons don't really expect to be bestowed in this manner, so... bug testing ahead.
 
 ## Aspects
-- Stygian Blade ★ <font color="blue">Poseidon's Flourish</font>
-- Eternal Spear ★ <font color="maroon">Hades' Call</font>
-- Shield of Chaos ★ <font color="purple">Chaos' Favor</font>
-- Heart-Seeking Bow ★ <font color="green">Artemis' Cast</font>
-- Twin Fists ★ <font color="lightblue">Demeter's Strike</font>
-- Adamant Rail ★ <font color="orange">Hermes' Evasion</font>
+- Stygian Blade ★ Poseidon's Flourish
+- Eternal Spear ★ Hades' Call
+- Shield of Chaos ★ Chaos' Favor
+- Heart-Seeking Bow ★ Artemis' Cast
+- Twin Fists ★ Demeter's Strike
+- Adamant Rail ★ Hermes' Evasion
 
 ### TODO
 - [x] A variety of traits, one for each weapon.

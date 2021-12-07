@@ -18,12 +18,12 @@ Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 ## Aspects
 - *Under Construction*
   - [Adamant Rail ★ Annie Oakley](LittleSureshot)
-  - [Stygian Blade ★ <font color="blue">Poseidon's Flourish</font>](TraitsAsAspects)
-  - [Eternal Spear ★ <font color="maroon">Hades' Call</font>](TraitsAsAspects)
-  - [Shield of Chaos ★ <font color="purple">Chaos' Favor</font>](TraitsAsAspects)
-  - [Heart-Seeking Bow ★ <font color="green">Artemis' Cast</font>](TraitsAsAspects)
-  - [Twin Fists ★ <font color="lightblue">Demeter's Strike</font>](TraitsAsAspects)
-  - [Adamant Rail ★ <font color="orange">Hermes' Evasion</font>](TraitsAsAspects)
+  - [Stygian Blade ★ Poseidon's Flourish](TraitsAsAspects)
+  - [Eternal Spear ★ Hades' Call](TraitsAsAspects)
+  - [Shield of Chaos ★ Chaos' Favor](TraitsAsAspects)
+  - [Heart-Seeking Bow ★ Artemis' Cast](TraitsAsAspects)
+  - [Twin Fists ★ Demeter's Strike](TraitsAsAspects)
+  - [Adamant Rail ★ Hermes' Evasion](TraitsAsAspects)
 - *Undetermined*
   - [Adamant Rail ★ Magic Bombs](undetermined)
 - *Under Consideration*

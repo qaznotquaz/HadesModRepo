@@ -4,4 +4,5 @@ Load Priority 20
 
 Top Import "config.lua"
 
+Include "TraitsAsAspects/modfile.txt"
 Include "LittleSureshot/modfile.txt"

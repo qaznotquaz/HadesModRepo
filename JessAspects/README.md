@@ -7,17 +7,25 @@ I had some ideas for new aspects and wanted to implement them - both as a way to
 ## Usage
 ***★ it works! doesn't do a lot, though ★***
 
-Requires [ModUtil](https://www.nexusmods.com/hades/mods/27) and [Aspect Fusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion).
+Requires [ModUtil](https://www.nexusmods.com/hades/mods/27)
+
+Also requires PonyWarrior's *as of yet unreleased*[Aspect Fusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion) mod. It's so cool, though.
 
 Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 
-[`config.lua`](config.lua) has options for enabling or disabling any given Aspect.
+[`config.lua`](config.lua) has options for enabling or disabling any given submodule.
 
 ## Aspects
 - *Under Construction*
   - [Adamant Rail ★ Annie Oakley](LittleSureshot)
+  - [Stygian Blade ★ <font color="blue">Poseidon's Flourish</font>](TraitsAsAspects)
+  - [Eternal Spear ★ <font color="maroon">Hades' Call</font>](TraitsAsAspects)
+  - [Shield of Chaos ★ <font color="purple">Chaos' Favor</font>](TraitsAsAspects)
+  - [Heart-Seeking Bow ★ <font color="green">Artemis' Cast</font>](TraitsAsAspects)
+  - [Twin Fists ★ <font color="lightblue">Demeter's Strike</font>](TraitsAsAspects)
+  - [Adamant Rail ★ <font color="orange">Hermes' Evasion</font>](TraitsAsAspects)
 - *Undetermined*
-  - [Adamant Rail ★ TBD](undetermined)
+  - [Adamant Rail ★ Magic Bombs](undetermined)
 - *Under Consideration*
   - Heart-Seeking Bow ★ Cleopatra
   - Twin Fists ★ Mike Tyson

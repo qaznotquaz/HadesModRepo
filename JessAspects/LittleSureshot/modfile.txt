@@ -1,10 +1,10 @@
 -: Adamant Rail ★ Aspect of Annie Oakley :-
 
 To "Scripts/TraitData.lua"
-Import "traitdata.lua"
+Import "TraitData.lua"
 
 To "Scripts/WeaponUpgradeData.lua"
-Import "weaponupgradedata.lua"
+Import "WeaponUpgradeData.lua"
 
 To "Game/Text/en/HelpText.en.sjson"
-SJSON "helptext.en.sjson"
+SJSON "HelpText.en.sjson"

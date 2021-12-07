@@ -1,0 +1,4 @@
+-: All Weapons ★ Traits as Aspects :-
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "WeaponUpgradeData.lua"

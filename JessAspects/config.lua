@@ -1,9 +1,6 @@
 ModUtil.RegisterMod("JessAspects")
 
-JessAspects =
+JessAspects.Config =
 {
-    Config =
-    {
-        LittleSureshot = true
-    }
+    LittleSureshot = true
 }

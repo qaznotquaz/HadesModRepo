@@ -5,7 +5,7 @@ lorem ipsum dolor sit amet
 ### TODO
 - Attack Changes
     - make visual bigger/flashier?
-    - 10% base crit chance?
+    - 10% base, levelling crit chance?
     - crit dislodges cast
 - Special Changes
     - does much less damage

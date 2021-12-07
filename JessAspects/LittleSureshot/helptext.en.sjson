@@ -1,0 +1,15 @@
+{
+    Texts = [
+        "_append"
+        {
+        Id = "GunLittleSureshotTrait"
+        DisplayName = "Aspect of Annie"
+        Description = "Be a sharpshooter!"
+        }
+        {
+        Id = "GunLittleSureshotTrait_Tray"
+        DisplayName = "Aspect of Annie"
+        Description = "Shoot sharp!"
+        }
+    ]
+}

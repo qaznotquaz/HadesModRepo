@@ -1,8 +1,9 @@
--: Jess' Aspects ★ WIP :-
+-:
+        Jess' Aspects ★ WIP
+                                :-
 
-Load Priority 20
-
-Top Import "config.lua"
+:: To disable a submodule, comment out its line like below
+:: Include "DisabledSubmodule/modfile.txt"
 
 Include "TraitsAsAspects/modfile.txt"
 Include "LittleSureshot/modfile.txt"

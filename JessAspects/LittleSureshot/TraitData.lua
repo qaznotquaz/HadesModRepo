@@ -6,7 +6,7 @@
              |_|
 ]]
 
-if JessAspects.Config.LittleSureshot then
+if JessAspects_TraitsAsAspects.Config.Enabled then
     TraitData.GunLittleSureshotTrait = {
         InheritFrom = { "WeaponEnchantmentTrait" },
         CustomTrayText = "GunLittleSureshotTrait_Tray",

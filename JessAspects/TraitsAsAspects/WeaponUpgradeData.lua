@@ -1,4 +1,4 @@
-if JessAspects.Config.TraitsAsAspects then
+if JessAspects_TraitsAsAspects.Config.Enabled then
     -- Stygian Blade ★ Poseidon's Flourish --
     table.insert(WeaponUpgradeData.SwordWeapon,
             {

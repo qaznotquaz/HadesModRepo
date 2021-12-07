@@ -1,5 +1,7 @@
 -: Adamant Rail ★ Aspect of Annie Oakley :-
 
+Top Import "config.lua"
+
 To "Scripts/TraitData.lua"
 Import "TraitData.lua"
 

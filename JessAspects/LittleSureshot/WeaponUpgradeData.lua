@@ -6,7 +6,7 @@
              |_|
 ]]
 
-if JessAspects.Config.LittleSureshot then
+if JessAspects_TraitsAsAspects.Config.Enabled then
     table.insert(WeaponUpgradeData.GunWeapon,
             {
                 Costs = { 1, 2, 3, 4, 5 },

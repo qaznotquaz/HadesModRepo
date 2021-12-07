@@ -15,10 +15,12 @@ Unfortunately, these boons don't really expect to be bestowed in this manner, so
 ### TODO
 - [x] A variety of traits, one for each weapon.
 - [x] Writing dramatic README stuff
+- [ ] fix weapon animations to be more apt (chaos aspect visuals for chaos' favor shield, etc)
 - [ ] Debugging ~~(these notes are half-assed cus i need to go to bed)~~
   - [ ] Rarity progression doesn't really expect 5 levels
-    - [ ] Which weapons expect what?
-    - [ ] Do you want to make them go to 5 levels, or reduce the levels available to upgrade?
+    - [x] Which boons expect what?
+    - [x] Do you want to make them go to 5 levels, or reduce the levels available to upgrade?
+    - [ ] I think it would work best to make duplicate versions of the aspects that can be edited. they will go up to Legendary.
   - [ ] Traits don't expect to need text to display on the weapon aspect selection/upgrade screen. Implement that text.
   - [ ] I think Artemis steals your ability to cast if she gets annoyed with you.
   - [ ] I wonder what happens if you equip Hades' keepsake while also having the call?

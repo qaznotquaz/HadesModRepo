@@ -5,9 +5,10 @@
 I had some ideas for new aspects and wanted to implement them - both as a way to give my two cents to the community, and to get my feet wet with understanding how modding this game really works. Hopefully I'm not getting *too* in over my head!
 
 ## Usage
-***★ This thing doesn't work yet! ★***
+***★ it works! doesn't do a lot, though ★***
 
-Requires [ModUtil](https://www.nexusmods.com/hades/mods/27).
+Requires [ModUtil](https://www.nexusmods.com/hades/mods/27) and [Aspect Fusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion).
+
 Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 
 [`config.lua`](config.lua) has options for enabling or disabling any given Aspect.
@@ -23,7 +24,7 @@ Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
   - Eternal Spear ★ Merlin
 
 ## General TODO
-- [ ] **★ Implement extended aspect menu from [AspectFusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion)**
+- [x] **★ Implement extended aspect menu from [AspectFusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion)**
   - *keeping in mind he'll be breaking this functionality into its own mod in due time*
 - [x] Write the README
 - [ ] Look for QA and balance testers?

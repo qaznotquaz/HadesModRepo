@@ -2,6 +2,6 @@
 
 Load Priority 20
 
-Import "config.lua"
+Top Import "config.lua"
 
 Include "LittleSureshot/modfile.txt"

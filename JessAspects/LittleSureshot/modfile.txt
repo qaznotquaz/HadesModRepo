@@ -3,8 +3,8 @@
 To "Scripts/TraitData.lua"
 Import "traitdata.lua"
 
-To "Script/WeaponUpgradeData.lua"
+To "Scripts/WeaponUpgradeData.lua"
 Import "weaponupgradedata.lua"
 
--: To "Game/Text/en/HelpText.en.sjson"
-SJSON "helptext.en.sjson" :-
+To "Game/Text/en/HelpText.en.sjson"
+SJSON "helptext.en.sjson"

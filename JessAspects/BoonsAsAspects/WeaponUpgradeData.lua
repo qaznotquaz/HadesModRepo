@@ -1,17 +1,13 @@
-if JessAspects_TraitsAsAspects.Config.Enabled then
+if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Stygian Blade ★ Poseidon's Flourish --
-    table.insert(WeaponUpgradeData.SwordWeapon,
-            {
-                Costs = { 3, 3, 3, 3, 3 },
-                MaxUpgradeLevel = 5,
-                TraitName = "PoseidonSecondaryTrait",
-                EquippedKitAnimation = "WeaponSwordAlt02FloatingIdleOff",
-                UnequippedKitAnimation = "WeaponSwordAlt02FloatingIdle",
-                BonusUnequippedKitAnimation = "WeaponSwordAlt02FloatingIdleBonus",
-                BonusEquippedKitAnimation = "WeaponSwordAlt02FloatingIdleOffBonus",
-                Image = "Codex_Portrait_SwordAlt02"
-            }
-    )
+    JessAspects_BoonsAsAspects.Data.SwordPoseidon = {
+        Costs = { 3, 3, 3, 3, 3 },
+        MaxUpgradeLevel = 5,
+        TraitName = "SwordPoseidonSecondaryTrait",
+    }
+    table.insert(WeaponUpgradeData.SwordWeapon, JessAspects_BoonsAsAspects.Data.SwordPoseidon)
+
+    --[[
 
     -- Eternal Spear ★ Hades' Call --
     table.insert(WeaponUpgradeData.SpearWeapon,
@@ -83,4 +79,5 @@ if JessAspects_TraitsAsAspects.Config.Enabled then
                 Image = "Codex_Portrait_GunAlt01"
             }
     )
+    ]]--
 end

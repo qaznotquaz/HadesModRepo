@@ -3,5 +3,5 @@
 :: To disable a submodule, comment out its line like below
 :: Include "DisabledSubmodule/modfile.txt"
 
-Include "TraitsAsAspects/modfile.txt"
+Include "BoonsAsAspects/modfile.txt"
 Include "LittleSureshot/modfile.txt"

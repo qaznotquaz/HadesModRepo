@@ -1,4 +1,4 @@
--: All Weapons ★ Traits as Aspects :-
+-: All Weapons ★ Boons as Aspects :-
 
 Top Import config.lua
 
@@ -7,3 +7,6 @@ Import "WeaponUpgradeData.lua"
 
 To "Scripts/TraitData.lua"
 Import "TraitData.lua"
+
+To "Scripts/LootData.lua"
+Import "LootData.lua"

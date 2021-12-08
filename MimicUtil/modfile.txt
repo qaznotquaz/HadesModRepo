@@ -1,0 +1,12 @@
+Load Priority 5
+
+Top Import "MimicUtil.lua"
+
+To "Scripts/TraitData.lua"
+Import "TraitData.lua"
+
+To "Scripts/LootData.lua"
+Import "LootData.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "WeaponUpgradeData.lua"

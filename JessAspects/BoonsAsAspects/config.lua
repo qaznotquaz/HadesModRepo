@@ -1,6 +1,6 @@
-ModUtil.RegisterMod("JessAspects_TraitsAsAspects")
+ModUtil.RegisterMod("JessAspects_BoonsAsAspects")
 
-JessAspects_TraitsAsAspects.Config =
+JessAspects_BoonsAsAspects.Config =
 {
     Enabled = true,
     SwordEnabled = true,

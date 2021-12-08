@@ -7,9 +7,9 @@ I had some ideas for new aspects and wanted to implement them - both as a way to
 ## Usage
 ***★ it works! doesn't do a lot, though ★***
 
-Requires [ModUtil](https://www.nexusmods.com/hades/mods/27)
+Requires [ModUtil](https://www.nexusmods.com/hades/mods/27) and [MimicUtil](../MimicUtil).
 
-Also requires PonyWarrior's *as of yet unreleased*[Aspect Fusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion) mod. It's so cool, though.
+Also requires PonyWarrior's *as of yet unreleased* [Aspect Fusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion) mod. It's so cool, though.
 
 Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 
@@ -18,12 +18,12 @@ to enable/disable particular submodules, comment out their **Include** statement
 ## Aspects
 - *Under Construction*
   - [Adamant Rail ★ Annie Oakley](LittleSureshot)
-  - [Stygian Blade ★ Poseidon's Flourish](TraitsAsAspects)
-  - [Eternal Spear ★ Hades' Call](TraitsAsAspects)
-  - [Shield of Chaos ★ Chaos' Favor](TraitsAsAspects)
-  - [Heart-Seeking Bow ★ Artemis' Cast](TraitsAsAspects)
-  - [Twin Fists ★ Demeter's Strike](TraitsAsAspects)
-  - [Adamant Rail ★ Hermes' Evasion](TraitsAsAspects)
+  - [Stygian Blade ★ Poseidon's Flourish](BoonsAsAspects)
+  - [Eternal Spear ★ Hades' Call](BoonsAsAspects)
+  - [Shield of Chaos ★ Chaos' Favor](BoonsAsAspects)
+  - [Heart-Seeking Bow ★ Artemis' Cast](BoonsAsAspects)
+  - [Twin Fists ★ Demeter's Strike](BoonsAsAspects)
+  - [Adamant Rail ★ Hermes' Evasion](BoonsAsAspects)
   - [Adamant Rail ★ Aspect of Jess](MagicBombs)
 - *Under Consideration*
   - Heart-Seeking Bow ★ Cleopatra
@@ -35,7 +35,7 @@ to enable/disable particular submodules, comment out their **Include** statement
 ## General TODO
 - [x] ★ Implement extended aspect menu from [AspectFusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion)
   - *keeping in mind he'll be breaking this functionality into its own mod in due time*
-  - [ ] i wonder if i could split this off myself
+  - [x] ~~i wonder if i could split this off myself~~ refer to the above list item
 - [x] Write the README
 - [ ] Look for QA and balance testers
   - [ ] create a google form for polling interest

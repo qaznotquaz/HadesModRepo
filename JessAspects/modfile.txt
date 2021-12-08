@@ -1,6 +1,4 @@
--:
-        Jess' Aspects ★ WIP
-                                :-
+-: Jess' Aspects ★ WIP :-
 
 :: To disable a submodule, comment out its line like below
 :: Include "DisabledSubmodule/modfile.txt"

@@ -2,6 +2,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Stygian Blade ★ Poseidon's Flourish --
     if JessAspects_BoonsAsAspects.Config.SwordEnabled then
         TraitData.SwordPoseidonSecondaryTrait = {
+            InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
                     MinMultiplier = 1.0,
@@ -24,6 +25,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                     MaxMultiplier = 3.0,
                 }
             },
+            CustomTrayText = "SwordPoseidonSecondaryTrait_Tray",
 
             God = "Poseidon",
             Slot = "Secondary",
@@ -122,6 +124,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Twin Fists ★ Demeter's Strike --
     if JessAspects_BoonsAsAspects.Config.FistEnabled then
         TraitData.FistDemeterWeaponTrait = {
+            InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
                     MinMultiplier = 1.0,
@@ -243,6 +246,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     -- watch out, hermes has a gun --
     if JessAspects_BoonsAsAspects.Config.GunEnabled then
         TraitData.GunDodgeChanceTrait = {
+            InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
                     Multiplier = 1.00,

@@ -4,9 +4,9 @@ JessAspects_BoonsAsAspects.Config =
 {
     Enabled = true,
     SwordEnabled = true,
-    SpearEnabled = true,
-    ShieldEnabled = true,
-    BowEnabled = true,
-    FistEnabled = true,
-    GunEnabled = true
+    SpearEnabled = false,
+    ShieldEnabled = false,
+    BowEnabled = false,
+    FistEnabled = false,
+    GunEnabled = false
 }

@@ -10,3 +10,6 @@ Import "TraitData.lua"
 
 To "Scripts/LootData.lua"
 Import "LootData.lua"
+
+To "Game/Text/en/HelpText.en.sjson"
+SJSON "HelpText.en.sjson"

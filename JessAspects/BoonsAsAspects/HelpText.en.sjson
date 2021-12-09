@@ -1,0 +1,25 @@
+{
+    Texts = [
+        "_append"
+            {
+              Id = "SwordPoseidonSecondaryTrait"
+              DisplayName = "Tempest Flourish"
+              Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipDamage:P} \n\n {#ItalicFormatDark}Poseidon's favor rests strongly on this weapon."
+            }
+            {
+              Id = "SwordPoseidonSecondaryTrait_Delta"
+              InheritFrom = "SwordPoseidonSecondaryTrait"
+              Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n\n {#ItalicFormatDark}Poseidon's favor rests strongly on this weapon."
+            }
+            {
+              Id = "SwordPoseidonSecondaryTrait_Tray"
+              InheritFrom = "SwordPoseidonSecondaryTrait"
+              Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipDamage:P}."
+            }
+            {
+              Id = "SwordPoseidonSecondaryTrait_Initial"
+              InheritFrom = "PoseidonSecondaryTrait"
+              Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$TooltipData.NewTotal1}"
+            }
+    ]
+}

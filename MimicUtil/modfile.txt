@@ -1,4 +1,4 @@
-Load Priority 5
+Load Priority 30
 
 Top Import "MimicUtil.lua"
 

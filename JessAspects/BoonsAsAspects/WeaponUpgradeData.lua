@@ -1,11 +1,16 @@
 if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Stygian Blade ★ Poseidon's Flourish --
-    JessAspects_BoonsAsAspects.Data.SwordPoseidon = {
-        Costs = { 3, 3, 3, 3, 3 },
-        MaxUpgradeLevel = 5,
-        TraitName = "SwordPoseidonSecondaryTrait",
-    }
-    table.insert(WeaponUpgradeData.SwordWeapon, JessAspects_BoonsAsAspects.Data.SwordPoseidon)
+    if JessAspects_BoonsAsAspects.Config.SwordEnabled then
+        JessAspects_BoonsAsAspects.Data.SwordPoseidon = {
+            Costs = { 3, 3, 3, 3, 3 },
+            MaxUpgradeLevel = 5,
+            TraitName = "SwordPoseidonSecondaryTrait"
+        }
+        table.insert(
+                WeaponUpgradeData.SwordWeapon,
+                JessAspects_BoonsAsAspects.Data.SwordPoseidon
+        )
+    end
 
     --[[
 
@@ -50,34 +55,32 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 BonusEquippedKitAnimation = "WeaponBowAlt01FloatingIdleOffBonus",
                 Image = "Codex_Portrait_BowAlt01"
             }
-    )
+    )]]--
 
     -- Twin Fists ★ Demeter's Strike --
-    table.insert(WeaponUpgradeData.FistWeapon,
-            {
-                Costs = { 3, 3, 3, 3, 3 },
-                MaxUpgradeLevel = 5,
-                TraitName = "DemeterWeaponTrait",
-                EquippedKitAnimation = "WeaponFistsAlt01FloatingIdleOff",
-                UnequippedKitAnimation = "WeaponFistsAlt01FloatingIdle",
-                BonusUnequippedKitAnimation = "WeaponFistsAlt01FloatingIdleBonus",
-                BonusEquippedKitAnimation = "WeaponFistsAlt01FloatingIdleOffBonus",
-                Image = "Codex_Portrait_FistAlt02"
-            }
-    )
+    if JessAspects_BoonsAsAspects.Config.FistEnabled then
+        JessAspects_BoonsAsAspects.Data.FistDemeter = {
+            Costs = { 3, 3, 3, 3, 3 },
+            MaxUpgradeLevel = 5,
+            TraitName = "FistDemeterWeaponTrait"
+        }
+        table.insert(
+                WeaponUpgradeData.FistWeapon,
+                JessAspects_BoonsAsAspects.Data.FistDemeter
+        )
+    end
 
     -- Adamant Rail ★ Hermes' Evasion --
-    table.insert(WeaponUpgradeData.GunWeapon,
-            {
-                Costs = { 3, 3, 3, 3, 3 },
-                MaxUpgradeLevel = 5,
-                TraitName = "DodgeChanceTrait",
-                EquippedKitAnimation = "WeaponGunAlt01FloatingIdleOff",
-                UnequippedKitAnimation = "WeaponGunAlt01FloatingIdle",
-                BonusUnequippedKitAnimation = "WeaponGunAlt01FloatingIdleBonus",
-                BonusEquippedKitAnimation = "WeaponGunAlt01FloatingIdleOffBonus",
-                Image = "Codex_Portrait_GunAlt01"
-            }
-    )
-    ]]--
+    if JessAspects_BoonsAsAspects.Config.GunEnabled then
+        JessAspects_BoonsAsAspects.Data.GunHermes = {
+            Costs = { 3, 3, 3, 3, 3 },
+            MaxUpgradeLevel = 5,
+            TraitName = "GunDodgeChanceTrait"
+        }
+
+        table.insert(
+                WeaponUpgradeData.GunWeapon,
+                JessAspects_BoonsAsAspects.Data.GunHermes
+        )
+    end
 end

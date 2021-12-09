@@ -102,8 +102,7 @@ MimicUtil.BaseWeapons = {
     },
 }
 
-
--- MimicTraitPropertyChanges i a near-exact copy of code from PonyWarrior's AspectFusion/Data/traitdata.lua
+-- MimicTraitPropertyChanges is a near-exact copy of code from PonyWarrior's AspectFusion/Data/traitdata.lua
 function MimicUtil.MimicTraitPropertyChanges(sourceTraitName, copyTraitName)
     for _, traitData in pairs(TraitData) do
         if traitData.PropertyChanges ~= nil then
@@ -115,6 +114,23 @@ function MimicUtil.MimicTraitPropertyChanges(sourceTraitName, copyTraitName)
                 end
             end
         end
+    end
+end
+
+function MimicUtil.RequireFalse(targetTraitName, disallowedTraitName)
+    local traitData = TraitData[targetTraitName]
+
+    if traitData.RequiredFalseTraits ~= nil then
+        table.insert(traitData.RequiredFalseTraits, disallowedTraitName)
+    elseif traitData.RequiredFalseTrait == nil then
+        traitData.RequiredFalseTrait = disallowedTraitName
+    else
+        local singularFalse = traitData.RequiredFalseTrait
+        traitData.RequiredFalseTrait = nil
+        traitData.RequiredFalseTraits = {
+            singularFalse,
+            disallowedTraitName
+        }
     end
 end
 

@@ -7,9 +7,10 @@ I had some ideas for new aspects and wanted to implement them - both as a way to
 ## Usage
 ***★ it works! doesn't do a lot, though ★***
 
-Requires [ModUtil](https://www.nexusmods.com/hades/mods/27) and [MimicUtil](../MimicUtil).
-
-Also requires PonyWarrior's *as of yet unreleased* [Aspect Fusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion) mod. It's so cool, though.
+#### Requirements
+- MagicGonads' [ModUtil](https://www.nexusmods.com/hades/mods/27)
+- PonyWarrior's [Aspect Extender](https://www.nexusmods.com/hades/mods/115)
+- My [MimicUtil](../MimicUtil)
 
 Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 
@@ -34,9 +35,6 @@ to enable/disable particular submodules, comment out their **Include** statement
 <!-- i don't want to step out of line so i'll wait til i have more completed before asking permission, but i wonder if i could set up raisins' swarm missiles as a separate aspect? -->
 
 ## General TODO
-- [x] ★ Implement extended aspect menu from [AspectFusion](https://github.com/PonyWarrior/HadesModRepo/tree/master/AspectFusion)
-  - *keeping in mind he'll be breaking this functionality into its own mod in due time*
-  - [x] ~~i wonder if i could split this off myself~~ refer to the above list item
 - [x] Write the README
 - [ ] Look for QA and balance testers
   - [ ] create a google form for polling interest

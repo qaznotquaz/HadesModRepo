@@ -9,8 +9,8 @@ Unfortunately, these boons don't really expect to be bestowed in this manner, so
 - [ ] Eternal Spear ★ Hades' Call
 - [ ] Shield of Chaos ★ Chaos' Favor
 - [ ] Heart-Seeking Bow ★ Artemis' Cast
-- [ ] Twin Fists ★ Demeter's Strike
-- [ ] Adamant Rail ★ Hermes' Evasion
+- [x] Twin Fists ★ Demeter's Strike
+- [x] Adamant Rail ★ Hermes' Evasion
 
 ### TODO
 - [x] A variety of boons, one for each weapon.
@@ -21,7 +21,7 @@ Unfortunately, these boons don't really expect to be bestowed in this manner, so
     - [x] Which boons expect what?
     - [x] Do you want to make them go to 5 levels, or reduce the levels available to upgrade?
     - [ ] I think it would work best to make duplicate versions of the aspects that can be edited. they will go up to Legendary.
-      - completion: 1/6
+      - completion: 3/6
   - [ ] Traits don't expect to need text to display on the weapon aspect selection/upgrade screen. Implement that text.
     - completion: 0/6
   - [ ] I think Artemis steals your ability to cast if she gets annoyed with you.

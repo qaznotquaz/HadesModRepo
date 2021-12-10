@@ -7,11 +7,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
             TraitName = "SwordPoseidonSecondaryTrait"
         }
         table.insert(
-                WeaponUpgradeData.SwordWeapon, 2,
-                JessAspects_BoonsAsAspects.Data.SwordPoseidon
-        )
-        table.insert(
-                WeaponUpgradeData.SwordWeapon, 2,
+                WeaponUpgradeData.SwordWeapon,
                 JessAspects_BoonsAsAspects.Data.SwordPoseidon
         )
     end

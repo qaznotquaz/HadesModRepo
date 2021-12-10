@@ -5,39 +5,34 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
             InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
-                    MinMultiplier = 1.0,
-                    MaxMultiplier = 1.0,
+                    Multiplier = 1.0
                 },
                 Rare = {
-                    MinMultiplier = 1.5,
-                    MaxMultiplier = 1.5,
+                    Multiplier = 1.5
                 },
                 Epic = {
-                    MinMultiplier = 2.0,
-                    MaxMultiplier = 2.0,
+                    Multiplier = 2.0
                 },
                 Heroic = {
-                    MinMultiplier = 2.5,
-                    MaxMultiplier = 2.5,
+                    Multiplier = 2.5
                 },
                 Legendary = {
-                    MinMultiplier = 3.0,
-                    MaxMultiplier = 3.0,
+                    Multiplier = 3.0
                 }
             },
             CustomTrayText = "SwordPoseidonSecondaryTrait_Tray",
 
             God = "Poseidon",
             Slot = "Secondary",
+
             AddOutgoingDamageModifiers = {
                 ValidWeaponMultiplier = {
                     BaseValue = 1.7,
                     SourceIsMultiplier = true,
-                    IdenticalMultiplier = {
-                        --      DuplicateMultiplier is local to TraitData but,
-                        -- for some reason if I try to call it by name, it's nil.
-                        Value = -0.60,
-                    },
+                    {
+                        -- this should be DuplicateValue, but that's local to TraitData --
+                        Value = -0.60
+                    }
                 },
                 ValidWeapons = { "SwordParry" },
                 ExtractValues = {
@@ -127,24 +122,19 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
             InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
-                    MinMultiplier = 1.0,
-                    MaxMultiplier = 1.0,
+                    Multiplier = 1.0
                 },
                 Rare = {
-                    MinMultiplier = 1.5,
-                    MaxMultiplier = 1.5,
+                    Multiplier = 1.5
                 },
                 Epic = {
-                    MinMultiplier = 2.0,
-                    MaxMultiplier = 2.0,
+                    Multiplier = 2.0
                 },
                 Heroic = {
-                    MinMultiplier = 2.5,
-                    MaxMultiplier = 2.5,
+                    Multiplier = 2.5
                 },
                 Legendary = {
-                    MinMultiplier = 3.0,
-                    MaxMultiplier = 3.0,
+                    Multiplier = 3.0
                 }
             },
 
@@ -154,11 +144,10 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 ValidWeaponMultiplier = {
                     BaseValue = 1.4,
                     SourceIsMultiplier = true,
-                    IdenticalMultiplier = {
-                        --      DuplicateMultiplier is local to TraitData but,
-                        -- for some reason if I try to call it by name, it's nil.
+                    {
+                        -- this should be DuplicateValue, but that's local to TraitData --
                         Value = -0.60
-                    },
+                    }
                 },
                 ValidWeapons = { "FistWeapon" },
                 ExtractValues = {
@@ -249,16 +238,16 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
             InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
-                    Multiplier = 1.00,
+                    Multiplier = 1.0
                 },
                 Rare = {
-                    Multiplier = 1.5,
+                    Multiplier = 1.5
                 },
                 Epic = {
-                    Multiplier = 2.0,
+                    Multiplier = 2.0
                 },
                 Heroic = {
-                    Multiplier = 2.5,
+                    Multiplier = 2.5
                 },
                 Legendary = {
                     Multiplier = 3.0

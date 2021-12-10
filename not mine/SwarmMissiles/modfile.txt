@@ -1,9 +1,23 @@
+Top Import "config.lua"
+
 Import "SwarmMissiles.lua"
+
+:: Lua scripts
+To "Scripts/TraitData.lua"
+Import "TraitData.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "WeaponUpgradeData.lua"
+
+To "Scripts/ObjectiveData.lua"
+Import "ObjectiveData.lua"
+
+:: SJSON edits
 To "Game/Text/en/HelpText.en.sjson"
 SJSON "helptext.sjson"
-To "Game/Text/en/HelpText.en.sjson"
-SJSON "helptext_replace.sjson"
+
 To "Game/Projectiles/PlayerProjectiles.sjson"
 SJSON "playerprojectiles.sjson"
+
 To "Game/Animations/Fx.sjson
 SJSON "fx.sjson"

@@ -58,5 +58,20 @@
 		  Description = "For {#BoldFormatGraft}{$TooltipData.TooltipBurnDuration} Sec{#PreviousFormat}., victim keeps taking damage. Effect can stack up to {#BoldFormatGraft}{$TooltipData.TooltipBurnStacks} {#PreviousFormat}times."
   		  OverwriteLocalization = true
 		}
+		{
+		  Id = "GunSwarmMissileTrait"
+          DisplayName = "Aspect of Itano"
+          Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipMaxMissile} \n\n {#ItalicFormatDark}Why fire one missile when you launch a whole circus?"
+		}
+		{
+		  Id = "GunSwarmMissileTrait_Delta"
+          InheritFrom = "GunSwarmMissileTrait"
+          Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n\n {#ItalicFormatDark}Why fire one missile when you launch a whole circus?"
+		}
+		{
+		  Id = "GunSwarmMissileTrait_Tray"
+          InheritFrom = "GunSwarmMissileTrait"
+          Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipMaxMissile}"
+		}
     ]
 }

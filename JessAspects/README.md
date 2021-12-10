@@ -31,8 +31,7 @@ to enable/disable particular submodules, comment out their **Include** statement
   - Twin Fists ★ Mike Tyson
   - Eternal Spear ★ Merlin
   - Heart-Seeking Bow ★ Robin Hood
-  - can i make sword that looks like fists?
-<!-- i don't want to step out of line so i'll wait til i have more completed before asking permission, but i wonder if i could set up raisins' swarm missiles as a separate aspect? -->
+  - can i make a sword that looks like fists?
 
 ## General TODO
 - [x] Write the README

@@ -32,6 +32,7 @@ to enable/disable particular submodules, comment out their **Include** statement
   - Eternal Spear ★ Merlin
   - Heart-Seeking Bow ★ Robin Hood
   - can i make a sword that looks like fists?
+  - swap spear/shield charge attack with their special
 
 ## General TODO
 - [x] Write the README

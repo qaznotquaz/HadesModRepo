@@ -61,12 +61,12 @@
 		{
 		  Id = "GunSwarmMissileTrait"
           DisplayName = "Aspect of Itano"
-          Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipMaxMissile} \n\n {#ItalicFormatDark}Why fire one missile when you launch a whole circus?"
+          Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipMaxMissile} \n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#UpgradeFormat}+{$TooltipData.TooltipAmmo} \n {#ItalicFormatDark}Why fire one missile when you can launch a whole circus?"
 		}
 		{
 		  Id = "GunSwarmMissileTrait_Delta"
           InheritFrom = "GunSwarmMissileTrait"
-          Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n\n {#ItalicFormatDark}Why fire one missile when you launch a whole circus?"
+          Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#PreviousFormat}{#OldFormat}+{$TooltipData.OldTotal2}{!Icons.RightArrow}{#UpgradeFormat}+{$TooltipData.NewTotal2} \n {#ItalicFormatDark}Why fire one missile when you can launch a whole circus?"
 		}
 		{
 		  Id = "GunSwarmMissileTrait_Tray"

@@ -31,7 +31,20 @@ if SwarmMissiles.config.Enabled then
             }
         },
 
-        PropertyChanges = { }
+        PropertyChanges =
+        {
+            {
+                WeaponNames = { "GunWeapon" },
+                WeaponProperty = "MaxAmmo",
+                BaseValue = 4,
+                AsInt = true,
+                ChangeType = "Add",
+                ExtractValue =
+                {
+                    ExtractAs = "TooltipAmmo"
+                }
+            },
+        },
     }
 
     --qaz: surely there's a better way to do mass property changes like this

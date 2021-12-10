@@ -1,8 +1,10 @@
 if SwarmMissiles.config.Enabled then
     table.insert(WeaponData.GunGrenadeToss.CompleteObjectivesOnFire, "GunGrenadeMissile")
 
-    ObjectiveData.GunWeaponGunWeave = { Description = "Objective_GunWeaponGunWeave" }
-    ObjectiveData.GunGrenadeMissile = { Description = "Objective_GunGrenadeMissile" }
+    ModUtil.MapSetTable( ObjectiveData, {
+        GunWeaponGunWeave = { Description = "Objective_GunWeaponGunWeave"},
+        GunGrenadeMissile = { Description = "Objective_GunGrenadeMissile"}
+    })
 
     ObjectiveSetData.GunTutorial_SwarmMissiles = {
         AllowRepeat = true,

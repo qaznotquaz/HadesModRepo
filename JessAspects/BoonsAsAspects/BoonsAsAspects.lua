@@ -6,6 +6,7 @@ end, BoonsAsAspects)
 
 ModUtil.WrapBaseFunction("ShowWeaponUpgradeScreen", function(baseFunc, args)
     TraitData.Jess_SwordPoseidonBoonTrait.AddOutgoingDamageModifiers.ValidWeaponMultiplier.IdenticalMultiplier = nil
+    TraitData.Jess_ShieldChaosBoonTrait.RarityBonus.RareBonus.IdenticalMultiplier = nil
     TraitData.Jess_FistDemeterBoonTrait.AddOutgoingDamageModifiers.ValidWeaponMultiplier.IdenticalMultiplier = nil
     TraitData.Jess_GunHermesBoonTrait.PropertyChanges[1].IdenticalMultiplier = nil
 
@@ -27,6 +28,9 @@ ModUtil.WrapBaseFunction("CloseWeaponUpgradeScreen", function(baseFunc, screen)
     TraitData.Jess_SwordPoseidonBoonTrait.AddOutgoingDamageModifiers.ValidWeaponMultiplier.IdenticalMultiplier = {
         -- this should be DuplicateValue, but that's local to TraitData --
         Value = -0.60
+    }
+    TraitData.Jess_ShieldChaosBoonTrait.RarityBonus.RareBonus.IdenticalMultiplier = {
+        Value = -0.80
     }
     TraitData.Jess_FistDemeterBoonTrait.AddOutgoingDamageModifiers.ValidWeaponMultiplier.IdenticalMultiplier = {
         -- this should be DuplicateValue, but that's local to TraitData --

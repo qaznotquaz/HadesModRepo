@@ -13,6 +13,17 @@
             }
 
             {
+                Id = "Jess_ShieldChaosBoonTrait"
+                DisplayName = "Gracious Favor"
+                Description = "{#BoldFormat}{$Keywords.GodBoonPlural} {#PreviousFormat}have {#AltUpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom} {#PreviousFormat}chance to be {#RareFormat}Rare {#PreviousFormat}or better.{$JessAspects_BoonsAsAspects.CustomText.ShieldFlavor}"
+            }
+            {
+                Id = "Jess_ShieldChaosBoonTrait_Delta"
+                InheritFrom = "Jess_ShieldChaosBoonTrait"
+                Description = "{#BoldFormat}{$Keywords.GodBoonPlural} {#PreviousFormat}have {#AltUpgradeFormat}{$TooltipData.DisplayDelta1} {#PreviousFormat}chance to be {#RareFormat}Rare {#PreviousFormat}or better.{$JessAspects_BoonsAsAspects.CustomText.ShieldFlavor}"
+            }
+
+            {
                 Id = "Jess_FistDemeterBoonTrait"
                 DisplayName = "Frost Strike"
                 Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom}{$JessAspects_BoonsAsAspects.CustomText.FistFlavor}"

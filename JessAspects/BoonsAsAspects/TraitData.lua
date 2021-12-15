@@ -101,7 +101,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         TraitData.Jess_SwordPoseidonBoonTrait.Icon = "Boon_Poseidon_00"
         TraitData.Jess_SwordPoseidonBoonTrait.WeaponDataOverride.RangedWeapon = nil
 
-        MimicUtil.MimicTraitPropertyChanges(
+        MimicUtil.MimicForeignPropertyModifiers(
                 "PoseidonSecondaryTrait",
                 "Jess_SwordPoseidonBoonTrait"
         )
@@ -206,6 +206,36 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                     ExcludeLinked = true,
                 },
             },
+            ExtractValues = {
+                {
+                    ExtractAs = "TooltipChillDuration",
+                    SkipAutoExtract = true,
+                    External = true,
+                    BaseType = "Effect",
+                    WeaponName = "SwordWeapon",
+                    BaseName = "DemeterSlow",
+                    BaseProperty = "Duration",
+                },
+                {
+                    ExtractAs = "TooltipChillPower",
+                    SkipAutoExtract = true,
+                    External = true,
+                    BaseType = "Effect",
+                    WeaponName = "SwordWeapon",
+                    BaseName = "DemeterSlow",
+                    BaseProperty = "ElapsedTimeMultiplier",
+                    Format = "NegativePercentDelta"
+                },
+                {
+                    ExtractAs = "TooltipChillStacks",
+                    SkipAutoExtract = true,
+                    External = true,
+                    BaseType = "Effect",
+                    WeaponName = "SwordWeapon",
+                    BaseName = "DemeterSlow",
+                    BaseProperty = "MaxStacks",
+                },
+            }
         }
 
         MimicUtil.TotalMimicWeaponAppearance(
@@ -218,7 +248,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         TraitData.Jess_FistDemeterBoonTrait.WeaponDataOverride.FistWeaponSpecial = nil
         TraitData.Jess_FistDemeterBoonTrait.WeaponDataOverride.FistWeaponSpecialDash = nil
 
-        MimicUtil.MimicTraitPropertyChanges(
+        MimicUtil.MimicForeignPropertyModifiers(
                 "DemeterWeaponTrait",
                 "Jess_FistDemeterBoonTrait"
         )
@@ -228,6 +258,52 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 "Jess_FistDemeterBoonTrait"
         )
     end
+
+    -- Eternal Spear ★ Hades' Aid --
+    -- im scared to do this one
+
+    -- Shield of Chaos ★ Chaos' Favor --
+    if JessAspects_BoonsAsAspects.Config.ShieldEnabled then
+        TraitData.Jess_ShieldChaosBoonTrait = {
+            InheritFrom = { "WeaponEnchantmentTrait" },
+
+            RarityBonus = {
+                RareBonus = {
+                    BaseValue = 0.1,
+                    IdenticalMultiplier = {
+                        Value = -0.80
+                    }
+                },
+                EpicBonus = 0.1,
+                LegendaryBonus = 0.1,
+                ExtractValues = {
+                    {
+                        Key = "RareBonus",
+                        ExtractAs = "AspectExtract",
+                        Format = "Percent",
+                    }
+                }
+            },
+
+            PropertyChanges = {}
+        }
+
+        MimicUtil.TotalMimicWeaponAppearance(
+                MimicUtil.BaseWeapons.ShieldChaos,
+                JessAspects_BoonsAsAspects.Data.ShieldChaos,
+                TraitData.Jess_ShieldChaosBoonTrait
+        )
+
+        TraitData.Jess_ShieldChaosBoonTrait.Icon = "Boon_Chaos_Blessing_10"
+
+        MimicUtil.RequireFalse(
+                "ChaosBlessingBoonRarityTrait",
+                "Jess_ShieldChaosBoonTrait"
+        )
+    end
+
+    -- Heart-Seeking Bow ★ Artemis' Cast --
+    -- im scared to do this one
 
     -- watch out, hermes has a gun --
     if JessAspects_BoonsAsAspects.Config.GunEnabled then
@@ -276,7 +352,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
 
         TraitData.Jess_GunHermesBoonTrait.Icon = "Boon_Hermes_04"
 
-        MimicUtil.MimicTraitPropertyChanges(
+        MimicUtil.MimicForeignPropertyModifiers(
                 "DodgeChanceTrait",
                 "Jess_GunHermesBoonTrait"
         )

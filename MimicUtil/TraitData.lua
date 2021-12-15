@@ -103,7 +103,7 @@ MimicUtil.BaseWeapons = {
 }
 
 -- MimicTraitPropertyChanges is a near-exact copy of code from PonyWarrior's AspectFusion/Data/traitdata.lua
-function MimicUtil.MimicTraitPropertyChanges(sourceTraitName, copyTraitName)
+function MimicUtil.MimicForeignPropertyModifiers(sourceTraitName, copyTraitName)
     for _, traitData in pairs(TraitData) do
         if traitData.PropertyChanges ~= nil then
             for _, property in pairs(traitData.PropertyChanges) do
@@ -135,20 +135,28 @@ function MimicUtil.RequireFalse(targetTraitName, disallowedTraitName)
 end
 
 function MimicUtil.TotalMimicWeaponAppearance(baseWeapon, copyWeaponUpgradeData, copyTraitData)
-    copyWeaponUpgradeData.Image = baseWeapon.WeaponUpgradeData.Image
-    copyWeaponUpgradeData.EquippedKitAnimation = baseWeapon.WeaponUpgradeData.EquippedKitAnimation
-    copyWeaponUpgradeData.UnequippedKitAnimation = baseWeapon.WeaponUpgradeData.UnequippedKitAnimation
-    copyWeaponUpgradeData.BonusUnequippedKitAnimation = baseWeapon.WeaponUpgradeData.BonusUnequippedKitAnimation
-    copyWeaponUpgradeData.BonusEquippedKitAnimation = baseWeapon.WeaponUpgradeData.BonusEquippedKitAnimation
+    local weaponFields = {
+        "Image",
+        "EquippedKitAnimation", "UnequippedKitAnimation",
+        "BonusEquippedKitAnimation", "BonusUnequippedKitAnimation",
+    }
 
-    copyTraitData.PostWeaponUpgradeScreenAnimation = baseWeapon.TraitData.PostWeaponUpgradeScreenAnimation
-    copyTraitData.PostWeaponUpgradeScreenAngle = baseWeapon.TraitData.PostWeaponUpgradeScreenAngle
-    copyTraitData.WeaponBinks = DeepCopyTable(baseWeapon.TraitData.WeaponBinks)
-    copyTraitData.WeaponDataOverride = DeepCopyTable(baseWeapon.TraitData.WeaponDataOverride)
-    copyTraitData.Icon = baseWeapon.TraitData.Icon
+    for _, field in pairs(weaponFields) do
+        copyWeaponUpgradeData[field] = baseWeapon.WeaponUpgradeData[field]
+    end
+
+    local traitFields = {
+        "PostWeaponUpgradeScreenAnimation", "PostWeaponUpgradeScreenAngle",
+        "WeaponBinks", "WeaponDataOverride",
+        "Icon"
+    }
+
+    for _, field in pairs(traitFields) do
+        copyTraitData[field] = DeepCopyTable(baseWeapon.TraitData[field])
+    end
 
     for _, property in pairs(baseWeapon.TraitData.PropertyChanges) do
-        if property.WeaponProperty ~= nil and MimicUtil.isCosmeticProperty(property.WeaponProperty) then
+        if (property.WeaponProperty ~= nil and MimicUtil.isCosmeticProperty(property.WeaponProperty)) or (property.ProjectileProperty ~= nil and MimicUtil.isCosmeticProperty(property.ProjectileProperty)) then
             table.insert(copyTraitData.PropertyChanges, DeepCopyTable(property))
         end
     end

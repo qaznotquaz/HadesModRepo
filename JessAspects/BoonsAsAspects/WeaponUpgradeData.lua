@@ -28,21 +28,22 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 BonusEquippedKitAnimation = "WeaponSpearAlt02FloatingIdleOffBonus",
                 Image = "Codex_Portrait_SpearAlt02"
             }
-    )
+    )]]--
 
     -- Shield of Chaos ★ Chaos' Favor --
-    table.insert(WeaponUpgradeData.ShieldWeapon,
-            {
-                Costs = { 3, 3, 3, 3, 3 },
-                MaxUpgradeLevel = 5,
-                TraitName = "ChaosBlessingBoonRarityTrait",
-                EquippedKitAnimation = "WeaponShieldAlt01FloatingIdleOff",
-                UnequippedKitAnimation = "WeaponShieldAlt01FloatingIdle",
-                BonusUnequippedKitAnimation = "WeaponShieldAlt01FloatingIdleBonus",
-                BonusEquippedKitAnimation = "WeaponShieldAlt01FloatingIdleOffBonus",
-                Image = "Codex_Portrait_ShieldAlt01"
-            }
-    )
+    if JessAspects_BoonsAsAspects.Config.ShieldEnabled then
+        JessAspects_BoonsAsAspects.Data.ShieldChaos = {
+            Costs = { 3, 3, 3, 3, 3 },
+            MaxUpgradeLevel = 5,
+            TraitName = "Jess_ShieldChaosBoonTrait"
+        }
+        table.insert(
+                WeaponUpgradeData.ShieldWeapon,
+                JessAspects_BoonsAsAspects.Data.ShieldChaos
+        )
+    end
+
+    --[[
     -- Heart-Seeking Bow ★ Artemis' Cast --
     table.insert(WeaponUpgradeData.BowWeapon,
             {

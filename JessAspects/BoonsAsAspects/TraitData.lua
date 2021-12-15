@@ -1,7 +1,7 @@
 if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Stygian Blade ★ Poseidon's Flourish --
     if JessAspects_BoonsAsAspects.Config.SwordEnabled then
-        TraitData.SwordPoseidonSecondaryTrait = {
+        TraitData.Jess_SwordPoseidonBoonTrait = {
             InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
@@ -20,7 +20,6 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                     Multiplier = 3.0
                 }
             },
-            CustomTrayText = "SwordPoseidonSecondaryTrait_Tray",
 
             God = "Poseidon",
             Slot = "Secondary",
@@ -28,8 +27,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
             AddOutgoingDamageModifiers = {
                 ValidWeaponMultiplier = {
                     BaseValue = 1.7,
-                    SourceIsMultiplier = true,
-                    {
+                    IdenticalMultiplier = {
                         -- this should be DuplicateValue, but that's local to TraitData --
                         Value = -0.60
                     }
@@ -38,7 +36,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 ExtractValues = {
                     {
                         Key = "ValidWeaponMultiplier",
-                        ExtractAs = "TooltipDamage",
+                        ExtractAs = "AspectExtract",
                         Format = "PercentDelta",
                     },
                 }
@@ -98,27 +96,27 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         MimicUtil.TotalMimicWeaponAppearance(
                 MimicUtil.BaseWeapons.SwordPoseidon,
                 JessAspects_BoonsAsAspects.Data.SwordPoseidon,
-                TraitData.SwordPoseidonSecondaryTrait
+                TraitData.Jess_SwordPoseidonBoonTrait
         )
-        TraitData.SwordPoseidonSecondaryTrait.Icon = "Boon_Poseidon_00"
-        TraitData.SwordPoseidonSecondaryTrait.WeaponDataOverride.RangedWeapon = nil
+        TraitData.Jess_SwordPoseidonBoonTrait.Icon = "Boon_Poseidon_00"
+        TraitData.Jess_SwordPoseidonBoonTrait.WeaponDataOverride.RangedWeapon = nil
 
         MimicUtil.MimicTraitPropertyChanges(
                 "PoseidonSecondaryTrait",
-                "SwordPoseidonSecondaryTrait"
+                "Jess_SwordPoseidonBoonTrait"
         )
 
-        TraitData.BossDamageTrait.AddOutgoingDamageModifiers.ValidEnchantments.TraitDependentWeapons.SwordPoseidonSecondaryTrait = { "SwordParry" }
+        TraitData.BossDamageTrait.AddOutgoingDamageModifiers.ValidEnchantments.TraitDependentWeapons.Jess_SwordPoseidonBoonTrait = { "SwordParry" }
 
         MimicUtil.RequireFalse(
                 "PoseidonSecondaryTrait",
-                "SwordPoseidonSecondaryTrait"
+                "Jess_SwordPoseidonBoonTrait"
         )
     end
 
     -- Twin Fists ★ Demeter's Strike --
     if JessAspects_BoonsAsAspects.Config.FistEnabled then
-        TraitData.FistDemeterWeaponTrait = {
+        TraitData.Jess_FistDemeterBoonTrait = {
             InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
@@ -143,8 +141,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
             AddOutgoingDamageModifiers = {
                 ValidWeaponMultiplier = {
                     BaseValue = 1.4,
-                    SourceIsMultiplier = true,
-                    {
+                    IdenticalMultiplier = {
                         -- this should be DuplicateValue, but that's local to TraitData --
                         Value = -0.60
                     }
@@ -153,7 +150,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 ExtractValues = {
                     {
                         Key = "ValidWeaponMultiplier",
-                        ExtractAs = "TooltipDamage",
+                        ExtractAs = "AspectExtract",
                         Format = "PercentDelta",
                     },
                 }
@@ -214,27 +211,27 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         MimicUtil.TotalMimicWeaponAppearance(
                 MimicUtil.BaseWeapons.FistDemeter,
                 JessAspects_BoonsAsAspects.Data.FistDemeter,
-                TraitData.FistDemeterWeaponTrait
+                TraitData.Jess_FistDemeterBoonTrait
         )
 
-        TraitData.FistDemeterWeaponTrait.Icon = "Boon_Demeter_01"
-        TraitData.FistDemeterWeaponTrait.WeaponDataOverride.FistWeaponSpecial = nil
-        TraitData.FistDemeterWeaponTrait.WeaponDataOverride.FistWeaponSpecialDash = nil
+        TraitData.Jess_FistDemeterBoonTrait.Icon = "Boon_Demeter_01"
+        TraitData.Jess_FistDemeterBoonTrait.WeaponDataOverride.FistWeaponSpecial = nil
+        TraitData.Jess_FistDemeterBoonTrait.WeaponDataOverride.FistWeaponSpecialDash = nil
 
         MimicUtil.MimicTraitPropertyChanges(
                 "DemeterWeaponTrait",
-                "FistDemeterWeaponTrait"
+                "Jess_FistDemeterBoonTrait"
         )
 
         MimicUtil.RequireFalse(
                 "DemeterWeaponTrait",
-                "FistDemeterWeaponTrait"
+                "Jess_FistDemeterBoonTrait"
         )
     end
 
     -- watch out, hermes has a gun --
     if JessAspects_BoonsAsAspects.Config.GunEnabled then
-        TraitData.GunDodgeChanceTrait = {
+        TraitData.Jess_GunHermesBoonTrait = {
             InheritFrom = { "WeaponEnchantmentTrait" },
             RarityLevels = {
                 Common = {
@@ -261,9 +258,12 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                     ChangeType = "Add",
                     DataValue = false,
                     ExtractValue = {
-                        ExtractAs = "TooltipChance",
+                        ExtractAs = "AspectExtract",
                         Format = "Percent"
                     },
+                    IdenticalMultiplier = {
+                        Value = -0.80
+                    }
                 },
             }
         }
@@ -271,19 +271,19 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         MimicUtil.TotalMimicWeaponAppearance(
                 MimicUtil.BaseWeapons.GunZagreus,
                 JessAspects_BoonsAsAspects.Data.GunHermes,
-                TraitData.GunDodgeChanceTrait
+                TraitData.Jess_GunHermesBoonTrait
         )
 
-        TraitData.GunDodgeChanceTrait.Icon = "Boon_Hermes_04"
+        TraitData.Jess_GunHermesBoonTrait.Icon = "Boon_Hermes_04"
 
         MimicUtil.MimicTraitPropertyChanges(
                 "DodgeChanceTrait",
-                "GunDodgeChanceTrait"
+                "Jess_GunHermesBoonTrait"
         )
 
         MimicUtil.RequireFalse(
                 "DodgeChanceTrait",
-                "GunDodgeChanceTrait"
+                "Jess_GunHermesBoonTrait"
         )
     end
 end

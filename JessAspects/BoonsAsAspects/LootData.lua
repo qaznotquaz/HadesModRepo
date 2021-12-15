@@ -2,7 +2,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     if JessAspects_BoonsAsAspects.Config.SwordEnabled then
         MimicUtil.MimicLootUpgradeRequirements(
                 "PoseidonSecondaryTrait",
-                "SwordPoseidonSecondaryTrait"
+                "Jess_SwordPoseidonBoonTrait"
         )
     end
 
@@ -33,7 +33,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     if JessAspects_BoonsAsAspects.Config.GunEnabled then
         MimicUtil.MimicLootUpgradeRequirements(
                 "DodgeChanceTrait",
-                "GunDodgeChanceTrait"
+                "Jess_GunHermesBoonTrait"
         )
     end
 end

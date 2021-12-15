@@ -4,7 +4,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         JessAspects_BoonsAsAspects.Data.SwordPoseidon = {
             Costs = { 3, 3, 3, 3, 3 },
             MaxUpgradeLevel = 5,
-            TraitName = "SwordPoseidonSecondaryTrait"
+            TraitName = "Jess_SwordPoseidonBoonTrait"
         }
         table.insert(
                 WeaponUpgradeData.SwordWeapon,
@@ -62,7 +62,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         JessAspects_BoonsAsAspects.Data.FistDemeter = {
             Costs = { 3, 3, 3, 3, 3 },
             MaxUpgradeLevel = 5,
-            TraitName = "FistDemeterWeaponTrait"
+            TraitName = "Jess_FistDemeterBoonTrait"
         }
         table.insert(
                 WeaponUpgradeData.FistWeapon,
@@ -75,7 +75,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         JessAspects_BoonsAsAspects.Data.GunHermes = {
             Costs = { 3, 3, 3, 3, 3 },
             MaxUpgradeLevel = 5,
-            TraitName = "GunDodgeChanceTrait"
+            TraitName = "Jess_GunHermesBoonTrait"
         }
 
         table.insert(

@@ -2,40 +2,36 @@
     Texts = [
         "_append"
             {
-                Id = "SwordPoseidonSecondaryTrait"
+                Id = "Jess_SwordPoseidonBoonTrait"
                 DisplayName = "Tempest Flourish"
-                Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1:P} \n\n {#ItalicFormatDark}Poseidon's favor rests strongly on this weapon."
+                Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom}{$JessAspects_BoonsAsAspects.CustomText.SwordFlavor}"
             }
             {
-                Id = "SwordPoseidonSecondaryTrait_Delta"
-                InheritFrom = "SwordPoseidonSecondaryTrait"
-                Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n\n {#ItalicFormatDark}Poseidon's favor rests strongly on this weapon."
-            }
-            {
-                Id = "SwordPoseidonSecondaryTrait_Tray"
-                InheritFrom = "SwordPoseidonSecondaryTrait"
-                Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}."
+                Id = "Jess_SwordPoseidonBoonTrait_Delta"
+                InheritFrom = "Jess_SwordPoseidonBoonTrait"
+                Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.SwordFlavor}"
             }
 
             {
-                Id = "FistDemeterWeaponTrait"
+                Id = "Jess_FistDemeterBoonTrait"
                 DisplayName = "Frost Strike"
-                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {$TooltipData.TooltipDamage} \n\n {#ItalicFormatDark}Demeter's favor rests strongly on this weapon."
+                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom}{$JessAspects_BoonsAsAspects.CustomText.FistFlavor}"
             }
             {
-                Id = "FistDemeterWeaponTrait_Delta"
-                InheritFrom = "FistDemeterWeaponTrait"
-                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {$TooltipData.DisplayDelta1} \n\n {#ItalicFormatDark}Demeter's favor rests strongly on this weapon."
+                Id = "Jess_FistDemeterBoonTrait_Delta"
+                InheritFrom = "Jess_FistDemeterBoonTrait"
+                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.FistFlavor}"
+            }
+
+            {
+              Id = "Jess_GunHermesBoonTrait"
+              DisplayName = "Greater Evasion"
+              Description = "Whenever you are hit, you have a chance to {$Keywords.Dodge} automatically. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Dodge} Chance: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom}{$JessAspects_BoonsAsAspects.CustomText.GunFlavor}"
             }
             {
-                Id = "FistDemeterWeaponTrait_Tray"
-                InheritFrom = "FistDemeterWeaponTrait"
-                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {$TooltipData.DisplayDelta1}"
-            }
-            {
-                Id = "FistDemeterWeaponTrait_Initial"
-                InheritFrom = "FistDemeterWeaponTrait"
-                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#UpgradeFormat}{$TooltipData.NewTotal1}"
+              Id = "Jess_GunHermesBoonTrait_Delta"
+              InheritFrom = "Jess_GunHermesBoonTrait"
+              Description = "Whenever you are hit, you have a chance to {$Keywords.Dodge} automatically. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Dodge} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.GunFlavor}"
             }
     ]
 }

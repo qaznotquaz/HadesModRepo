@@ -1,0 +1,16 @@
+{
+    Texts = [
+        "_append"
+        {
+        Id = "Jess_GunMagicBombsTrait"
+        DisplayName = "Aspect of Jess"
+        Description = "Loads your cast into your special.{$JessAspects_MagicBombs.CustomText.Flavor}"
+        }
+
+        {
+          Id = "Unimplemented"
+          DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
+          Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
+        }
+    ]
+}

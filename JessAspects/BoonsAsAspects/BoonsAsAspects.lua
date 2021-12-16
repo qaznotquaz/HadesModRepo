@@ -14,12 +14,12 @@ ModUtil.WrapBaseFunction("ShowWeaponUpgradeScreen", function(baseFunc, args)
     ModUtil.MapSetTable(JessAspects_BoonsAsAspects.CustomText,
             {
                 AspectOrPom = "{$TooltipData.AspectExtract}",
-                SwordFlavor = " \\n\\n {#ItalicFormatDark}Poseidon's favor rests strongly on this weapon.",
-                SpearFlavor = " \\n\\n {#ItalicFormatDark}Hades' favor rests strongly on this weapon.",
-                ShieldFlavor = " \\n\\n {#ItalicFormatDark}Chaos' favor rests strongly on this weapon.",
-                BowFlavor = " \\n\\n {#ItalicFormatDark}Artemis' favor rests strongly on this weapon.",
-                FistFlavor = " \\n\\n {#ItalicFormatDark}Demeter's favor rests strongly on this weapon.",
-                GunFlavor = " \\n\\n {#ItalicFormatDark}Hermes' favor rests strongly on this weapon."
+                SwordFlavor = " \\n{$Keywords.Untested}\\n {#ItalicFormatDark}Poseidon's favor rests strongly on this weapon.",
+                SpearFlavor = " \\n{$Keywords.Unimplemented}",
+                ShieldFlavor = " \\n\\n{$Keywords.Untested}\\n {#ItalicFormatDark}Chaos' favor rests strongly on this weapon.",
+                BowFlavor = " \\n{$Keywords.Known_Bugs}\\n {#ItalicFormatDark}Artemis' favor rests strongly on this weapon.",
+                FistFlavor = " \\n{$Keywords.Untested}\\n {#ItalicFormatDark}Demeter's favor rests strongly on this weapon.",
+                GunFlavor = " \\n{$Keywords.Untested}\\n {#ItalicFormatDark}Hermes' favor rests strongly on this weapon."
             })
 
     return baseFunc(args)
@@ -58,3 +58,12 @@ ModUtil.WrapBaseFunction("CloseWeaponUpgradeScreen", function(baseFunc, screen)
 
     return baseFunc(screen)
 end, BoonsAsAspects)
+
+ModUtil.MapSetTable(KeywordList, {
+    "Unimplemented",
+    "Under_Construction",
+    "Untested",
+    "Known_Bugs",
+})
+
+ResetKeywords()

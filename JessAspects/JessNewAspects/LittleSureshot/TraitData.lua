@@ -7,37 +7,25 @@
 ]]
 
 if JessAspects_LittleSureshot.Config.Enabled then
-    TraitData.GunLittleSureshotTrait = {
+    TraitData.Jess_GunLittleSureshotTrait = {
         InheritFrom = { "WeaponEnchantmentTrait" },
-        CustomTrayText = "GunLittleSureshotTrait_Tray",
-        PostWeaponUpgradeScreenAnimation = "ZagreusGunAlt01ReloadEnd",
-        RequiredWeapon = "GunWeapon",
-        PostWeaponUpgradeScreenAngle = 210,
         RarityLevels = {
             Common = {
-                MinMultiplier = 1.0,
-                MaxMultiplier = 1.0,
+                Multiplier = 1.0
             },
             Rare = {
-                MinMultiplier = 2.0,
-                MaxMultiplier = 2.0,
+                Multiplier = 2.0
             },
             Epic = {
-                MinMultiplier = 3.0,
-                MaxMultiplier = 3.0,
+                Multiplier = 3.0
             },
             Heroic = {
-                MinMultiplier = 4.0,
-                MaxMultiplier = 4.0,
+                Multiplier = 4.0
             },
             Legendary = {
-                MinMultiplier = 5.0,
-                MaxMultiplier = 5.0,
-            },
-            Icon = "WeaponEnchantment_Gun03",
-
+                Multiplier = 5.0
+            }
         },
-        Icon = "WeaponEnchantment_Gun03",
 
         -- Higher Crit Chance on Targeted Enemies? / part 1 --
         --[[
@@ -53,32 +41,6 @@ if JessAspects_LittleSureshot.Config.Enabled then
             ForceMax = 420
         },
         DroppedAmmoForceMultiplier = 5,
-
-        -- Hestia Animations --
-        WeaponBinks = {
-            "ZagreusGun01_Bink",
-            "ZagreusGun01Run_Bink",
-            "ZagreusGun01GrenadeToss_Bink",
-            "ZagreusGun01Stop_Bink",
-            "ZagreusGun01FireEmpty_Bink",
-        },
-        WeaponDataOverride = {
-            GunWeapon = {
-                IdleReloadAnimation = "ZagreusGunAlt01ReloadStart",
-                MovingReloadAnimation = "ZagreusGunAlt01RunReload",
-                WeaponBinks = {
-                    "ZagreusGun01_Bink",
-                    "ZagreusGun01Run_Bink",
-                    "ZagreusGun01GrenadeToss_Bink",
-                    "ZagreusGun01Stop_Bink",
-                    "ZagreusGun01FireEmpty_Bink",
-                }
-            },
-            GunWeaponDash = {
-                IdleReloadAnimation = "ZagreusGunAlt01ReloadStart",
-                MovingReloadAnimation = "ZagreusGunAlt01RunReload",
-            },
-        },
 
         PropertyChanges = {
             -- GunWeapon Weapon 0 Scatter --
@@ -331,4 +293,10 @@ if JessAspects_LittleSureshot.Config.Enabled then
             ]]--
         }
     }
+
+    MimicUtil.TotalMimicWeaponAppearance(
+            MimicUtil.BaseWeapons.GunHestia,
+            JessAspects_LittleSureshot.Data.GunAnnie,
+            TraitData.Jess_GunLittleSureshotTrait
+    )
 end

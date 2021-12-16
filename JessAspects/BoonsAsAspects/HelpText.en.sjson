@@ -13,6 +13,17 @@
             }
 
             {
+              Id = "Jess_SpearHadesBoonTrait"
+              DisplayName = "Hades' Aid"
+              Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}+50% \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspects_BoonsAsAspects.CustomText.SpearFlavor}"
+            }
+            {
+              Id = "Jess_SpearHadesBoonTrait_Delta"
+              InheritFrom = "Jess_SpearHadesBoonTrait"
+              Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspects_BoonsAsAspects.CustomText.SpearFlavor}"
+            }
+
+            {
                 Id = "Jess_ShieldChaosBoonTrait"
                 DisplayName = "Gracious Favor"
                 Description = "{#BoldFormat}{$Keywords.GodBoonPlural} {#PreviousFormat}have {#AltUpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom:P} {#PreviousFormat}chance to be {#RareFormat}Rare {#PreviousFormat}or better.{$JessAspects_BoonsAsAspects.CustomText.ShieldFlavor}"
@@ -54,6 +65,27 @@
               Id = "Jess_GunHermesBoonTrait_Delta"
               InheritFrom = "Jess_GunHermesBoonTrait"
               Description = "Whenever you are hit, you have a chance to {$Keywords.Dodge} automatically. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Dodge} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.GunFlavor}"
+            }
+
+	        {
+		      Id = "Unimplemented"
+		      DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
+		      Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
+		    }
+		    {
+              Id = "Under_Construction"
+              DisplayName = "Status: {#PenaltyFormat}Under Construction{#PreviousFormat}"
+              Description = "{!Icons.Alert} Some of this has been implemented, but not all. Watch for future updates!"
+            }
+            {
+              Id = "Untested"
+              DisplayName = "Status: {#PenaltyFormat}Untested{#PreviousFormat}"
+              Description = "{!Icons.Alert} This has been fully implemented, but not properly tested. Please submit issues on the mod page!"
+            }
+            {
+              Id = "Known_Bugs"
+              DisplayName = "Status: {#PenaltyFormat}Known Bugs{#PreviousFormat}"
+              Description = "{!Icons.Alert} This has been fully implemented, but it's not functioning properly. Please submit issues on the mod page!"
             }
     ]
 }

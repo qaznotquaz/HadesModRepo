@@ -4,4 +4,4 @@
 :: Include "DisabledSubmodule/modfile.txt"
 
 Include "BoonsAsAspects/modfile.txt"
-Include "LittleSureshot/modfile.txt"
+Include "JessNewAspects/modfile.txt"

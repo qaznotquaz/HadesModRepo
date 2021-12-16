@@ -1,7 +1,6 @@
 -: All Weapons ★ Boons as Aspects :-
 
 Top Import config.lua
-
 Import "BoonsAsAspects.lua"
 
 To "Scripts/WeaponUpgradeData.lua"

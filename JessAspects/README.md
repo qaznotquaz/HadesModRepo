@@ -14,25 +14,26 @@ I had some ideas for new aspects and wanted to implement them - both as a way to
 
 Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 
-to enable/disable particular submodules, comment out their **Include** statement in the [`modfile.txt`](modfile.txt). each module also may have its own configuration options, available from their corresponding `config.lua` file. alternatively, you can use each submodule as a self-contained mod!
+to enable/disable particular submodules, comment out their **Include** statement in the [`modfile.txt`](modfile.txt). each module also may have its own configuration options, available from their corresponding `config.lua` file. alternatively, any subfolder or sub-subfolder which has a `modfile.txt` can be used as a self-contained mod.
 
 ## Aspects
-- *Under Construction*
-  - [Adamant Rail ★ Annie Oakley](LittleSureshot)
+- *Completed*
   - [Stygian Blade ★ Poseidon's Flourish](BoonsAsAspects)
-  - [Eternal Spear ★ Hades' Call](BoonsAsAspects)
   - [Shield of Chaos ★ Chaos' Favor](BoonsAsAspects)
   - [Heart-Seeking Bow ★ Artemis' Cast](BoonsAsAspects)
   - [Twin Fists ★ Demeter's Strike](BoonsAsAspects)
   - [Adamant Rail ★ Hermes' Evasion](BoonsAsAspects)
-  - [Adamant Rail ★ Aspect of Jess](MagicBombs)
-- *Under Consideration*
-  - Heart-Seeking Bow ★ Cleopatra
-  - Twin Fists ★ Mike Tyson
-  - Eternal Spear ★ Merlin
-  - Heart-Seeking Bow ★ Robin Hood
-  - can i make a sword that looks like fists?
-  - swap spear/shield charge attack with their special
+- *Under Construction*
+  - [swap spear/shield charge attack with their special](MiscConcepts/InverseAttacks)
+  - [Adamant Rail ★ Annie Oakley](JessNewAspects/LittleSureshot)
+- *Unimplemented*
+  - [Eternal Spear ★ Hades' Call](BoonsAsAspects)
+  - [Adamant Rail ★ Aspect of Jess](JessNewAspects/MagicBombs)
+  - [Heart-Seeking Bow ★ Cleopatra](JessNewAspects/temp_Cleopatra)
+  - [Twin Fists ★ Mike Tyson](JessNewAspects/temp_MikeTyson)
+  - [Eternal Spear ★ Merlin](JessNewAspects/temp_Merlin)
+  - [Heart-Seeking Bow ★ Robin Hood](JessNewAspects/temp_RobinHood)
+  - [can i make a sword that looks like fists?](MiscConcepts/InaccurateGraphics)
 
 ## General TODO
 - [x] Write the README

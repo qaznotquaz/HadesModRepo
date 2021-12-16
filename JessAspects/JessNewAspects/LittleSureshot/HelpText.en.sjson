@@ -1,0 +1,16 @@
+{
+    Texts = [
+        "_append"
+        {
+        Id = "Jess_GunLittleSureshotTrait"
+        DisplayName = "Aspect of Annie"
+        Description = "{$Keywords.Under_Construction}"
+        }
+
+        {
+          Id = "Under_Construction"
+          DisplayName = "Status: {#PenaltyFormat}Under Construction{#PreviousFormat}"
+          Description = "{!Icons.Alert} Some of this has been implemented, but not all. Watch for future updates!"
+        }
+    ]
+}

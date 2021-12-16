@@ -1,6 +1,7 @@
--: Adamant Rail ★ Aspect of Annie Oakley :-
+-: Twin Fists ★ Aspect of MikeTyson :-
 
 Top Import "config.lua"
+Import "temp_MikeTyson.lua"
 
 To "Scripts/TraitData.lua"
 Import "TraitData.lua"

@@ -1,0 +1,13 @@
+-: Heart-Seeking Bow ★ Aspect of Robin Hood :-
+
+Top Import "config.lua"
+Import "temp_RobinHood.lua"
+
+To "Scripts/TraitData.lua"
+Import "TraitData.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "WeaponUpgradeData.lua"
+
+To "Game/Text/en/HelpText.en.sjson"
+SJSON "HelpText.en.sjson"

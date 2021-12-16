@@ -259,8 +259,35 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         )
     end
 
-    -- Eternal Spear ★ Hades' Aid --
-    -- im scared to do this one
+    -- Eternal Spear ★ Hades' Aid -- SKELETON
+    if JessAspects_BoonsAsAspects.Config.SpearEnabled then
+        TraitData.Jess_SpearHadesBoonTrait = {
+            InheritFrom = { "WeaponEnchantmentTrait" },
+
+            Slot = "Shout",
+
+            PropertyChanges = {},
+        }
+
+        --MimicUtil.TotalMimicWeaponAppearance(
+        --        MimicUtil.BaseWeapons.SpearHades,
+        --        JessAspects_BoonsAsAspects.Data.SpearHades,
+        --        TraitData.Jess_SpearHadesBoonTrait
+        --)
+
+        TraitData.Jess_SpearHadesBoonTrait.Icon = "Boon_Hades_01"
+
+        --local otherGods = {
+        --    "Aphrodite", "Artemis", "Athena", "Zeus",
+        --    "Poseidon", "Ares", "Dionysus", "Demeter"
+        --}
+        --for _, god in otherGods do
+        --    MimicUtil.RequireFalse(
+        --            god.."ShoutTrait",
+        --            "Jess_SpearHadesBoonTrait"
+        --    )
+        --end
+    end
 
     -- Shield of Chaos ★ Chaos' Favor --
     if JessAspects_BoonsAsAspects.Config.ShieldEnabled then

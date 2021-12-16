@@ -1,0 +1,1 @@
+i wonder if i can make sword that look like fists

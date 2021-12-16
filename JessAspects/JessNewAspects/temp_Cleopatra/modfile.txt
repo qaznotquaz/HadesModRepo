@@ -1,0 +1,13 @@
+-: Heart-Seeking Bow ★ Aspect of Cleopatra :-
+
+Top Import "config.lua"
+Import "temp_Cleopatra.lua"
+
+To "Scripts/TraitData.lua"
+Import "TraitData.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "WeaponUpgradeData.lua"
+
+To "Game/Text/en/HelpText.en.sjson"
+SJSON "HelpText.en.sjson"

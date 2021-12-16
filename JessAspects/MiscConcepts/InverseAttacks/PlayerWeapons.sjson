@@ -1,0 +1,161 @@
+{
+    Weapons = {
+        _sequence=true
+        10={
+      _replace = true
+      Name = "ShieldWeapon"
+      InheritFrom = "1_BaseDamagingWeapon"
+      Control = "Attack2"
+      Type = "GUN"
+      Projectile = "ShieldWeapon"
+	  TreatProjectilesAsUniqueVolleys = true
+      ChargeSoundFadeTime = 0.25
+      CancelMovement = false
+      ChargeCancelMovement = false
+      RootOwnerWhileFiring = false
+      BlockMoveInput = false
+      FullyAutomatic = true
+      BarrelLength = 150
+      AutoLock = false
+      AutoLockRange = 1000
+      FireFx = "null"
+      ShowFreeAimLine = false
+      AimLineAnimation = "null"
+      ChargeStartAnimation = "null"
+      FireGraphic = "ZagreusShieldPunch"
+      LockTriggerForCharge = false
+      RequestTriggerLockDuringReload = true
+      FireOnRelease = false
+      ChargeCancelGraphic = "null"
+      ChargeStartFx = "null"
+      ChargeFinishFx = "null"
+      ReloadOnRelease = true
+      ReloadTime = 0.4
+      NumProjectiles = 1
+      MinChargeToFire = 0
+      ChargeTime = 0
+      DisableOwnerForDurationFrames = 0
+      SwapOnFire = "ShieldThrow"
+      CanCancelDisables = false
+      TriggersStoredAmmoVulnerability = true
+	  SetCompleteAngleOnFire = true
+	  SetCompleteAngleOnCharge = true
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "ShieldAttackReflect"
+          Type = "PROJECTILE_DEFENSE"
+          Duration = 0.19
+          Range = 180
+          Deflect = false
+          AngleCoverage = 90
+          Active = true
+        }
+        {
+          Trigger = "Fire"
+          Name = "ShieldDisableAttack"
+          DurationFrames = 10
+          DisableMove = false
+          DisableRotate = true
+          DisableAttack = true
+          RequestTriggerLock = true
+        }
+        {
+          Trigger = "Fire"
+          Name = "ShieldDisableAttackFast"
+          DurationFrames = 7
+          DisableMove = false
+          DisableRotate = true
+          DisableAttack = true
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Trigger = "Fire"
+          Name = "ShieldSelfSlowFire"
+          Type = "SPEED"
+          DurationFrames = 25
+          Modifier = 0.1
+          Active = true
+          CanAffectInvulnerable = true
+        }
+      ]
+    }
+        688={
+        _replace = true
+      Name = "ShieldWeaponDash"
+      InheritFrom = "ShieldWeapon"
+      Projectile = "ShieldWeaponDash"
+      Control = "Attack2"
+      Cooldown = 0.02
+      DisableOwnerForDurationFrames = 0
+      ControlWindow = 0.45
+      AutoLockArcDistance = 90
+      SelfVelocity = 400
+      FireGraphic = "ZagreusShieldPunchFast"
+      ChargeTimeFrames = 0
+      ChargeStartAnimation = "null"
+      Enabled = true
+      CanCancelDisables = true
+      CanCancelOwnDisables = true
+	  LockTriggerTransferFromOnSwap = false
+	  AllowExternalForceRelease = false
+      MinChargeToFire = 0
+      ChargeTime = 0
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "ShieldDashReflect"
+          Type = "PROJECTILE_DEFENSE"
+          Duration = 0.22
+          Range = 180
+          Deflect = false
+          AngleCoverage = 60
+          Active = true
+        }
+        {
+          Trigger = "Fire"
+          Name = "ShieldDisableAttack"
+          DurationFrames = 12
+          DisableMove = false
+          DisableRotate = true
+          DisableAttack = true
+          RequestTriggerLock = true
+        }
+        {
+          Trigger = "Fire"
+          Name = "ShieldSelfSlowFire"
+          Type = "SPEED"
+          DurationFrames = 10
+          Modifier = 0.1
+          Active = true
+          CanAffectInvulnerable = true
+        }
+
+        {
+          Trigger = "Charging"
+          Name = "ShieldSelfSlowFireBeowulf"
+          Type = "SPEED"
+          DurationFrames = 10
+          Modifier = 0.15
+          Active = false
+          DisableRotate = true
+          CanAffectInvulnerable = true
+          ClearOnAttack = false
+        }
+      ]
+    }
+        689={
+        _replace=true
+		  Id = "GunBaseUpgradeTrait_Delta"
+		  InheritFrom = "GunBaseUpgradeTrait"
+		  Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#PreviousFormat}{#OldFormat}+{$TooltipData.OldTotal2}{!Icons.RightArrow}{#UpgradeFormat}+{$TooltipData.NewTotal2} \n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1} \n {#ItalicFormatDark}The image of the noble gryphon belies its true intent but not its power."
+		}
+        690={
+        _replace=true
+		  Id = "GunBaseUpgradeTrait_Tray"
+		  InheritFrom = "GunBaseUpgradeTrait"
+		  Description = "Your {$Keywords.Special} becomes a {$Keywords.MissileBarrage}. {$Keywords.Attack} to add missiles.\n {!Icons.Bullet}{#PropertyFormat}Bonus Ammo Capacity: \Column 380 {#UpgradeFormat}+{$TooltipData.TooltipAmmo}\n {!Icons.Bullet}{#PropertyFormat}Maximum Missile Barrage: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipMaxMissile}"
+		}
+    }
+}

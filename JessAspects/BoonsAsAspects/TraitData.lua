@@ -303,7 +303,107 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     end
 
     -- Heart-Seeking Bow ★ Artemis' Cast --
-    -- im scared to do this one
+    if JessAspects_BoonsAsAspects.Config.BowEnabled then
+        TraitData.Jess_BowArtemisBoonTrait = {
+            InheritFrom = { "WeaponEnchantmentTrait" },
+            RarityLevels = {
+                Common = {
+                    Multiplier = 1.000
+                },
+                Rare = {
+                    Multiplier = 1.145
+                },
+                Epic = {
+                    Multiplier = 1.290
+                },
+                Heroic = {
+                    Multiplier = 1.435
+                },
+                Legendary = {
+                    Multiplier = 1.570
+                }
+            },
+
+            God = "Artemis",
+            Slot = "Ranged",
+
+            PropertyChanges = {
+                {
+                    WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
+                    WeaponProperty = "Projectile",
+                    ChangeValue = "ArtemisProjectile",
+                    ChangeType = "Absolute",
+                },
+                {
+                    WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
+                    WeaponProperty = "FireFx",
+                    ChangeValue = "ProjectileFireRing-Artemis",
+                    ChangeType = "Absolute",
+                },
+                {
+                    WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
+                    ProjectileProperty = "DamageLow",
+                    BaseMin = 70,
+                    BaseMax = 70,
+                    -- DepthDamageMultiplier
+                    DepthMult = 0.0,
+                    IdenticalMultiplier =
+                    {
+                        -- DuplicateStrongMultiplier
+                        Value = -0.40,
+                    },
+                    ExtractValue =
+                    {
+                        ExtractAs = "AspectExtract",
+                    }
+                },
+                {
+                    WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
+                    ProjectileProperty = "DamageHigh",
+                    DeriveValueFrom = "DamageLow"
+                },
+                {
+                    WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
+                    ProjectileProperty = "CriticalHitChance",
+                    ChangeValue = 0.10,
+                    ChangeType = "Absolute",
+                    ExtractValue =
+                    {
+                        ExtractAs = "TooltipCritChance",
+                        Format = "Percent",
+                        SkipAutoExtract = true
+                    }
+                },
+            },
+            ExtractValues = {
+                {
+                    ExtractAs = "BaseRangedDamage",
+                    External = true,
+                    BaseType = "Projectile",
+                    BaseName = "RangedWeapon",
+                    BaseProperty = "DamageLow",
+                }
+            }
+        }
+
+        MimicUtil.TotalMimicWeaponAppearance(
+                MimicUtil.BaseWeapons.BowChiron,
+                JessAspects_BoonsAsAspects.Data.BowArtemis,
+                TraitData.Jess_BowArtemisBoonTrait
+        )
+
+        TraitData.Jess_BowArtemisBoonTrait.Icon = "Boon_Artemis_02"
+
+        MimicUtil.MimicForeignPropertyModifiers(
+                "ArtemisRangedTrait",
+                "Jess_BowArtemisBoonTrait"
+        )
+
+        MimicUtil.RequireFalse(
+                "ArtemisRangedTrait",
+                "Jess_BowArtemisBoonTrait"
+        )
+    end
 
     -- watch out, hermes has a gun --
     if JessAspects_BoonsAsAspects.Config.GunEnabled then

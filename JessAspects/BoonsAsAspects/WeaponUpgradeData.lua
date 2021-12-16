@@ -2,7 +2,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Stygian Blade ★ Poseidon's Flourish --
     if JessAspects_BoonsAsAspects.Config.SwordEnabled then
         JessAspects_BoonsAsAspects.Data.SwordPoseidon = {
-            Costs = { 3, 3, 3, 3, 3 },
+            Costs = { 1, 2, 3, 4, 5 },
             MaxUpgradeLevel = 5,
             TraitName = "Jess_SwordPoseidonBoonTrait"
         }
@@ -33,7 +33,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Shield of Chaos ★ Chaos' Favor --
     if JessAspects_BoonsAsAspects.Config.ShieldEnabled then
         JessAspects_BoonsAsAspects.Data.ShieldChaos = {
-            Costs = { 3, 3, 3, 3, 3 },
+            Costs = { 1, 2, 3, 4, 5 },
             MaxUpgradeLevel = 5,
             TraitName = "Jess_ShieldChaosBoonTrait"
         }
@@ -43,25 +43,23 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         )
     end
 
-    --[[
     -- Heart-Seeking Bow ★ Artemis' Cast --
-    table.insert(WeaponUpgradeData.BowWeapon,
-            {
-                Costs = { 3, 3, 3, 3, 3 },
-                MaxUpgradeLevel = 5,
-                TraitName = "ArtemisRangedTrait",
-                EquippedKitAnimation = "WeaponBowAlt01FloatingIdleOff",
-                UnequippedKitAnimation = "WeaponBowAlt01FloatingIdle",
-                BonusUnequippedKitAnimation = "WeaponBowAlt01FloatingIdleBonus",
-                BonusEquippedKitAnimation = "WeaponBowAlt01FloatingIdleOffBonus",
-                Image = "Codex_Portrait_BowAlt01"
-            }
-    )]]--
+    if JessAspects_BoonsAsAspects.Config.BowEnabled then
+        JessAspects_BoonsAsAspects.Data.BowArtemis = {
+            Costs = { 1, 2, 3, 4, 5 },
+            MaxUpgradeLevel = 5,
+            TraitName = "Jess_BowArtemisBoonTrait",
+        }
+        table.insert(
+                WeaponUpgradeData.BowWeapon,
+                JessAspects_BoonsAsAspects.Data.BowArtemis
+        )
+    end
 
     -- Twin Fists ★ Demeter's Strike --
     if JessAspects_BoonsAsAspects.Config.FistEnabled then
         JessAspects_BoonsAsAspects.Data.FistDemeter = {
-            Costs = { 3, 3, 3, 3, 3 },
+            Costs = { 1, 2, 3, 4, 5 },
             MaxUpgradeLevel = 5,
             TraitName = "Jess_FistDemeterBoonTrait"
         }
@@ -74,7 +72,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     -- Adamant Rail ★ Hermes' Evasion --
     if JessAspects_BoonsAsAspects.Config.GunEnabled then
         JessAspects_BoonsAsAspects.Data.GunHermes = {
-            Costs = { 3, 3, 3, 3, 3 },
+            Costs = { 1, 2, 3, 4, 5 },
             MaxUpgradeLevel = 5,
             TraitName = "Jess_GunHermesBoonTrait"
         }

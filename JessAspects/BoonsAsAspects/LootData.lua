@@ -19,14 +19,14 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     if JessAspects_BoonsAsAspects.Config.BowEnabled then
         MimicUtil.MimicLootUpgradeRequirements(
                 "ArtemisRangedTrait",
-                "BowArtemisRangedTrait"
+                "Jess_BowArtemisBoonTrait"
         )
     end
 
     if JessAspects_BoonsAsAspects.Config.FistEnabled then
         MimicUtil.MimicLootUpgradeRequirements(
                 "DemeterSecondaryTrait",
-                "FistDemeterSecondaryTrait"
+                "Jess_FistDemeterBoonTrait"
         )
     end
 

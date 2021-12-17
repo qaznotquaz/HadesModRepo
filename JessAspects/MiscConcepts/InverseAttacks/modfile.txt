@@ -1,0 +1,2 @@
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "PlayerWeapons.sjson"

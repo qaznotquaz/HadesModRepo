@@ -9,5 +9,11 @@ Import "TraitData.lua"
 To "Scripts/WeaponUpgradeData.lua"
 Import "WeaponUpgradeData.lua"
 
+To "Scripts/LootData.lua"
+Import "LootData.lua"
+
+To "Scripts/Powers.lua"
+Import "Powers.lua"
+
 To "Game/Text/en/HelpText.en.sjson"
 SJSON "HelpText.en.sjson"

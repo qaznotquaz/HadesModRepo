@@ -134,6 +134,23 @@ function MimicUtil.RequireFalse(targetTraitName, disallowedTraitName)
     end
 end
 
+function MimicUtil.RequireTrue(targetTraitName, disallowedTraitName)
+    local traitData = TraitData[targetTraitName]
+
+    if traitData.RequiredTraits ~= nil then
+        table.insert(traitData.RequiredTraits, disallowedTraitName)
+    elseif traitData.RequiredFalseTrait == nil then
+        traitData.RequiredTrait = disallowedTraitName
+    else
+        local singularFalse = traitData.RequiredTrait
+        traitData.RequiredTrait = nil
+        traitData.RequiredTraits = {
+            singularFalse,
+            disallowedTraitName
+        }
+    end
+end
+
 function MimicUtil.TotalMimicWeaponAppearance(baseWeapon, copyWeaponUpgradeData, copyTraitData)
     local weaponFields = {
         "Image",

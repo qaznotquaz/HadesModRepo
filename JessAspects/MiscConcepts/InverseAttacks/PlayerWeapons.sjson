@@ -1,17 +1,22 @@
 {
     Weapons = {
-        "_sequence" = true
-        10 = {
-            Control = "Attack3"
+        _sequence = true
+        9={
+            SwapOnFire = false
         }
-        11 = {
-            Control = "Attack3"
+        11={
+            Control = false
+            FullyAutomatic = ""
+            FireOnRelease = ""
+            MinChargeToFire = false
+            ChargeTime = false
+            ChargeRangeMultiplier = false
+            ChargeVelocityMultiplier = false
+            ChargeDamageMultiplier = false
+            Effects = ""
         }
-        12 = {
-            Control = "Attack3"
-        }
-        43 = {
-            Control = "Attack2"
+        42={
+            Control = false
         }
     }
 }

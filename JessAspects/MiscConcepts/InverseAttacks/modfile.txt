@@ -1,2 +1,7 @@
+Load Priority 10
 To "Game/Weapons/PlayerWeapons.sjson"
 SJSON "PlayerWeapons.sjson"
+
+Load Priority 15
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "PlayerWeapons2.sjson"

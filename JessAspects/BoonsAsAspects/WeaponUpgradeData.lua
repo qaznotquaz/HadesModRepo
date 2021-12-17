@@ -16,7 +16,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
     if JessAspects_BoonsAsAspects.Config.SpearEnabled then
         JessAspects_BoonsAsAspects.Data.SpearHades = {
             Costs = { 3, 3, 3, 4, 5 },
-            MaxUpgradeLevel = -1,
+            MaxUpgradeLevel = 5,
             TraitName = "Jess_SpearHadesBoonTrait",
         }
         table.insert(

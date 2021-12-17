@@ -10,7 +10,7 @@ I had some ideas for new aspects and wanted to implement them - both as a way to
 #### Requirements
 - MagicGonads' [ModUtil](https://www.nexusmods.com/hades/mods/27)
 - PonyWarrior's [Aspect Extender](https://www.nexusmods.com/hades/mods/115)
-- My [MimicUtil](../MimicUtil)
+- My [MimicUtil](https://www.nexusmods.com/hades/mods/117/)
 
 Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 

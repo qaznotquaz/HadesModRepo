@@ -102,7 +102,7 @@ MimicUtil.BaseWeapons = {
     },
 }
 
--- MimicTraitPropertyChanges is a near-exact copy of code from PonyWarrior's AspectFusion/Data/traitdata.lua
+-- MimicForeignPropertyModifiers is a near-exact copy of code from PonyWarrior's AspectFusion/Data/traitdata.lua
 function MimicUtil.MimicForeignPropertyModifiers(sourceTraitName, copyTraitName)
     for _, traitData in pairs(TraitData) do
         if traitData.PropertyChanges ~= nil then

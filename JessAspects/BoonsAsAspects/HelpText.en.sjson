@@ -15,7 +15,7 @@
             {
               Id = "Jess_SpearHadesBoonTrait"
               DisplayName = "Hades' Aid"
-              Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}+50% \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspects_BoonsAsAspects.CustomText.SpearFlavor}"
+              Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspects_BoonsAsAspects.CustomText.SpearFlavor}"
             }
             {
               Id = "Jess_SpearHadesBoonTrait_Delta"

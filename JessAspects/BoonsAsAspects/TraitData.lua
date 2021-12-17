@@ -264,29 +264,133 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         TraitData.Jess_SpearHadesBoonTrait = {
             InheritFrom = { "WeaponEnchantmentTrait" },
 
-            Slot = "Shout",
+            RarityLevels = {
+                Common = {
+                    Multiplier = 1.0,
+                },
+                Rare = {
+                    Multiplier = 2.0,
+                },
+                Epic = {
+                    Multiplier = 3.0,
+                },
+                Heroic = {
+                    Multiplier = 4.0,
+                },
+                Legendary = {
+                    Multiplier = 5.0,
+                }
+            },
 
-            PropertyChanges = {},
+            Slot = "Shout",
+            God = "Hades",
+            ProcEmote = "/VO/ZagreusEmotes/EmoteDarkness",
+            RequiredFalseTrait = "HadesShoutTrait",
+            LoadPackages = "HadesUpgrade",
+            PreEquipWeapons = { "HadesShoutWeapon", "HadesBreakStealthBuff" },
+            SuperActivatedVoiceLines = HeroVoiceLines.SuperActivatedVoiceLines,
+            FullSuperActivatedVoiceLines = HeroVoiceLines.FullSuperActivatedVoiceLines,
+
+            AddOutgoingDamageModifiers =
+            {
+                RequiredEffects = { "HadesShieldShoutInvincible" },
+                RequiredSelfEffectsMultiplier =
+                {
+                    BaseValue = 1.5,
+                    SourceIsMultiplier = true,
+                },
+            },
+
+            AddShout =
+            {
+                FunctionName = "HadesShout",
+                MaxFunctionName = "HadesShoutMax",
+                Cost = 50,
+                BonusDamageExtract = {
+                    BaseValue = 0.25,
+                    IdenticalMultiplier = {
+                        Value = -0.80
+                    }
+                },
+                SuperDuration = 2.0,
+                MaxDurationMultiplier = 2.5,
+
+                ExtractValues =
+                {
+                    {
+                        Key = "BonusDamageExtract",
+                        ExtractAs = "AspectExtract",
+                        Format = "Percent",
+                    },
+                    {
+                        Key = "SuperDuration",
+                        ExtractAs = "TooltipDuration",
+                        DecimalPlaces = 2,
+                    },
+                    {
+                        Key = "Cost",
+                        ExtractAs = "TooltipWrathStocks",
+                        Format = "WrathStocks",
+                        SkipAutoExtract = true
+                    },
+                    {
+                        Key = "MaxDurationMultiplier",
+                        ExtractAs = "TooltipMaxDuration",
+                        Format = "EXWrathDuration",
+                        DecimalPlaces = 2,
+                        SkipAutoExtract = true
+                    }
+                }
+            },
+            EndShout = "EndHadesShout",
+            BreakStealthDamage = { BaseValue = 0.5 },
+            PropertyChanges =
+            {
+                {
+                    WeaponName = "HadesShoutWeapon",
+                    EffectName = "HadesShieldShoutSpeed",
+                    EffectProperty = "Modifier",
+                    ChangeValue = 0.5,
+                    ChangeType = "Add",
+                },
+                {
+                    WeaponName = "HadesBreakStealthBuff",
+                    EffectName = "HadesBreakStealthBuff",
+                    EffectProperty = "Duration",
+                    ChangeValue = 1.5,
+                    ExtractValue =
+                    {
+                        ExtractAs = "TooltipDamageDuration",
+                        SkipAutoExtract = true,
+                        DecimalPlaces = 2,
+                    },
+                },
+                {
+                    WeaponName = "HadesBreakStealthBuff",
+                    EffectName = "HadesBreakStealthBuff",
+                    EffectProperty = "Modifier",
+                    BaseValue = 0.25,
+                    ChangeType = "Add",
+                    ExtractValue =
+                    {
+                        ExtractAs = "TooltipBonus",
+                        SkipAutoExtract = true,
+                        Format = "Percent",
+                        IdenticalMultiplier = {
+                            Value = -0.80
+                        }
+                    },
+                },
+            },
         }
 
-        --MimicUtil.TotalMimicWeaponAppearance(
-        --        MimicUtil.BaseWeapons.SpearHades,
-        --        JessAspects_BoonsAsAspects.Data.SpearHades,
-        --        TraitData.Jess_SpearHadesBoonTrait
-        --)
+        MimicUtil.TotalMimicWeaponAppearance(
+                MimicUtil.BaseWeapons.SpearHades,
+                JessAspects_BoonsAsAspects.Data.SpearHades,
+                TraitData.Jess_SpearHadesBoonTrait
+        )
 
         TraitData.Jess_SpearHadesBoonTrait.Icon = "Boon_Hades_01"
-
-        --local otherGods = {
-        --    "Aphrodite", "Artemis", "Athena", "Zeus",
-        --    "Poseidon", "Ares", "Dionysus", "Demeter"
-        --}
-        --for _, god in otherGods do
-        --    MimicUtil.RequireFalse(
-        --            god.."ShoutTrait",
-        --            "Jess_SpearHadesBoonTrait"
-        --    )
-        --end
     end
 
     -- Shield of Chaos ★ Chaos' Favor --
@@ -374,13 +478,11 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                     BaseMax = 70,
                     -- DepthDamageMultiplier
                     DepthMult = 0.0,
-                    IdenticalMultiplier =
-                    {
+                    IdenticalMultiplier = {
                         -- DuplicateStrongMultiplier
                         Value = -0.40,
                     },
-                    ExtractValue =
-                    {
+                    ExtractValue = {
                         ExtractAs = "AspectExtract",
                     }
                 },
@@ -394,8 +496,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                     ProjectileProperty = "CriticalHitChance",
                     ChangeValue = 0.10,
                     ChangeType = "Absolute",
-                    ExtractValue =
-                    {
+                    ExtractValue = {
                         ExtractAs = "TooltipCritChance",
                         Format = "Percent",
                         SkipAutoExtract = true

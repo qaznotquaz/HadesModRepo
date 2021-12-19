@@ -1,7 +1,12 @@
-Load Priority 10
+To "Scripts/WeaponData.lua"
+Import "WeaponData.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "WeaponSets.lua"
+
+To "Scripts/TraitData.lua"
+Import "TraitData.lua"
+
+:: credit to niicco#0886 for the work in this file. it's the only stuff that actually works so far lol
 To "Game/Weapons/PlayerWeapons.sjson"
 SJSON "PlayerWeapons.sjson"
-
-Load Priority 15
-To "Game/Weapons/PlayerWeapons.sjson"
-SJSON "PlayerWeapons2.sjson"

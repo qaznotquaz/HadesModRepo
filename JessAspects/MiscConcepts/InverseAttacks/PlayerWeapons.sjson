@@ -1,22 +1,79 @@
+// this file is based on some work that niicco#0886 sent me over discord. the work i was sent was a modified .sjson file, while this is an .sjson merge file for use with the modimporter - with a few of my own changes.
+// it doesn't entirely work yet.
+
 {
     Weapons = {
         _sequence = true
-        9={
-            SwapOnFire = false
+
+        // Shield changes
+        9 = { // ShieldWeapon
+            SwapOnFire = "ShieldThrow"
+            AddOnFire = "ShieldThrow"
         }
-        11={
-            Control = false
-            FullyAutomatic = ""
-            FireOnRelease = ""
-            MinChargeToFire = false
-            ChargeTime = false
-            ChargeRangeMultiplier = false
-            ChargeVelocityMultiplier = false
-            ChargeDamageMultiplier = false
-            Effects = ""
+        11 = { // ShieldWeaponRush
+            Control = "Attack3"
+            BlockMoveInput = true
+            FullyAutomatic = true
+            FireFx = "null"
+            AimLineAnimation = "AuraAimLineNoMovement"
+            LockTriggerForCharge = false
+            DisableOwnerForDuration = 0.0
+            CanCancelDisables = false
+            AcceptTriggerLockRequests = false
+            ClearFireRequestOnSwap = true
+            ForceReleaseOnFire = true
+            SetCompleteAngleOnFire = true
+            SetCompleteAngleOnCharge = false
+
+            RemoveControlOnCharge = "ShieldWeapon"
+            RemoveControlOnCharge2 = "ShieldThrow"
+            AddControlOnFire = "ShieldWeapon"
+            AddControlOnFire2 = "ShieldThrow"
+            AddControlOnChargeCancel = "ShieldWeapon"
+            AddControlOnChargeCancel = "ShieldThrow"
         }
-        42={
-            Control = false
+        42 = { // ShieldThrow
+            Control = "Attack2"
+            FullyAutomatic = true
+            MinChargeToFire = 1.0
+            LoseControlOnRelease = true
+            LoseControlIfNotCharging = false
+            LockTriggerForCharge = "_delete"
+            RemoveControlOnFire5 = "ShieldWeaponRush"
+            ReloadOnRelease = true
+        }
+
+        // Spear changes
+        12 = { // SpearWeapon
+            AddOnFire = "SpearWeaponThrow"
+        }
+        16 = { // SpearWeaponSpin
+            Control = "Attack3"
+            FullyAutomatic = false
+            DisallowedControl = "_delete"
+            LoseControlOnRelease = "_delete"
+            LoseControlIfNotCharging = "_delete"
+            RemoveControlOnCharge = "SpearWeapon"
+            RemoveControlOnCharge2 = "SpearWeapon2"
+            RemoveControlOnCharge3 = "SpearWeapon3"
+            AddControlOnFire = "SpearWeapon"
+            AddControlOnChargeCancel = "SpearWeapon"
+        }
+        19 = { // SpearWeaponThrow
+            Control = "Attack2"
+            FullyAutomatic = true
+            MinChargeToFire = 1.0
+            LoseControlOnRelease = true
+            LoseControlIfNotCharging = false
+            LockTriggerForCharge = "_delete"
+            RemoveControlOnFire5 = "SpearWeaponSpin"
+            ReloadOnRelease = true
+        }
+        20 = { // SpearWeaponThrowReturn
+            InheritFrom = "SpearWeapon"
+            AlternateControl = "Attack3"
+            SwapOnFire = "_delete"
+            FullyAutomatic = false
         }
     }
 }

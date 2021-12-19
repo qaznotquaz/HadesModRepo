@@ -1,0 +1,1 @@
+TraitData.ShieldBaseUpgradeTrait.PreEquipWeapons = { "ShieldWeaponRush" }

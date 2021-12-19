@@ -1,5 +1,7 @@
 // this file is based on some work that niicco#0886 sent me over discord. the work i was sent was a modified .sjson file, while this is an .sjson merge file for use with the modimporter - with a few of my own changes.
 // it doesn't entirely work yet.
+//
+// IMPORTANT: must be used with the version of the modimporter with the 'better delete mechanism', so make sure your modimporter is fully up-to-date
 
 {
     Weapons = {

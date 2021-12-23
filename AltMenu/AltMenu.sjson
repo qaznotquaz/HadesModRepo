@@ -1,0 +1,10 @@
+{
+    MainMenuScreen = {
+        Logo = {
+            Graphic = "MainMenuZagIn"
+            FadeDelayMin = 1.0
+            FadeDelayMax = 1.0
+            FadeSpeed = 200.0
+        }
+    }
+}

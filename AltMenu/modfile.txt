@@ -1,0 +1,8 @@
+:: changes based directly on this post from AltheaR
+:: > https://www.nexusmods.com/hades/videos/1
+
+:: will not work correctly, i think, without the version of the modimporter sent in the hades modding discord here
+:: > https://discord.com/channels/667753182608359424/667757899111596071/921399993624051764
+
+To "Game/GUI/MainMenuScreen.sjson"
+SJSON "AltMenu.sjson"

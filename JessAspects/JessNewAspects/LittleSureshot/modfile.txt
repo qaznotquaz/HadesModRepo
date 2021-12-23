@@ -1,5 +1,6 @@
 -: Adamant Rail ★ Aspect of Annie Oakley :-
 
+:: lua appends
 Top Import "config.lua"
 Import "LittleSureshot.lua"
 
@@ -9,5 +10,12 @@ Import "TraitData.lua"
 To "Scripts/WeaponUpgradeData.lua"
 Import "WeaponUpgradeData.lua"
 
+:: SJSON merges
 To "Game/Text/en/HelpText.en.sjson"
 SJSON "HelpText.en.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "PlayerWeapons.sjson"
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "PlayerProjectiles.sjson"

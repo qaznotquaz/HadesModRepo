@@ -1,0 +1,17 @@
+{
+  Weapons = [
+    "_append"
+    {
+      Name = "GunCritTargetWeapon"
+      InheritFrom = "1_BaseMagicWeapon"
+      Type = "GUN"
+      Projectile = "GunCritTargetWeapon"
+      ClearFireRequestOnChargeCancel = false
+      FullyAutomatic = true
+      AutoLock = true
+      FireFx = "null"
+      IgnoreOwnerAttackDisabled = true
+      SilentImpact = true
+    }
+  ]
+}

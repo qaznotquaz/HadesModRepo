@@ -28,11 +28,9 @@ if JessAspects_LittleSureshot.Config.Enabled then
         },
 
         -- Higher Crit Chance on Targeted Enemies? / part 1 --
-        --[[
-        AddOnFireWeapons = { "CritVulnerabilityWeapon" },
+        AddOnFireWeapons = { "GunCritTargetWeapon" },
         LegalOnFireWeapons = { "GunGrenadeToss" },
         AddOnFireWeaponArgs = { UseTargetLocation = true },
-        ]]--
 
         -- Normal Shot dislodge cast --
         DislodgeAmmoProperties = {
@@ -57,11 +55,11 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ChangeType = "Absolute"
             },
 
-            -- GunWeapon Weapon acts like a six-shooter
+            -- GunWeapon Weapon single-shot
             {
                 WeaponNames = { "GunWeapon" },
                 WeaponProperty = "MaxAmmo",
-                ChangeValue = 6,
+                ChangeValue = 1,
                 ChangeType = "Absolute",
                 ExcludeLinked = true
             },
@@ -73,25 +71,32 @@ if JessAspects_LittleSureshot.Config.Enabled then
             },
             {
                 WeaponNames = { "GunWeapon" },
-                WeaponProperty = "Cooldown",
-                ChangeValue = 0.5,
-                ChangeType = "Absolute",
-                ExcludeLinked = true
+                WeaponProperty = "ReloadTime",
+                BaseValue = 0.0,
+                ChangeType = "Absolute"
             },
-            {
-                WeaponNames = { "GunWeaponDash" },
-                WeaponProperty = "Cooldown",
-                ChangeValue = 0.2,
-                ChangeType = "Absolute",
-                ExcludeLinked = true
-            },
-            {
-                WeaponNames = { "GunWeapon" },
-                WeaponProperty = "ChargeTimeFrames",
-                ChangeValue = 8,
-                ChangeType = "Absolute",
-                ExcludeLinked = true
-            },
+            --{
+            --    WeaponNames = { "GunWeapon" },
+            --    WeaponProperty = "Cooldown",
+            --    ChangeValue = 0.25,
+            --    ChangeType = "Absolute"
+            --},
+            --{
+            --    WeaponNames = { "GunWeapon" },
+            --    WeaponProperty = "ChargeTimeFrames",
+            --    ChangeValue = 4,
+            --    ChangeType = "Absolute",
+            --    ExcludeLinked = true
+            --},
+
+            -- GunReloadSelf faster reload --
+            --{
+            --    WeaponNames = { "GunReloadSelf" },
+            --    EffectName = "ZagreusSelfReload",
+            --    ChangeValue = "Absolute",
+            --    EffectProperty = "Duration",
+            --    ChangeValue = 0.0
+            --},
 
             -- GunWeapon Projectile Faster/Farther
             {
@@ -107,26 +112,48 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ChangeType = "Absolute"
             },
 
-            -- GunWeapon Projectile 30 Damage --
+            -- GunWeapon Projectile 25 Damage --
             {
                 WeaponNames = { "GunWeapon" },
                 ProjectileProperty = "DamageHigh",
-                ChangeValue = 30,
-                ChangeType = "Absolute"
+                ChangeValue = 25,
+                ChangeType = "Absolute",
+                ExcludeLinked = true
             },
             {
                 WeaponNames = { "GunWeapon" },
                 ProjectileProperty = "DamageLow",
-                ChangeValue = 30,
-                ChangeType = "Absolute"
+                ChangeValue = 25,
+                ChangeType = "Absolute",
+                ExcludeLinked = true
+            },
+
+            -- GunWeaponDash Projectile 35 Damage --
+            {
+                WeaponNames = { "GunWeaponDash" },
+                ProjectileProperty = "DamageHigh",
+                ChangeValue = 35,
+                ChangeType = "Absolute",
+                ExcludeLinked = true
+            },
+            {
+                WeaponNames = { "GunWeaponDash" },
+                ProjectileProperty = "DamageLow",
+                ChangeValue = 35,
+                ChangeType = "Absolute",
+                ExcludeLinked = true
             },
 
             -- GunWeapon Projectile Levelling Crit Chance --
             {
                 WeaponNames = { "GunWeapon" },
                 ProjectileProperty = "CriticalHitChance",
-                BaseValue = 0.17,
-                ChangeType = "Add"
+                BaseValue = 0.15,
+                ChangeType = "Add",
+                ExtractValue = {
+                    ExtractAs = "TooltipCritChance",
+                    Format = "Percent",
+                }
             },
 
             -- GunGrenadeToss Projectile 20 Damage --
@@ -134,13 +161,15 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 WeaponNames = { "GunGrenadeToss" },
                 ProjectileProperty = "DamageLow",
                 ChangeValue = 20,
-                ChangeType = "Absolute"
+                ChangeType = "Absolute",
+                ExcludeLinked = true
             },
             {
                 WeaponNames = { "GunGrenadeToss" },
                 ProjectileProperty = "DamageHigh",
                 ChangeValue = 20,
-                ChangeType = "Absolute"
+                ChangeType = "Absolute",
+                ExcludeLinked = true
             },
 
             -- GunGrenadeToss Projectile Slower --
@@ -153,7 +182,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
             {
                 WeaponNames = { "GunGrenadeToss" },
                 ProjectileProperty = "Gravity",
-                ChangeValue = 400,
+                ChangeValue = 300,
                 ChangeType = "Absolute"
             },
 
@@ -185,112 +214,34 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ExcludeLinked = true,
             },
 
-            -- Bloodstone Graphics? --
-            --[[{
-                WeaponNames = { "GunWeapon" },
-                ProjectileProperty = "Thing",
-                ChangeType = "Absolute",
-                ChangeValue = {
-                    Graphic = "BloodstoneProjectile",
-                    OffsetZ = 112,
-                    AttachedAnim = "SlingShotShadow",
-                    Grip = 999999,
-                    RotateGeometry = true,
-                    Tallness = 20,
-                    Points = {
-                        {
-                            X = 76,
-                            Y = 20
-                        },
-                        {
-                            X = 76,
-                            Y = -20
-                        },
-                        {
-                            X = -32,
-                            Y = -20
-                        },
-                        {
-                            X = -32,
-                            Y = 20
-                        }
-                    }
-                }
-            }
-            ]]--
-
             -- Higher Crit Chance on Targeted Enemies? / part 2 --
-            --[[
             {
-                WeaponNames = { "CritVulnerabilityWeapon" },
-                EffectName = "ImpactVulnerability",
-                EffectProperty = "Modifier",
-                ChangeValue = 0.30,
-                ChangeType = "Add"
-            },
-            {
-                WeaponNames = { "CritVulnerabilityWeapon" },
-                EffectName = "ImpactVulnerability",
-                EffectProperty = "Type",
-                ChangeValue = 0.30,
-                ChangeType = "Add"
-            },
-            {
-                TraitName = "GunExplodingSecondaryTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "Type",
-                ChangeValue = "STRAIGHT",
-            },
-            {
-                TraitName = "GunExplodingSecondaryTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "Speed",
-                ChangeValue = 2200,
-                ChangeType = "Absolute",
-            },
-            {
-                TraitName = "GunExplodingSecondaryTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "DetonateLineOfSightFromOwner",
-                ChangeValue = true,
-                ChangeType = "Absolute",
-            },
-            {
-                TraitName = "GunExplodingSecondaryTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "CheckObstacleImpact",
-                ChangeValue = true,
-                ChangeType = "Absolute",
-            },
-            {
-                TraitName = "GunExplodingSecondaryTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "Range",
-                ChangeValue = 800,
-                ChangeType = "Absolute",
-            },
-            {
-                TraitName = "GunGrenadeDropTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "UseStartLocation",
-                ChangeValue = true,
-                ChangeType = "Absolute",
-            },
-            {
-                TraitName = "GunGrenadeDropTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "UseStartLocation",
-                ChangeValue = true,
-                ChangeType = "Absolute",
-            },
-            {
-                TraitName = "GunGrenadeDropTrait",
-                WeaponName = "CritVulnerabilityWeapon",
-                ProjectileProperty = "DamageRadius",
-                ChangeValue = 1.5,
-                ChangeType = "Multiply",
+                WeaponName = "GunCritTargetWeapon",
+                EffectName = "CritVulnerability",
+                EffectProperty = "CritVulnerabilityAddition",
+                BaseValue = 0.10,
+                ExtractValue = {
+                    ExtractAs = "CritTargetVulnerability",
+                    Format = "Percent",
+                },
+                CustomRarityMultiplier = {
+                    Common = {
+                        Multiplier = 1.0
+                    },
+                    Rare = {
+                        Multiplier = 1.2
+                    },
+                    Epic = {
+                        Multiplier = 1.4
+                    },
+                    Heroic = {
+                        Multiplier = 1.6
+                    },
+                    Legendary = {
+                        Multiplier = 1.8
+                    },
+                },
             }
-            ]]--
         }
     }
 

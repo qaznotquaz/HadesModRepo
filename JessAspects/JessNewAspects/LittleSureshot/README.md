@@ -6,7 +6,7 @@ lorem ipsum dolor sit amet
 - Attack Changes
     - [ ] make visual bigger/flashier?
     - [x] 15% - 75% bonus crit chance (scales with level)
-    - [ ] crit dislodges cast - reference CriticalStunTrait
+    - [x] crit dislodges cast
     - [x] single-shot rifle
       - [ ] faster reload to somewhat compensate - do i need to futz with the animation or something?
 - Special Changes

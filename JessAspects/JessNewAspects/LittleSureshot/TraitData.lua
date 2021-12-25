@@ -9,6 +9,7 @@
 if JessAspects_LittleSureshot.Config.Enabled then
     TraitData.Jess_GunLittleSureshotTrait = {
         InheritFrom = { "WeaponEnchantmentTrait" },
+        CustomTrayText = "Jess_GunLittleSureshotTrait_Tray",
         RarityLevels = {
             Common = {
                 Multiplier = 1.0
@@ -27,17 +28,23 @@ if JessAspects_LittleSureshot.Config.Enabled then
             }
         },
 
-        -- Higher Crit Chance on Targeted Enemies? / part 1 --
+        -- Levelling Bonus Crit Chance on Targeted Enemies / part 1 --
         AddOnFireWeapons = { "GunCritTargetWeapon" },
         LegalOnFireWeapons = { "GunGrenadeToss" },
         AddOnFireWeaponArgs = { UseTargetLocation = true },
 
-        -- Normal Shot dislodge cast --
-        DislodgeAmmoProperties = {
-            ValidWeapons = { "GunWeapon" },
+        -- Crits dislodge cast --
+        CritDislodgeAmmoProperties = {
+            ValidWeapons = { "GunWeapon", "GunGrenadeWeapon" },
             ForceMin = 300,
             ForceMax = 420
         },
+
+        OnEnemyCrittedFunction = {
+            Name = "CritDislodges",
+            Args = nil
+        },
+
         DroppedAmmoForceMultiplier = 5,
 
         PropertyChanges = {
@@ -148,7 +155,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
             {
                 WeaponNames = { "GunWeapon" },
                 ProjectileProperty = "CriticalHitChance",
-                BaseValue = 0.15,
+                BaseValue = 0.03,
                 ChangeType = "Add",
                 ExtractValue = {
                     ExtractAs = "TooltipCritChance",
@@ -160,14 +167,14 @@ if JessAspects_LittleSureshot.Config.Enabled then
             {
                 WeaponNames = { "GunGrenadeToss" },
                 ProjectileProperty = "DamageLow",
-                ChangeValue = 20,
+                ChangeValue = 10,
                 ChangeType = "Absolute",
                 ExcludeLinked = true
             },
             {
                 WeaponNames = { "GunGrenadeToss" },
                 ProjectileProperty = "DamageHigh",
-                ChangeValue = 20,
+                ChangeValue = 10,
                 ChangeType = "Absolute",
                 ExcludeLinked = true
             },
@@ -214,7 +221,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ExcludeLinked = true,
             },
 
-            -- Higher Crit Chance on Targeted Enemies? / part 2 --
+            -- Levelling Bonus Crit Chance on Targeted Enemies / part 2 --
             {
                 WeaponName = "GunCritTargetWeapon",
                 EffectName = "CritVulnerability",

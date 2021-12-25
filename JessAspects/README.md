@@ -24,16 +24,16 @@ to enable/disable particular submodules, comment out their **Include** statement
   - [Twin Fists ★ Demeter's Strike](BoonsAsAspects)
   - [Adamant Rail ★ Hermes' Evasion](BoonsAsAspects)
 - *Under Construction*
-  - [swap spear/shield charge attack with their special](MiscConcepts/InverseAttacks)
   - [Adamant Rail ★ Annie Oakley](JessNewAspects/LittleSureshot)
+  - [Adamant Rail ★ Aspect of Jess](JessNewAspects/MagicBombs)
 - *Unimplemented*
   - [Eternal Spear ★ Hades' Call](BoonsAsAspects)
-  - [Adamant Rail ★ Aspect of Jess](JessNewAspects/MagicBombs)
   - [Heart-Seeking Bow ★ Cleopatra](JessNewAspects/temp_Cleopatra)
   - [Twin Fists ★ Mike Tyson](JessNewAspects/temp_MikeTyson)
   - [Eternal Spear ★ Merlin](JessNewAspects/temp_Merlin)
   - [Heart-Seeking Bow ★ Robin Hood](JessNewAspects/temp_RobinHood)
   - [can i make a sword that looks like fists?](MiscConcepts/InaccurateGraphics)
+  - [swap spear/shield charge attack with their special](MiscConcepts/InverseAttacks)
 
 ## General TODO
 - [x] Write the README

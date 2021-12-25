@@ -1,0 +1,23 @@
+{
+    Animations = [
+        "_append"
+        {
+              Name = "ExitWoundsFx_Annie"
+              InheritFrom = "BloodImpactA"
+              VisualFx = "ExitWoundsFxB"
+              ScaleX = 2.0
+              VisualFxCap = 6
+              VisualFxIntervalMax = 0.06
+              VisualFxIntervalMin = 0.04
+              OffsetZ = 60
+              AngleFromOwner = "Maintain"
+              CreateAnimations = [
+                { Name = "ExitWoundsFxB" }
+                { Name = "ExitWoundsFxC" }
+                { Name = "QuickFlashGreen" }
+                { Name = "QuickFlashGreen" }
+                { Name = "ExitWoundsFlare" }
+              ]
+            }
+    ]
+}

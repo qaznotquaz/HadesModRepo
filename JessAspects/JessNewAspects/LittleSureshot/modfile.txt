@@ -2,6 +2,7 @@
 
 :: lua appends
 Top Import "config.lua"
+
 Import "LittleSureshot.lua"
 
 To "Scripts/TraitData.lua"
@@ -19,3 +20,6 @@ SJSON "PlayerWeapons.sjson"
 
 To "Game/Projectiles/PlayerProjectiles.sjson"
 SJSON "PlayerProjectiles.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "Fx.sjson"

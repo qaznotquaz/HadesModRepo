@@ -4,12 +4,12 @@
         {
             Id = "Jess_GunLittleSureshotTrait"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipCritChance:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.CritTargetVulnerability:P}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Under_Construction}. Flavor text."
+            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipCritChance:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.CritTargetVulnerability:P}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Delta"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Under_Construction}. Flavor text."
+            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Tray"
@@ -22,9 +22,9 @@
             Description = "Foes targeted by your special are more vulnerable to {$Keywords.Crit} hits."
         }
         {
-            Id = "Under_Construction"
-            DisplayName = "Status: {#PenaltyFormat}Under Construction{#PreviousFormat}"
-            Description = "{!Icons.Alert} Some of this has been implemented, but not all. Watch for future updates!"
+            Id = "Prototype"
+            DisplayName = "Status: {#PenaltyFormat}Prototype{#PreviousFormat}"
+            Description = "{!Icons.Alert} This is fully functional, but may change during QA. Watch for future updates!"
         }
     ]
 }

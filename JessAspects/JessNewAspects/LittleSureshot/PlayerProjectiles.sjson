@@ -39,8 +39,8 @@
         TimeModifierFraction = 0
         CritMultiplierVulnerabilityAddition = 0.0
         IsVulnerabilityEffect = true
-        BackFx = "ArtemisCritVulnerabilityStatus"
-        FrontFx = "null"
+        FrontFx = "GunWeaponMarkTarget_Annie"
+        BackFx = "null"
       }
     }
   ]

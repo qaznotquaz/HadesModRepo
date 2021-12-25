@@ -4,22 +4,22 @@
         {
             Id = "Jess_GunLittleSureshotTrait"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes, and you have {$Keywords.Annie_SharpAim}. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipCritChance:P} \n\n {#ItalicFormatDark}{$Keywords.Under_Construction}. Flavor text."
+            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipCritChance:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.CritTargetVulnerability:P}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Under_Construction}. Flavor text."
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Delta"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes, and you have {$Keywords.Annie_SharpAim}. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n\n {#ItalicFormatDark}{$Keywords.Under_Construction}. Flavor text."
+            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Under_Construction}. Flavor text."
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Tray"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes, and you have {$Keywords.Annie_SharpAim}. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}"
+            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat}"
         }
         {
             Id = "Annie_SharpAim"
-            DisplayName = "Sharp Aim"
-            Description = "Foes targeted by your special are {#UpgradeFormat}{$TooltipData.DisplayDelta2} more vulnerable to critical hits."
+            DisplayName = "Called Shots"
+            Description = "Foes targeted by your special are more vulnerable to {$Keywords.Crit} hits."
         }
         {
             Id = "Under_Construction"

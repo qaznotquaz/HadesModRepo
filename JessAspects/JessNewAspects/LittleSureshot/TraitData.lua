@@ -163,7 +163,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 }
             },
 
-            -- GunGrenadeToss Projectile 20 Damage --
+            -- GunGrenadeToss Projectile 10 Damage --
             {
                 WeaponNames = { "GunGrenadeToss" },
                 ProjectileProperty = "DamageLow",
@@ -226,7 +226,8 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 WeaponName = "GunCritTargetWeapon",
                 EffectName = "CritVulnerability",
                 EffectProperty = "CritVulnerabilityAddition",
-                BaseValue = 0.10,
+                BaseValue = 0.08,
+                ChangeType = "Add",
                 ExtractValue = {
                     ExtractAs = "CritTargetVulnerability",
                     Format = "Percent",
@@ -236,16 +237,16 @@ if JessAspects_LittleSureshot.Config.Enabled then
                         Multiplier = 1.0
                     },
                     Rare = {
-                        Multiplier = 1.2
+                        Multiplier = 1.25
                     },
                     Epic = {
-                        Multiplier = 1.4
+                        Multiplier = 1.5
                     },
                     Heroic = {
-                        Multiplier = 1.6
+                        Multiplier = 1.75
                     },
                     Legendary = {
-                        Multiplier = 1.8
+                        Multiplier = 2.0
                     },
                 },
             }

@@ -68,26 +68,25 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 WeaponProperty = "MaxAmmo",
                 ChangeValue = 1,
                 ChangeType = "Absolute",
-                ExcludeLinked = true
-            },
-            {
-                WeaponNames = { "GunWeapon" },
-                WeaponProperty = "FullyAutomatic",
-                ChangeValue = false,
-                ChangeType = "Absolute"
-            },
-            {
-                WeaponNames = { "GunWeapon" },
-                WeaponProperty = "ReloadTime",
-                BaseValue = 0.0,
-                ChangeType = "Absolute"
             },
             --{
             --    WeaponNames = { "GunWeapon" },
-            --    WeaponProperty = "Cooldown",
-            --    ChangeValue = 0.25,
+            --    WeaponProperty = "FullyAutomatic",
+            --    ChangeValue = false,
             --    ChangeType = "Absolute"
             --},
+            --{
+            --    WeaponNames = { "GunWeapon" },
+            --    WeaponProperty = "ReloadTime",
+            --    BaseValue = 0.0,
+            --    ChangeType = "Absolute"
+            --},
+            -- {
+            --     WeaponNames = { "GunWeapon" },
+            --     WeaponProperty = "Cooldown",
+            --     ChangeValue = 0.25,
+            --     ChangeType = "Absolute"
+            -- },
             --{
             --    WeaponNames = { "GunWeapon" },
             --    WeaponProperty = "ChargeTimeFrames",
@@ -151,18 +150,6 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ExcludeLinked = true
             },
 
-            -- GunWeapon Projectile Levelling Crit Chance --
-            {
-                WeaponNames = { "GunWeapon" },
-                ProjectileProperty = "CriticalHitChance",
-                BaseValue = 0.03,
-                ChangeType = "Add",
-                ExtractValue = {
-                    ExtractAs = "TooltipCritChance",
-                    Format = "Percent",
-                }
-            },
-
             -- GunGrenadeToss Projectile 10 Damage --
             {
                 WeaponNames = { "GunGrenadeToss" },
@@ -221,6 +208,18 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ExcludeLinked = true,
             },
 
+            -- Levelling Crit Chance from GunWeapon --
+            {
+                WeaponNames = { "GunWeapon" },
+                ProjectileProperty = "CriticalHitChance",
+                BaseValue = 0.03,
+                ChangeType = "Add",
+                ExtractValue = {
+                    ExtractAs = "TooltipCritChance",
+                    Format = "Percent",
+                }
+            },
+
             -- Levelling Bonus Crit Chance on Targeted Enemies / part 2 --
             {
                 WeaponName = "GunCritTargetWeapon",
@@ -258,4 +257,9 @@ if JessAspects_LittleSureshot.Config.Enabled then
             JessAspects_LittleSureshot.Data.GunAnnie,
             TraitData.Jess_GunLittleSureshotTrait
     )
+
+    -- disallow Delta Chamber, Spread Fire, and Flurry Fire
+    MimicUtil.RequireFalse("GunInfiniteAmmoTrait", "Jess_GunLittleSureshotTrait")
+    MimicUtil.RequireFalse("GunShotgunTrait", "Jess_GunLittleSureshotTrait")
+    MimicUtil.RequireFalse("GunMinigunTrait", "Jess_GunLittleSureshotTrait")
 end

@@ -4,17 +4,17 @@
         {
             Id = "Jess_GunLittleSureshotTrait"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipCritChance:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.CritTargetVulnerability:P}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
+            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipCritChance:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.CritTargetVulnerability:P}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Delta"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
+            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Tray"
             DisplayName = "Aspect of Annie"
-            Description = "Your gun's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat}"
+            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat}"
         }
         {
             Id = "Annie_SharpAim"

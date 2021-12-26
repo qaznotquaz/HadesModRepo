@@ -1,5 +1,5 @@
 ModUtil.MapSetTable(KeywordList, {
-    "Under_Construction",
+    "Prototype",
     "Annie_SharpAim"
 })
 

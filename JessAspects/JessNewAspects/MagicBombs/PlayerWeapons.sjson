@@ -1,0 +1,10 @@
+{
+  Weapons = [
+    "_append"
+    {
+      Name = "Jess_GunLoadAmmoApplicator"
+      InheritFrom = "LoadAmmoApplicator"
+      Projectile = "null"
+    }
+  ]
+}

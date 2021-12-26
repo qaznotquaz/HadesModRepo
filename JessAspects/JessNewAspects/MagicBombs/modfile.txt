@@ -1,6 +1,8 @@
 -: Adamant Rail ★ Aspect of Jess :-
 
+:: lua appends
 Top Import "config.lua"
+
 Import "MagicBombs.lua"
 
 To "Scripts/TraitData.lua"
@@ -15,5 +17,13 @@ Import "LootData.lua"
 To "Scripts/Powers.lua"
 Import "Powers.lua"
 
+To "Scripts/WeaponData.lua"
+Import "WeaponData.lua"
+
+:: sjson merges
+
 To "Game/Text/en/HelpText.en.sjson"
 SJSON "HelpText.en.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "PlayerWeapons.sjson"

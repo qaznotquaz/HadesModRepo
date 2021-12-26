@@ -9,11 +9,11 @@ if JessAspects_MagicBombs.Config.Enabled then
             AmmoDropUpwardForceMax = 1030,
         },
         RequiredWeapons = { "GunWeapon", "RangedWeapon" },
-        PreEquipWeapons = { "LoadAmmoApplicator" },
+        PreEquipWeapons = { "Jess_GunLoadAmmoApplicator" },
         OverrideWeaponFireNames =
         {
             RangedWeapon = "nil",
-            SelfLoadAmmoApplicator = "RangedWeapon",
+            Jess_GunLoadAmmoApplicator = "RangedWeapon",
         },
         OnProjectileDeathFunction =
         {
@@ -24,8 +24,7 @@ if JessAspects_MagicBombs.Config.Enabled then
         },
         SetupFunction =
         {
-            Name = "SetupAmmoLoad",
-            Args = { MaxCount = 99 },
+            Name = "Jess_SetupGunAmmoLoad",
             RunOnce = true,
         },
         PropertyChanges = {

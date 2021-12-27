@@ -49,6 +49,13 @@ end
 function Jess_BombFireClear(triggerArgs, args)
     if HeroHasTrait("Jess_GunMagicBombsTrait") and CurrentRun.CurrentRoom.LoadedAmmo and CurrentRun.CurrentRoom.LoadedAmmo > 0 and triggerArgs.name == "GunGrenadeToss" and CurrentRun.Hero.StoredAmmo and CurrentRun.CurrentRoom.LoadedAmmo then
         local numAmmo = CurrentRun.CurrentRoom.LoadedAmmo
+        if HeroHasTrait("ShieldLoadAmmo_ZeusRangedTrait" ) then
+            local targetId = SpawnObstacle({ Name = "InvisibleTarget", Group = "Scripting", LocationX = triggerArgs.LocationX, LocationY = triggerArgs.LocationY })
+            for i = 1, numAmmo do
+                thread(FireWeaponWithinRange, { SourceId = targetId, Range = 350, SeekTarget = true, WeaponName = "ZeusShieldLoadAmmoStrike", InitialDelay = 0.1 * i, Delay = 0.25, Count = 1, BonusChance = GetTotalHeroTraitValue("BonusBolts") })
+            end
+            thread( DestroyOnDelay, { targetId }, 3 )
+        end
 
         thread( UnloadAmmoThread, { Count = numAmmo , Attacker = CurrentRun.Hero, Angle = GetAngle({Id = CurrentRun.Hero.ObjectId}), LocationX = triggerArgs.LocationX, LocationY = triggerArgs.LocationY, Interval = args.Interval })
 

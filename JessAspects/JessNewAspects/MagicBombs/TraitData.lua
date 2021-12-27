@@ -151,23 +151,17 @@ if JessAspects_MagicBombs.Config.Enabled then
             TraitData.Jess_GunMagicBombsTrait
     )
 
-    -- disallow traditional casts and clone beowulf traits. dionysus and poseidon need to be handled separately
+    -- disallow traditional casts and modify beowulf casts. dionysus and poseidon need to be handled separately
     local basicGods = {
         "Aphrodite", "Ares", "Artemis", "Athena", "Demeter", --[[ "Dionysus", "Poseidon", ]] "Zeus"
     }
 
+    local traitName
     for _, godName in pairs(basicGods) do
+        traitName = "ShieldLoadAmmo_"..godName.."RangedTrait"
         MimicUtil.RequireFalse(godName.."RangedTrait", "Jess_GunMagicBombsTrait")
-        MimicUtil.CloneTrait(
-                "ShieldLoadAmmo_"..godName.."RangedTrait",
-                "Jess_GunLoadAmmo_"..godName.."RangedTrait",
-                {
-                    RequiredTrait = "Jess_GunMagicBombsTrait"
-                },
-                {
-                    CustomTrayText = true
-                }
-        )
+        TraitData[traitName].RequiredTrait = nil
+        TraitData[traitName].RequiredOneOfTraits = {"ShieldLoadAmmoTrait", "Jess_GunMagicBombsTrait"}
     end
 
     ModUtil.MapSetTable(TraitData.DionysusRangedTrait.TraitDependencyTextOverrides, {
@@ -185,87 +179,4 @@ if JessAspects_MagicBombs.Config.Enabled then
     })
 
     MimicUtil.MimicForeignPropertyModifiers("ShieldLoadAmmoTrait", "Jess_GunMagicBombsTrait")
-
-    --[[ TraitData.GunMagicBomb_AphroditeRangedTrait = {
-        InheritFrom = { "ShopTier1Trait" },
-        CustomTrayText = "ShieldLoadAmmo_AphroditeRangedTrait_Tray",
-        RequiredTrait = "Jess_GunMagicBombsTrait",
-        Icon = "Boon_Aphrodite_02",
-        God = "Aphrodite",
-        Slot = "Ranged",
-        RarityLevels = {
-            Common = {
-                Multiplier = 1.0,
-            },
-            Rare = {
-                Multiplier = 1.2,
-            },
-            Epic = {
-                Multiplier = 1.4,
-            },
-            Heroic = {
-                Multiplier = 1.6,
-            }
-        },
-        PropertyChanges = {
-            {
-                WeaponNames = { WeaponSets.HeroNonPhysicalWeapons },
-                WeaponProperty = "Projectile",
-                ChangeValue = "AphroditeBeowulfProjectile",
-                ChangeType = "Absolute",
-            },
-            {
-                WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
-                ProjectileProperty = "DamageLow",
-                BaseMin = 80,
-                BaseMax = 80,
-                DepthMult = DepthDamageMultiplier,
-                IdenticalMultiplier = {
-                    Value = DuplicateStrongMultiplier,
-                },
-                ExtractValue = {
-                    ExtractAs = "TooltipDamage",
-                }
-            },
-            {
-                WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
-                ProjectileProperty = "DamageHigh",
-                DeriveValueFrom = "DamageLow"
-            },
-            {
-                WeaponName = "RangedWeapon",
-                EffectName = "OnHitStun",
-                EffectProperty = "Active",
-                ChangeValue = false,
-            },
-        },
-        ExtractValues = {
-            {
-                ExtractAs = "BaseRangedDamage",
-                External = true,
-                BaseType = "Projectile",
-                BaseName = "RangedWeapon",
-                BaseProperty = "DamageLow",
-            },
-            {
-                ExtractAs = "TooltipWeakDuration",
-                SkipAutoExtract = true,
-                External = true,
-                BaseType = "Effect",
-                WeaponName = "SwordWeapon",
-                BaseName = "ReduceDamageOutput",
-                BaseProperty = "Duration",
-            },
-            {
-                ExtractAs = "TooltipWeakPower",
-                SkipAutoExtract = true,
-                External = true,
-                BaseType = "Effect",
-                WeaponName = "SwordWeapon",
-                BaseName = "ReduceDamageOutput",
-                BaseProperty = "Modifier",
-                Format = "NegativePercentDelta"
-            }
-        }
-    } ]]--
 end

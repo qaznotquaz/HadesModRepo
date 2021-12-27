@@ -2,15 +2,25 @@
     Texts = [
         "_append"
         {
-        Id = "Jess_GunMagicBombsTrait"
-        DisplayName = "Aspect of Jess"
-        Description = "Loads your cast into your special.{$JessAspects_MagicBombs.CustomText.Flavor}"
+            Id = "Jess_GunMagicBombsTrait"
+            DisplayName = "Aspect of Jess"
+            Description = "Loads your cast into your special.{$JessAspects_MagicBombs.CustomText.Flavor}"
+        }
+        {
+            Id = "Jess_GunLoadAmmo_DionysusRangedTrait"
+            DisplayName = "Trippy Flare"
+            Description = "Your {$Keywords.Cast} damages foes in the blast, leaving behind {$Keywords.Cloud}. \n {!Icons.Bullet}{#PropertyFormat}Blast Damage: \Column 380 {$TooltipData.DisplayDelta2}"
+        }
+        {
+            Id = "Jess_GunLoadAmmo_DionysusRangedTrait_Initial"
+            InheritFrom = "Jess_GunLoadAmmo_DionysusRangedTrait"
+            Description = "Your {$Keywords.Cast} damages foes in the blast, leaving behind {$Keywords.Cloud}. \n {!Icons.Bullet}{#PropertyFormat}Blast Damage: \Column 380 {#OldFormat}{$TooltipData.BaseRangedDamage}{!Icons.RightArrow}{$TooltipData.NewTotal2}"
         }
 
         {
-          Id = "Unimplemented"
-          DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
-          Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
+            Id = "Unimplemented"
+            DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
+            Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
         }
     ]
 }

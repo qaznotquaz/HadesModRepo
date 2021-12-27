@@ -1,11 +1,17 @@
 if JessAspects_MagicBombs.Config.Enabled then
-    MimicUtil.MimicLootUpgradeRequirements(
-            "ShieldLoadAmmo_AphroditeRangedTrait",
-            "GunMagicBomb_AphroditeRangedTrait"
-    )
+    local basicGods = {
+        "Aphrodite", "Ares", "Artemis", "Athena", "Demeter", "Dionysus", "Poseidon", "Zeus"
+    }
 
-    ModUtil.MapSetTable(LootData.AphroditeUpgrade, {
-        PriorityUpgrades = { "GunMagicBomb_AphroditeRangedTrait" },
-        WeaponUpgrades ={ "GunMagicBomb_AphroditeRangedTrait" }
-    })
+    for _, godName in pairs(basicGods) do
+        MimicUtil.MimicLootUpgradeRequirements(
+                "ShieldLoadAmmo_"..godName.."RangedTrait",
+                "Jess_GunLoadAmmo_"..godName.."RangedTrait"
+        )
+
+        ModUtil.MapSetTable(LootData[godName.."Upgrade"], {
+            PriorityUpgrades = { "Jess_GunLoadAmmo_"..godName.."RangedTrait" },
+            WeaponUpgrades ={ "Jess_GunLoadAmmo_"..godName.."RangedTrait" }
+        })
+    end
 end

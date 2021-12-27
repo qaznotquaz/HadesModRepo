@@ -1,8 +1,7 @@
 if JessAspects_MagicBombs.Config.Enabled then
     TraitData.Jess_GunMagicBombsTrait = {
         InheritFrom = { "WeaponEnchantmentTrait" },
-        AmmoDropData =
-        {
+        AmmoDropData = {
             AmmoDropForceMin = 160,
             AmmoDropForceMax = 190,
             AmmoDropUpwardForceMin = 1000,
@@ -10,20 +9,17 @@ if JessAspects_MagicBombs.Config.Enabled then
         },
         RequiredWeapons = { "GunWeapon", "RangedWeapon" },
         PreEquipWeapons = { "Jess_GunLoadAmmoApplicator" },
-        OverrideWeaponFireNames =
-        {
+        OverrideWeaponFireNames = {
             RangedWeapon = "nil",
             Jess_GunLoadAmmoApplicator = "RangedWeapon",
         },
-        OnProjectileDeathFunction =
-        {
+        OnProjectileDeathFunction = {
             Name = "Jess_BombFireClear",
             Args = {
                 Interval = 0.17,
             },
         },
-        SetupFunction =
-        {
+        SetupFunction = {
             Name = "Jess_SetupGunAmmoLoad",
             RunOnce = true,
         },
@@ -155,34 +151,63 @@ if JessAspects_MagicBombs.Config.Enabled then
             TraitData.Jess_GunMagicBombsTrait
     )
 
-    TraitData.GunMagicBomb_AphroditeRangedTrait = {
+    -- disallow traditional casts and clone beowulf traits. dionysus and poseidon need to be handled separately
+    local basicGods = {
+        "Aphrodite", "Ares", "Artemis", "Athena", "Demeter", --[[ "Dionysus", "Poseidon", ]] "Zeus"
+    }
+
+    for _, godName in pairs(basicGods) do
+        MimicUtil.RequireFalse(godName.."RangedTrait", "Jess_GunMagicBombsTrait")
+        MimicUtil.CloneTrait(
+                "ShieldLoadAmmo_"..godName.."RangedTrait",
+                "Jess_GunLoadAmmo_"..godName.."RangedTrait",
+                {
+                    RequiredTrait = "Jess_GunMagicBombsTrait"
+                },
+                {
+                    CustomTrayText = true
+                }
+        )
+    end
+
+    ModUtil.MapSetTable(TraitData.DionysusRangedTrait.TraitDependencyTextOverrides, {
+        Jess_GunMagicBombsTrait = {
+            Name = "Jess_GunLoadAmmo_DionysusRangedTrait",
+            CustomTrayText = "Jess_GunLoadAmmo_DionysusRangedTrait_Tray",
+        },
+    })
+
+    ModUtil.MapSetTable(TraitData.PoseidonRangedTrait.TraitDependencyTextOverrides, {
+        Jess_GunMagicBombsTrait = {
+            Name = "Jess_GunLoadAmmo_PoseidonRangedTrait",
+            CustomTrayText = "Jess_GunLoadAmmo_PoseidonRangedTrait_Tray",
+        },
+    })
+
+    MimicUtil.MimicForeignPropertyModifiers("ShieldLoadAmmoTrait", "Jess_GunMagicBombsTrait")
+
+    --[[ TraitData.GunMagicBomb_AphroditeRangedTrait = {
         InheritFrom = { "ShopTier1Trait" },
         CustomTrayText = "ShieldLoadAmmo_AphroditeRangedTrait_Tray",
         RequiredTrait = "Jess_GunMagicBombsTrait",
         Icon = "Boon_Aphrodite_02",
         God = "Aphrodite",
         Slot = "Ranged",
-        RarityLevels =
-        {
-            Common =
-            {
+        RarityLevels = {
+            Common = {
                 Multiplier = 1.0,
             },
-            Rare =
-            {
+            Rare = {
                 Multiplier = 1.2,
             },
-            Epic =
-            {
+            Epic = {
                 Multiplier = 1.4,
             },
-            Heroic =
-            {
+            Heroic = {
                 Multiplier = 1.6,
             }
         },
-        PropertyChanges =
-        {
+        PropertyChanges = {
             {
                 WeaponNames = { WeaponSets.HeroNonPhysicalWeapons },
                 WeaponProperty = "Projectile",
@@ -191,22 +216,14 @@ if JessAspects_MagicBombs.Config.Enabled then
             },
             {
                 WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
-                WeaponProperty = "FireFx",
-                ChangeValue = "ProjectileFireRing-Aphrodite",
-                ChangeType = "Absolute",
-            },
-            {
-                WeaponNames = WeaponSets.HeroNonPhysicalWeapons,
                 ProjectileProperty = "DamageLow",
                 BaseMin = 80,
                 BaseMax = 80,
                 DepthMult = DepthDamageMultiplier,
-                IdenticalMultiplier =
-                {
+                IdenticalMultiplier = {
                     Value = DuplicateStrongMultiplier,
                 },
-                ExtractValue =
-                {
+                ExtractValue = {
                     ExtractAs = "TooltipDamage",
                 }
             },
@@ -222,8 +239,7 @@ if JessAspects_MagicBombs.Config.Enabled then
                 ChangeValue = false,
             },
         },
-        ExtractValues =
-        {
+        ExtractValues = {
             {
                 ExtractAs = "BaseRangedDamage",
                 External = true,
@@ -251,5 +267,5 @@ if JessAspects_MagicBombs.Config.Enabled then
                 Format = "NegativePercentDelta"
             }
         }
-    }
+    } ]]--
 end

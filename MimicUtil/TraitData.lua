@@ -151,6 +151,23 @@ function MimicUtil.RequireTrue(targetTraitName, disallowedTraitName)
     end
 end
 
+function MimicUtil.CloneTrait(targetTraitName, copyTraitName, alterTable, nilTable)
+    alterTable = alterTable or {}
+    nilTable = nilTable or {}
+
+    TraitData[copyTraitName] = DeepCopyTable(TraitData[targetTraitName])
+    MimicUtil.MimicForeignPropertyModifiers(targetTraitName, copyTraitName)
+
+    ModUtil.MapSetTable(TraitData[copyTraitName], alterTable)
+    ModUtil.MapNilTable(TraitData[copyTraitName], nilTable)
+end
+
+function MimicUtil.PartialCloneTrait(targetTraitName, copyTraitName, targetFields)
+    for _, field in pairs(targetFields) do
+        TraitData[copyTraitName][field] = DeepCopyTable(TraitData[targetTraitName][field])
+    end
+end
+
 function MimicUtil.TotalMimicWeaponAppearance(baseWeapon, copyWeaponUpgradeData, copyTraitData)
     local weaponFields = {
         "Image",

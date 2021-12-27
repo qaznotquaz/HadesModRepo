@@ -6,5 +6,5 @@ JessAspects_MagicBombs.Config =
 }
 
 JessAspects_MagicBombs.CustomText = {
-    Flavor = "\\n\\n{$Keywords.Unimplemented}\\n{#ItalicFormatDark}Usually nonviolent, the mod creator does have a flair for the dramatic."
+    Flavor = "\\n\\n{$Keywords.Unimplemented}\\n{#ItalicFormatDark}Usually nonviolent, this mod creator does have a flair for the dramatic."
 }

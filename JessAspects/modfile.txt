@@ -3,5 +3,7 @@
 :: To disable a submodule, comment out its line like below
 :: Include "DisabledSubmodule/modfile.txt"
 
+Include "JessAspectsCore/modfile.txt"
+
 Include "BoonsAsAspects/modfile.txt"
 Include "JessNewAspects/modfile.txt"

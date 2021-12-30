@@ -4,13 +4,7 @@
         {
           Id = "Jess_temp_MerlinTrait"
           DisplayName = "Aspect of Merlin"
-          Description = "{$JessAspects_temp_Merlin.CustomText.Flavor}"
-        }
-
-        {
-          Id = "Unimplemented"
-          DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
-          Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
+          Description = "{$JessAspectsCore.WeaponScreenToggle.Text.Active.MerlinFlavor}"
         }
     ]
 }

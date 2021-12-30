@@ -1,10 +1,10 @@
 ModUtil.RegisterMod("JessAspects_MagicBombs")
 
-JessAspects_MagicBombs.Config =
-{
+JessAspects_MagicBombs.Config = {
     Enabled = true
 }
 
-JessAspects_MagicBombs.CustomText = {
-    Flavor = "\\n\\n{$Keywords.Unimplemented}\\n{#ItalicFormatDark}Usually nonviolent, this mod creator does have a flair for the dramatic."
-}
+-- check for requirement
+if JessAspectsCore == nil or JessAspectsCore.config.Enabled == false then
+    JessAspects_MagicBombs.Config.Enabled = false
+end

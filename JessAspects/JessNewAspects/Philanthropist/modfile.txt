@@ -1,7 +1,8 @@
 -: Heart-Seeking Bow ★ Aspect of Robin Hood :-
 
 Top Import "config.lua"
-Import "temp_RobinHood.lua"
+
+Import "Philanthropist.lua"
 
 To "Scripts/TraitData.lua"
 Import "TraitData.lua"

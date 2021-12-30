@@ -23,10 +23,16 @@
             Name = "GunWeaponMarkTarget_Annie"
             FilePath = "Fx\ArtemisCritReticle\ArtemisCritReticle"
             InheritFrom = "ArtemisCritVulnerabilityStatus"
-            StartScale = 0.5
-            EndScale = 0.6
+            Duration = 1.5
+            EndScale = 0.5
             Hue = -0.1
             StartAngle = 0.0
+            EndAngle = 90.0
+        }
+        {
+            Name = "CriticalHit_Annie"
+            InheritFrom = "CriticalHit"
+            Hue = -0.1
         }
     ]
 }

@@ -4,13 +4,7 @@
         {
           Id = "Jess_temp_MikeTysonTrait"
           DisplayName = "Aspect of Mike Tyson"
-          Description = "{$JessAspects_temp_MikeTyson.CustomText.Flavor}"
-        }
-
-        {
-          Id = "Unimplemented"
-          DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
-          Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
+          Description = "{$JessAspectsCore.WeaponScreenToggle.Text.Active.MikeFlavor}"
         }
     ]
 }

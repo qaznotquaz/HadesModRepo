@@ -31,7 +31,7 @@ to enable/disable particular submodules, comment out their **Include** statement
   - [Heart-Seeking Bow ★ Cleopatra](JessNewAspects/temp_Cleopatra)
   - [Twin Fists ★ Mike Tyson](JessNewAspects/temp_MikeTyson)
   - [Eternal Spear ★ Merlin](JessNewAspects/temp_Merlin)
-  - [Heart-Seeking Bow ★ Robin Hood](JessNewAspects/temp_RobinHood)
+  - [Heart-Seeking Bow ★ Robin Hood](JessNewAspects/Philanthropist)
   - [can i make a sword that looks like fists?](MiscConcepts/InaccurateGraphics)
   - [swap spear/shield charge attack with their special](MiscConcepts/InverseAttacks)
 

@@ -1,6 +1,8 @@
 -: All Weapons ★ Boons as Aspects :-
 
+:: lua appends
 Top Import config.lua
+
 Import "BoonsAsAspects.lua"
 
 To "Scripts/WeaponUpgradeData.lua"
@@ -12,5 +14,6 @@ Import "TraitData.lua"
 To "Scripts/LootData.lua"
 Import "LootData.lua"
 
+:: SJSON merges
 To "Game/Text/en/HelpText.en.sjson"
 SJSON "HelpText.en.sjson"

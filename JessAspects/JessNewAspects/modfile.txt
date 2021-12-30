@@ -1,6 +1,8 @@
+Include "JessAspectsCore/modfile.txt"
+
 Include "LittleSureshot/modfile.txt"
 Include "MagicBombs/modfile.txt"
-Include "temp_RobinHood/modfile.txt"
+Include "Philanthropist/modfile.txt"
 Include "temp_Cleopatra/modfile.txt"
 Include "temp_MikeTyson/modfile.txt"
 Include "temp_Merlin/modfile.txt"

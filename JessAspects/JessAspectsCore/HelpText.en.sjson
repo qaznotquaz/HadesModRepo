@@ -1,0 +1,30 @@
+{
+    Texts = [
+        "_append"
+	    {
+		    Id = "Unimplemented"
+		    DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
+		    Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
+		}
+		{
+            Id = "Under_Construction"
+            DisplayName = "Status: {#PenaltyFormat}Under Construction{#PreviousFormat}"
+            Description = "{!Icons.Alert} Some of this has been implemented, but not all. Watch for future updates!"
+        }
+        {
+            Id = "Prototype"
+            DisplayName = "Status: {#PenaltyFormat}Prototype{#PreviousFormat}"
+            Description = "{!Icons.Alert} This is fully functional, but may change during QA. Watch for future updates!"
+        }
+        {
+            Id = "Untested"
+            DisplayName = "Status: {#PenaltyFormat}Untested{#PreviousFormat}"
+            Description = "{!Icons.Alert} This has been fully implemented, but not properly tested. Please submit issues on the mod page!"
+        }
+        {
+            Id = "Known_Bugs"
+            DisplayName = "Status: {#PenaltyFormat}Known Bugs{#PreviousFormat}"
+            Description = "{!Icons.Alert} This has been fully implemented, but it's not functioning properly. Please submit issues on the mod page!"
+        }
+    ]
+}

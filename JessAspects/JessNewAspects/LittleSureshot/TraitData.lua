@@ -9,7 +9,6 @@
 if JessAspects_LittleSureshot.Config.Enabled then
     TraitData.Jess_GunLittleSureshotTrait = {
         InheritFrom = { "WeaponEnchantmentTrait" },
-        CustomTrayText = "Jess_GunLittleSureshotTrait_Tray",
         RarityLevels = {
             Common = {
                 Multiplier = 1.0
@@ -25,6 +24,12 @@ if JessAspects_LittleSureshot.Config.Enabled then
             },
             Legendary = {
                 Multiplier = 5.0
+            }
+        },
+
+        WeaponDataOverride = {
+            GunWeapon = {
+                ActiveReloadTime = 0.60
             }
         },
 
@@ -69,40 +74,12 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ChangeValue = 1,
                 ChangeType = "Absolute",
             },
-            --{
-            --    WeaponNames = { "GunWeapon" },
-            --    WeaponProperty = "FullyAutomatic",
-            --    ChangeValue = false,
-            --    ChangeType = "Absolute"
-            --},
-            --{
-            --    WeaponNames = { "GunWeapon" },
-            --    WeaponProperty = "ReloadTime",
-            --    BaseValue = 0.0,
-            --    ChangeType = "Absolute"
-            --},
-            -- {
-            --     WeaponNames = { "GunWeapon" },
-            --     WeaponProperty = "Cooldown",
-            --     ChangeValue = 0.25,
-            --     ChangeType = "Absolute"
-            -- },
-            --{
-            --    WeaponNames = { "GunWeapon" },
-            --    WeaponProperty = "ChargeTimeFrames",
-            --    ChangeValue = 4,
-            --    ChangeType = "Absolute",
-            --    ExcludeLinked = true
-            --},
-
-            -- GunReloadSelf faster reload --
-            --{
-            --    WeaponNames = { "GunReloadSelf" },
-            --    EffectName = "ZagreusSelfReload",
-            --    ChangeValue = "Absolute",
-            --    EffectProperty = "Duration",
-            --    ChangeValue = 0.0
-            --},
+            {
+                WeaponNames = { "GunWeapon" },
+                WeaponProperty = "FullyAutomatic",
+                ChangeValue = false,
+                ChangeType = "Absolute"
+            },
 
             -- GunWeapon Projectile Faster/Farther
             {
@@ -208,6 +185,13 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 ExcludeLinked = true,
             },
 
+            -- Yellow Crit Fx --
+            {
+                WeaponName = "GunWeapon",
+                ProjectileProperty = "CriticalFx",
+                ChangeValue = "CriticalHit_Annie"
+            },
+
             -- Levelling Crit Chance from GunWeapon --
             {
                 WeaponNames = { "GunWeapon" },
@@ -215,7 +199,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 BaseValue = 0.03,
                 ChangeType = "Add",
                 ExtractValue = {
-                    ExtractAs = "TooltipCritChance",
+                    ExtractAs = "AspectExtract1",
                     Format = "Percent",
                 }
             },
@@ -228,7 +212,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
                 BaseValue = 0.08,
                 ChangeType = "Add",
                 ExtractValue = {
-                    ExtractAs = "CritTargetVulnerability",
+                    ExtractAs = "AspectExtract2",
                     Format = "Percent",
                 },
                 CustomRarityMultiplier = {
@@ -258,8 +242,98 @@ if JessAspects_LittleSureshot.Config.Enabled then
             TraitData.Jess_GunLittleSureshotTrait
     )
 
-    -- disallow Delta Chamber, Spread Fire, and Flurry Fire
-    MimicUtil.RequireFalse("GunInfiniteAmmoTrait", "Jess_GunLittleSureshotTrait")
+    -- disallow Spread Fire and Flurry Fire
     MimicUtil.RequireFalse("GunShotgunTrait", "Jess_GunLittleSureshotTrait")
     MimicUtil.RequireFalse("GunMinigunTrait", "Jess_GunLittleSureshotTrait")
+
+    -- modify Delta Chamber
+    --MimicUtil.RequireFalse("GunInfiniteAmmoTrait", "Jess_GunLittleSureshotTrait")
+    ModUtil.MapSetTable(TraitData.GunInfiniteAmmoTrait,
+            {
+                RequiredFalseTraits = {
+                    "Jess_GunLittleSureshot_ShotgunTrait",
+                    "Jess_GunLittleSureshot_MinigunTrait"
+                },
+                PropertyChanges = {
+                    {
+                        WeaponName = "Jess_GunLittleSureshotTrait",
+                        WeaponProperty = "MaxAmmo",
+                        ChangeValue = -1,
+                        ChangeType = "Absolute"
+                    }
+                },
+            })
+
+    -- replace Spread Fire and Flurry Fire
+    -- Spread Fire -> Slug Fire
+    MimicUtil.CloneTrait(
+            "GunShotgunTrait",
+            "Jess_GunLittleSureshot_ShotgunTrait",
+            {
+                RequiredTrait = "Jess_GunLittleSureshotTrait",
+                RequiredFalseTraits = { "Jess_GunLittleSureshot_MinigunTrait" },
+                WeaponOverrideData = {
+                    GunWeapon = {
+                        ActiveReloadTime = 2.0
+                    }
+                },
+                PropertyChanges = {
+                    {
+                        WeaponNames = { "GunWeapon", "GunWeaponDash" },
+                        ProjectileProperty = "DamageLow",
+                        ChangeValue = 55,
+                        ChangeType = "Absolute",
+                        ExcludeLinked = true,
+                        ExtractValue = {
+                            ExtractAs = "TooltipDamage",
+                        },
+                    },
+                    {
+                        WeaponNames = { "GunWeapon", "GunWeaponDash" },
+                        ProjectileProperty = "DamageHigh",
+                        DeriveValueFrom = "DamageLow",
+                    },
+                    {
+                        WeaponNames = { "GunWeapon", "GunWeaponDash" },
+                        EffectName = "OnHitStun",
+                        EffectProperty = "Active",
+                        ChangeValue = true,
+                    },
+                    {
+                        WeaponNames = { "GunWeapon" },
+                        ProjectileProperty = "Speed",
+                        ChangeValue = 7000.0,
+                        ChangeType = "Absolute"
+                    },
+
+                    GunWeapon = {
+                        Sounds = {
+                            FireSounds = {
+                                { Name = "/VO/ZagreusEmotes/EmoteCharging_Bow" },
+                                { Name = "/SFX/Player Sounds/ZagreusGunFire" },
+                                { Name = "/Leftovers/SFX/AuraPerfectThrow" },
+                            },
+                            ImpactSounds = {
+                                Invulnerable = "/SFX/Player Sounds/ZagreusShieldRicochet",
+                                Armored = "/SFX/Player Sounds/ZagreusShieldRicochet",
+                                Bone = "/SFX/ArrowMetalBoneSmash",
+                                Brick = "/SFX/ArrowMetalStoneClang",
+                                Stone = "/SFX/ArrowMetalStoneClang",
+                                Organic = "/SFX/GunBulletOrganicImpact",
+                                StoneObstacle = "/SFX/ArrowWallHitClankSmall",
+                                BrickObstacle = "/SFX/ArrowWallHitClankSmall",
+                                MetalObstacle = "/SFX/ArrowWallHitClankSmall",
+                            },
+                        }
+                    },
+                },
+            },
+            {
+                RequiredWeapon = true,
+                PropertyChanges = true
+            }
+    )
+
+    -- todo: crit-flavored minigun
+    -- Flurry Fire -> ConsecutiveCritBonus
 end

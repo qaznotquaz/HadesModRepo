@@ -5,6 +5,7 @@ JessAspects_temp_Merlin.Config =
     Enabled = true
 }
 
-JessAspects_temp_Merlin.CustomText = {
-    Flavor = "{$Keywords.Unimplemented}"
-}
+-- check for requirement
+if JessAspectsCore == nil or JessAspectsCore.config.Enabled == false then
+    JessAspects_Philanthropist.Config.Enabled = false
+end

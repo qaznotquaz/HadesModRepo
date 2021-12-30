@@ -4,13 +4,7 @@
         {
           Id = "Jess_temp_CleopatraTrait"
           DisplayName = "Aspect of Cleopatra"
-          Description = "{$JessAspects_temp_Cleopatra.CustomText.Flavor}"
-        }
-
-        {
-          Id = "Unimplemented"
-          DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
-          Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
+          Description = "{$JessAspectsCore.WeaponScreenToggle.Text.Active.CleoFlavor}"
         }
     ]
 }

@@ -1,91 +1,70 @@
 {
     Texts = [
         "_append"
-            {
-                Id = "Jess_SwordPoseidonBoonTrait"
-                DisplayName = "Tempest Flourish"
-                Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom:P}{$JessAspects_BoonsAsAspects.CustomText.SwordFlavor}"
-            }
-            {
-                Id = "Jess_SwordPoseidonBoonTrait_Delta"
-                InheritFrom = "Jess_SwordPoseidonBoonTrait"
-                Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.SwordFlavor}"
-            }
+        {
+            Id = "Jess_SwordPoseidonBoonTrait"
+            DisplayName = "Tempest Flourish"
+            Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1:P}{$JessAspectsCore.WeaponScreenToggle.Text.Active.PoseidonSwordFlavor}"
+        }
+        {
+            Id = "Jess_SwordPoseidonBoonTrait_Delta"
+            InheritFrom = "Jess_SwordPoseidonBoonTrait"
+            Description = "Your {$Keywords.Special} deals more damage and knocks foes away. \n {!Icons.Bullet}{#PropertyFormat}Special Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1}{$JessAspectsCore.WeaponScreenToggle.Text.Active.PoseidonSwordFlavor}"
+        }
 
-            {
-              Id = "Jess_SpearHadesBoonTrait"
-              DisplayName = "Hades' Aid"
-              Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspects_BoonsAsAspects.CustomText.SpearFlavor}"
-            }
-            {
-              Id = "Jess_SpearHadesBoonTrait_Delta"
-              InheritFrom = "Jess_SpearHadesBoonTrait"
-              Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspects_BoonsAsAspects.CustomText.SpearFlavor}"
-            }
+        {
+            Id = "Jess_SpearHadesBoonTrait"
+            DisplayName = "Hades' Aid"
+            Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspectsCore.WeaponScreenToggle.Text.Active.HadesSpearFlavor}"
+        }
+        {
+            Id = "Jess_SpearHadesBoonTrait_Delta"
+            InheritFrom = "Jess_SpearHadesBoonTrait"
+            Description = "Your {$Keywords.WrathHades} briefly makes you turn {$Keywords.Invisible}. \n {!Icons.Bullet}{#PropertyFormat}Stealth Damage Bonus: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.EXWrath}: \Column 380 Turn {#UpgradeFormat}{$Keywords.GreaterInvisible} {#PreviousFormat}Instead{$JessAspectsCore.WeaponScreenToggle.Text.Active.HadesSpearFlavor}"
+        }
 
-            {
-                Id = "Jess_ShieldChaosBoonTrait"
-                DisplayName = "Gracious Favor"
-                Description = "{#BoldFormat}{$Keywords.GodBoonPlural} {#PreviousFormat}have {#AltUpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom:P} {#PreviousFormat}chance to be {#RareFormat}Rare {#PreviousFormat}or better.{$JessAspects_BoonsAsAspects.CustomText.ShieldFlavor}"
-            }
-            {
-                Id = "Jess_ShieldChaosBoonTrait_Delta"
-                InheritFrom = "Jess_ShieldChaosBoonTrait"
-                Description = "{#BoldFormat}{$Keywords.GodBoonPlural} {#PreviousFormat}have {#AltUpgradeFormat}{$TooltipData.DisplayDelta1} {#PreviousFormat}chance to be {#RareFormat}Rare {#PreviousFormat}or better.{$JessAspects_BoonsAsAspects.CustomText.ShieldFlavor}"
-            }
+        {
+            Id = "Jess_ShieldChaosBoonTrait"
+            DisplayName = "Gracious Favor"
+            Description = "{#BoldFormat}{$Keywords.GodBoonPlural} {#PreviousFormat}have {#AltUpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1:P} {#PreviousFormat}chance to be {#RareFormat}Rare {#PreviousFormat}or better.{$JessAspectsCore.WeaponScreenToggle.Text.Active.ChaosShieldFlavor}"
+        }
+        {
+            Id = "Jess_ShieldChaosBoonTrait_Delta"
+            InheritFrom = "Jess_ShieldChaosBoonTrait"
+            Description = "{#BoldFormat}{$Keywords.GodBoonPlural} {#PreviousFormat}have {#AltUpgradeFormat}{$TooltipData.DisplayDelta1} {#PreviousFormat}chance to be {#RareFormat}Rare {#PreviousFormat}or better.{$JessAspectsCore.WeaponScreenToggle.Text.Active.ChaosShieldFlavor}"
+        }
 
-            {
-              Id = "Jess_BowArtemisBoonTrait"
-              DisplayName = "True Shot"
-              Description = "Your {$Keywords.Cast} seeks foes, with {#AltUpgradeFormat}{$TooltipData.TooltipCritChance:P} {#PreviousFormat} chance to deal {$Keywords.Crit} damage. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom}{$JessAspects_BoonsAsAspects.CustomText.BowFlavor}"
-            }
-            {
-              Id = "Jess_BowArtemisBoonTrait_Delta"
-              InheritFrom = "Jess_BowArtemisBoonTrait"
-              Description = "Your {$Keywords.Cast} seeks foes, with {#AltUpgradeFormat}{$TooltipData.TooltipCritChance:P} {#PreviousFormat} chance to deal {$Keywords.Crit} damage. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.BowFlavor}"
-            }
+        {
+            Id = "Jess_BowArtemisBoonTrait"
+            DisplayName = "True Shot"
+            Description = "Your {$Keywords.Cast} seeks foes, with {#AltUpgradeFormat}{$TooltipData.TooltipCritChance:P} {#PreviousFormat} chance to deal {$Keywords.Crit} damage. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1}{$JessAspectsCore.WeaponScreenToggle.Text.Active.ArtemisBowFlavor}"
+        }
+        {
+            Id = "Jess_BowArtemisBoonTrait_Delta"
+            InheritFrom = "Jess_BowArtemisBoonTrait"
+            Description = "Your {$Keywords.Cast} seeks foes, with {#AltUpgradeFormat}{$TooltipData.TooltipCritChance:P} {#PreviousFormat} chance to deal {$Keywords.Crit} damage. \n {!Icons.Bullet}{#PropertyFormat}Cast Damage: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}{$JessAspectsCore.WeaponScreenToggle.Text.Active.ArtemisBowFlavor}"
+        }
 
-            {
-                Id = "Jess_FistDemeterBoonTrait"
-                DisplayName = "Frost Strike"
-                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom:P}{$JessAspects_BoonsAsAspects.CustomText.FistFlavor}"
-            }
-            {
-                Id = "Jess_FistDemeterBoonTrait_Delta"
-                InheritFrom = "Jess_FistDemeterBoonTrait"
-                Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.FistFlavor}"
-            }
+        {
+            Id = "Jess_FistDemeterBoonTrait"
+            DisplayName = "Frost Strike"
+            Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1:P}{$JessAspectsCore.WeaponScreenToggle.Text.Active.DemeterFistFlavor}"
+        }
+        {
+            Id = "Jess_FistDemeterBoonTrait_Delta"
+            InheritFrom = "Jess_FistDemeterBoonTrait"
+            Description = "Your {$Keywords.Attack} is stronger and inflicts {$Keywords.Chill}. \n {!Icons.Bullet}{#PropertyFormat}Attack Damage: \Column 380 {#PreviousFormat}{$TooltipData.DisplayDelta1}{$JessAspectsCore.WeaponScreenToggle.Text.Active.DemeterFistFlavor}"
+        }
 
-            {
-              Id = "Jess_GunHermesBoonTrait"
-              DisplayName = "Greater Evasion"
-              Description = "Whenever you are hit, you have a chance to {$Keywords.Dodge} automatically. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Dodge} Chance: \Column 380 {#UpgradeFormat}{$JessAspects_BoonsAsAspects.CustomText.AspectOrPom:P}{$JessAspects_BoonsAsAspects.CustomText.GunFlavor}"
-            }
-            {
-              Id = "Jess_GunHermesBoonTrait_Delta"
-              InheritFrom = "Jess_GunHermesBoonTrait"
-              Description = "Whenever you are hit, you have a chance to {$Keywords.Dodge} automatically. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Dodge} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}{$JessAspects_BoonsAsAspects.CustomText.GunFlavor}"
-            }
-
-	        {
-		      Id = "Unimplemented"
-		      DisplayName = "Status: {#PenaltyFormat}Unimplemented{#PreviousFormat}"
-		      Description = "{!Icons.Alert} None of the code for this has been written yet. Watch for future updates!"
-		    }
-		    {
-              Id = "Under_Construction"
-              DisplayName = "Status: {#PenaltyFormat}Under Construction{#PreviousFormat}"
-              Description = "{!Icons.Alert} Some of this has been implemented, but not all. Watch for future updates!"
-            }
-            {
-              Id = "Untested"
-              DisplayName = "Status: {#PenaltyFormat}Untested{#PreviousFormat}"
-              Description = "{!Icons.Alert} This has been fully implemented, but not properly tested. Please submit issues on the mod page!"
-            }
-            {
-              Id = "Known_Bugs"
-              DisplayName = "Status: {#PenaltyFormat}Known Bugs{#PreviousFormat}"
-              Description = "{!Icons.Alert} This has been fully implemented, but it's not functioning properly. Please submit issues on the mod page!"
-            }
+        {
+            Id = "Jess_GunHermesBoonTrait"
+            DisplayName = "Greater Evasion"
+            Description = "Whenever you are hit, you have a chance to {$Keywords.Dodge} automatically. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Dodge} Chance: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1:P}{$JessAspectsCore.WeaponScreenToggle.Text.Active.HermesGunFlavor}"
+        }
+        {
+            Id = "Jess_GunHermesBoonTrait_Delta"
+            InheritFrom = "Jess_GunHermesBoonTrait"
+            Description = "Whenever you are hit, you have a chance to {$Keywords.Dodge} automatically. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Dodge} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1}{$JessAspectsCore.WeaponScreenToggle.Text.Active.HermesGunFlavor}"
+        }
     ]
 }

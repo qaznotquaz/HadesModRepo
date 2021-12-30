@@ -36,7 +36,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 ExtractValues = {
                     {
                         Key = "ValidWeaponMultiplier",
-                        ExtractAs = "AspectExtract",
+                        ExtractAs = "AspectExtract1",
                         Format = "PercentDelta",
                     },
                 }
@@ -150,7 +150,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 ExtractValues = {
                     {
                         Key = "ValidWeaponMultiplier",
-                        ExtractAs = "AspectExtract",
+                        ExtractAs = "AspectExtract1",
                         Format = "PercentDelta",
                     },
                 }
@@ -259,7 +259,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         )
     end
 
-    -- Eternal Spear ★ Hades' Aid -- SKELETON
+    -- Eternal Spear ★ Hades' Aid --
     if JessAspects_BoonsAsAspects.Config.SpearEnabled then
         TraitData.Jess_SpearHadesBoonTrait = {
             InheritFrom = { "WeaponEnchantmentTrait" },
@@ -319,7 +319,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 {
                     {
                         Key = "BonusDamageExtract",
-                        ExtractAs = "AspectExtract",
+                        ExtractAs = "AspectExtract1",
                         Format = "Percent",
                     },
                     {
@@ -410,7 +410,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                 ExtractValues = {
                     {
                         Key = "RareBonus",
-                        ExtractAs = "AspectExtract",
+                        ExtractAs = "AspectExtract1",
                         Format = "Percent",
                     }
                 }
@@ -483,7 +483,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                         Value = -0.40,
                     },
                     ExtractValue = {
-                        ExtractAs = "AspectExtract",
+                        ExtractAs = "AspectExtract1",
                     }
                 },
                 {
@@ -562,7 +562,7 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
                     ChangeType = "Add",
                     DataValue = false,
                     ExtractValue = {
-                        ExtractAs = "AspectExtract",
+                        ExtractAs = "AspectExtract1",
                         Format = "Percent"
                     },
                     IdenticalMultiplier = {

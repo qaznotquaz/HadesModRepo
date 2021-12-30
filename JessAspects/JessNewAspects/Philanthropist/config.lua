@@ -1,6 +1,6 @@
-ModUtil.RegisterMod("JessAspects_temp_Cleopatra")
+ModUtil.RegisterMod("JessAspects_Philanthropist")
 
-JessAspects_temp_Cleopatra.Config = {
+JessAspects_Philanthropist.Config = {
     Enabled = true
 }
 

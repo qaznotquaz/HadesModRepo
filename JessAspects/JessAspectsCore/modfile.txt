@@ -1,0 +1,12 @@
+-: Jess' Aspects Core! :-
+
+Load Priority 40
+
+:: lua appends
+Top Import "config.lua"
+
+Import "JessAspectsCore.lua"
+
+:: SJSON merges
+To "Game/Text/en/HelpText.en.sjson"
+SJSON "HelpText.en.sjson"

@@ -6,15 +6,19 @@ if JessAspects_BoonsAsAspects.Config.Enabled then
         )
     end
 
-    --[[ These aren't really necessary,
-            they aren't quite naturally-granted boons --
-
     if JessAspects_BoonsAsAspects.Config.SpearEnabled then
+        MimicUtil.MimicLootUpgradeRequirements(
+                "HadesShoutTrait",
+                "Jess_SpearHadesBoonTrait"
+        )
     end
 
     if JessAspects_BoonsAsAspects.Config.ShieldEnabled then
+        MimicUtil.MimicLootUpgradeRequirements(
+                "ChaosBlessingBoonRarityTrait",
+                "Jess_ShieldChaosBoonTrait"
+        )
     end
-    ]]--
 
     if JessAspects_BoonsAsAspects.Config.BowEnabled then
         MimicUtil.MimicLootUpgradeRequirements(

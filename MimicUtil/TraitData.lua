@@ -158,8 +158,8 @@ function MimicUtil.CloneTrait(targetTraitName, copyTraitName, alterTable, nilTab
     TraitData[copyTraitName] = DeepCopyTable(TraitData[targetTraitName])
     MimicUtil.MimicForeignPropertyModifiers(targetTraitName, copyTraitName)
 
-    ModUtil.MapSetTable(TraitData[copyTraitName], alterTable)
     ModUtil.MapNilTable(TraitData[copyTraitName], nilTable)
+    ModUtil.MapSetTable(TraitData[copyTraitName], alterTable)
 end
 
 function MimicUtil.PartialCloneTrait(targetTraitName, copyTraitName, targetFields)
@@ -169,25 +169,25 @@ function MimicUtil.PartialCloneTrait(targetTraitName, copyTraitName, targetField
 end
 
 function MimicUtil.TotalMimicWeaponAppearance(baseWeapon, copyWeaponUpgradeData, copyTraitData)
-    local weaponFields = {
-        "Image",
-        "EquippedKitAnimation", "UnequippedKitAnimation",
-        "BonusEquippedKitAnimation", "BonusUnequippedKitAnimation",
+    local baseWeaponUpgradeAppearance = {
+        Image = baseWeapon.WeaponUpgradeData.Image,
+        EquippedKitAnimation = baseWeapon.WeaponUpgradeData.EquippedKitAnimation,
+        UnequippedKitAnimation = baseWeapon.WeaponUpgradeData.UnequippedKitAnimation,
+        BonusEquippedKitAnimation = baseWeapon.WeaponUpgradeData.BonusEquippedKitAnimation,
+        BonusUnequippedKitAnimation = baseWeapon.WeaponUpgradeData.BonusUnequippedKitAnimation
     }
 
-    for _, field in pairs(weaponFields) do
-        copyWeaponUpgradeData[field] = baseWeapon.WeaponUpgradeData[field]
-    end
+    ModUtil.MapSetTable(copyWeaponUpgradeData, baseWeaponUpgradeAppearance)
 
-    local traitFields = {
-        "PostWeaponUpgradeScreenAnimation", "PostWeaponUpgradeScreenAngle",
-        "WeaponBinks", "WeaponDataOverride",
-        "Icon"
+    local baseWeaponTraitAppearance = {
+        Icon = baseWeapon.TraitData.Icon,
+        PostWeaponUpgradeScreenAnimation = baseWeapon.TraitData.PostWeaponUpgradeScreenAnimation,
+        PostWeaponUpgradeScreenAngle = baseWeapon.TraitData.PostWeaponUpgradeScreenAngle,
+        WeaponBinks = DeepCopyTable(baseWeapon.TraitData.WeaponBinks),
+        WeaponDataOverride = DeepCopyTable(baseWeapon.TraitData.WeaponDataOverride)
     }
 
-    for _, field in pairs(traitFields) do
-        copyTraitData[field] = DeepCopyTable(baseWeapon.TraitData[field])
-    end
+    ModUtil.MapSetTable(copyTraitData, baseWeaponTraitAppearance)
 
     for _, property in pairs(baseWeapon.TraitData.PropertyChanges) do
         if (property.WeaponProperty ~= nil and MimicUtil.isCosmeticProperty(property.WeaponProperty)) or (property.ProjectileProperty ~= nil and MimicUtil.isCosmeticProperty(property.ProjectileProperty)) then

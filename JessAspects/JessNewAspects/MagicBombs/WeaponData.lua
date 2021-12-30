@@ -1,10 +1,12 @@
-WeaponData.Jess_GunLoadAmmoApplicator = {
-    OnFiredFunctionName = "Jess_GunLoadAmmo",
+if JessAspects_MagicBombs.Config.Enabled then
+    WeaponData.Jess_GunLoadAmmoApplicator = {
+        OnFiredFunctionName = "Jess_GunLoadAmmo",
 
-    NotReadySound = "/Leftovers/SFX/OutOfAmmo2",
-    NotReadyText = "OutOfAmmo_Alt",
-    NoAmmoFunctionName = "RangedFailedNoAmmoPresentation",
-    NotReadyAmmoPackText = "RetrieveAmmo",
-    NotReadyAmmoInEnemyText = "RetrieveAmmoFromEnemy",
-    NotReadyPulseStoredAmmo = true
-}
+        NotReadySound = "/Leftovers/SFX/OutOfAmmo2",
+        NotReadyText = "OutOfAmmo_Alt",
+        NoAmmoFunctionName = "RangedFailedNoAmmoPresentation",
+        NotReadyAmmoPackText = "RetrieveAmmo",
+        NotReadyAmmoInEnemyText = "RetrieveAmmoFromEnemy",
+        NotReadyPulseStoredAmmo = true
+    }
+end

@@ -4,27 +4,18 @@
         {
             Id = "Jess_GunLittleSureshotTrait"
             DisplayName = "Aspect of Annie"
-            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.TooltipCritChance:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.CritTargetVulnerability:P}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
+            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom2:P}{#PreviousFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.LittleSureshotFlavor}"
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Delta"
             DisplayName = "Aspect of Annie"
-            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat} \n {#ItalicFormatDark}{$Keywords.Prototype}. Flavor text."
+            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.LittleSureshotFlavor}"
         }
-        {
-            Id = "Jess_GunLittleSureshotTrait_Tray"
-            DisplayName = "Aspect of Annie"
-            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat}"
-        }
+
         {
             Id = "Annie_SharpAim"
             DisplayName = "Called Shots"
             Description = "Foes targeted by your special are more vulnerable to {$Keywords.Crit} hits."
-        }
-        {
-            Id = "Prototype"
-            DisplayName = "Status: {#PenaltyFormat}Prototype{#PreviousFormat}"
-            Description = "{!Icons.Alert} This is fully functional, but may change during QA. Watch for future updates!"
         }
     ]
 }

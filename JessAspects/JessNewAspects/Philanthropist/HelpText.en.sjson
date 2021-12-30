@@ -1,0 +1,26 @@
+{
+    Texts = [
+        "_append"
+        {
+            Id = "Jess_PhilanthropistTrait"
+            DisplayName = "Aspect of Robin"
+            Description = "Your {!Icons.Currency} mirror trait selects from the following:\n{$Keywords.PhilanthropistSteal} bonus: \Column 380 {#UpgradeFormat}15{#PreviousFormat}\n{$Keywords.PhilanthropistGive} cost: \Column 300 {#UpgradeFormat}20{#PreviousFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.RobinFlavor}"
+        }
+        {
+            Id = "Jess_PhilanthropistTrait_Delta"
+            DisplayName = "Aspect of Robin"
+            Description = "Your {!Icons.Currency} mirror trait selects from the following:\n{$Keywords.PhilanthropistSteal} bonus: \Column 380 {#UpgradeFormat}15{#PreviousFormat}\n{$Keywords.PhilanthropistGive} cost: \Column 300 {#UpgradeFormat}20{#PreviousFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.RobinFlavor}"
+        }
+
+        {
+            Id = "PhilanthropistSteal"
+            DisplayName = "Steal from the Rich"
+            Description = "Miniboss encounters provide bonus {!Icons.Currency}, and Boss encounters provide {#UpgradeFormat}+1{#PreviousFormat} shot for your {#PropertyFormat}Special."
+        }
+        {
+            Id = "PhilanthropistGive"
+            DisplayName = "Give to the Poor"
+            Description = "You can give {!Icons.Currency} to NPCs to earn {#UpgradeFormat}+1{#PreviousFormat} or {#UpgradeFormat}+2{#PreviousFormat} shots for your {$Keywords.Special}."
+        }
+    ]
+}

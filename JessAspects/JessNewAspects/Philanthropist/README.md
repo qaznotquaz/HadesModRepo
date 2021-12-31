@@ -1,10 +1,23 @@
 ## Heart-Seeking Bow ★ Aspect of Robin Hood
 
-*Inspired by... the mod creator themselves!*
+*Inspired by the famous thieving archer, this is a currency-focused aspect*
 
-> Your **Cast** loads **Bloodstone** into your next **Special**, firing on impact.
-> Levelling bonus unimplemented.
-> *Usually nonviolent, this mod creator does have a flair for the dramatic.*
+> Your **Coin** mirror trait selects from the following:
+> 
+> **Steal from the Rich** bonus: 15
+> 
+> **Give to the Poor** cost: 20
+> 
+> *Flavor text unwritten*
+
+> **Steal from the Rich**
+> 
+> "Miniboss encounters provide bonus **Coin**, and Boss encounters provide **+1** shot for your **Special**
+
+> **Give to the Poor**
+> 
+> You can give **Coin** to NPCs to earn **+1** or **+2** shots for your **Special**
+
 
 
 ### TODO

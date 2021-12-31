@@ -3,7 +3,9 @@
 *Inspired by the mod creator themselves, this is a cast-focused variation of the Adamant Rail which makes use of the Flare casts that are typically only used by the Aspect of Beowulf.*
 
 > Your **Cast** loads **Bloodstone** into your next **Special**, firing on impact.
+> 
 > Levelling bonus unimplemented.
+> 
 > *Usually nonviolent, this mod creator does have a flair for the dramatic.*
 
 ### TODO

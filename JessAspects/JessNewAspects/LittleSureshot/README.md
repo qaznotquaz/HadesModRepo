@@ -3,8 +3,11 @@
 *Inspired by the famous markswoman Annie Oakley, the Aspect of Annie is a combo- and crit- focused aspect for the Adamant Rail.*
 
 > Your single-shot rifle's **Critical** dislodges **Bloodstone** from foes.
+> 
 > **Critical Attack** Chance: 3%/6%/9%/12%/15%
+> 
 > **Sharp Aim** Bonus **Critical** Chance: 8%/10%/12%/14%/16%
+> 
 > *Flavor text unwritten.*
 
 > **Sharp Aim**

@@ -184,7 +184,7 @@ function MimicUtil.TotalMimicWeaponAppearance(baseWeapon, copyWeaponUpgradeData,
         PostWeaponUpgradeScreenAnimation = baseWeapon.TraitData.PostWeaponUpgradeScreenAnimation,
         PostWeaponUpgradeScreenAngle = baseWeapon.TraitData.PostWeaponUpgradeScreenAngle,
         WeaponBinks = DeepCopyTable(baseWeapon.TraitData.WeaponBinks),
-        WeaponDataOverride = DeepCopyTable(baseWeapon.TraitData.WeaponDataOverride)
+        WeaponDataOverride = DeepCopyTable(baseWeapon.TraitData.WeaponDataOverride or {})
     }
 
     ModUtil.MapSetTable(copyTraitData, baseWeaponTraitAppearance)

@@ -12,7 +12,7 @@ if JessAspects_temp_Cleopatra.Config.Enabled then
             {
                 Text = {
                     Open = {
-                        CleoFlavor = "\\n{$Keywords.Unimplemented}, {#ItalicFormatDark}Flavor text unwritten.",
+                        CleoFlavor = "{$Keywords.Unimplemented}, {#ItalicFormatDark}Flavor text unwritten.",
                     },
                     Close = {
                         CleoFlavor = ""

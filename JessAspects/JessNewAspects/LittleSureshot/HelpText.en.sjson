@@ -4,7 +4,7 @@
         {
             Id = "Jess_GunLittleSureshotTrait"
             DisplayName = "Aspect of Annie"
-            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1:P} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom2:P}{#PreviousFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.LittleSureshotFlavor}"
+            Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom2}{#PreviousFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.LittleSureshotFlavor}"
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Delta"
@@ -15,7 +15,13 @@
         {
             Id = "Annie_SharpAim"
             DisplayName = "Called Shots"
-            Description = "Foes targeted by your special are more vulnerable to {$Keywords.Crit} hits."
+            Description = "Foes targeted by your {#PropertyFormat}Special{#PreviousFormat} are more vulnerable to {$Keywords.Crit} hits."
+        }
+
+        {
+            Id = "Jess_GunLittleSureshot_ShotgunTrait"
+            DisplayName = "Slug Shot"
+            Description = "Your {$Keywords.Attack} deals {#AltUpgradeFormat}{$TooltipData.TooltipDamage} {#PreviousFormat} base damage and shoves foes back; your reload is {#AltPenaltyFormat}150%{#PreviousFormat} slower.\n{$Keywords.Prototype}"
         }
     ]
 }

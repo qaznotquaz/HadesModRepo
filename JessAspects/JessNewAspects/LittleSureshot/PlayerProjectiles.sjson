@@ -11,7 +11,7 @@
       AffectsSelf = false
       CheckUnitImpact = false
       CheckObstacleImpact = false
-      Fuse = 0.1
+      Fuse = 0.0
       MultiDetonate = true
       TotalFuse = 1.0
       Range = 800
@@ -23,25 +23,26 @@
       ImpactVelocityCap = 0
       SpawnAtVictimLocation = true
       DetonateAtVictimLocation = true
+      IgnoreCoverageAngles = true
       Thing =
       {
         Graphic = "null"
         OffsetZ = 70
         Grip = 999999
       }
-      Effect =
-      {
-        Name = "CritVulnerability"
-        IgnoreName = "_PlayerUnit"
-        Duration = 1.7
-        Active = true
-        CanAffectInvulnerable = false
-        TimeModifierFraction = 0
-        CritMultiplierVulnerabilityAddition = 0.0
-        IsVulnerabilityEffect = true
-        FrontFx = "GunWeaponMarkTarget_Annie"
-        BackFx = "null"
-      }
+      Effects = [
+        {
+          Name = "CritVulnerability"
+          Duration = 1.7
+          Active = true
+          CanAffectInvulnerable = false
+          TimeModifierFraction = 0
+          CritMultiplierVulnerabilityAddition = 1.0
+          IsVulnerabilityEffect = true
+          FrontFx = "GunWeaponMarkTarget_Annie"
+          BackFx = "null"
+        }
+      ]
     }
   ]
 }

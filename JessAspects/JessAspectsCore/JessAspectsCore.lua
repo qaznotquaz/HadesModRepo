@@ -27,7 +27,7 @@ if JessAspectsCore.config.Enabled then
                 AspectOrPom1 = "{$TooltipData.AspectExtract1}",
                 AspectOrPom2 = "{$TooltipData.AspectExtract2}"
             },
-            Closed = {
+            Close = {
                 -- SampleWeaponAspectTrait = ""
                 AspectOrPom1 = "{$TooltipData.DisplayDelta1}",
                 AspectOrPom2 = "{$TooltipData.AspectExtract2}"
@@ -58,7 +58,7 @@ if JessAspectsCore.config.Enabled then
     end, JessAspectsCore)
 
     ModUtil.WrapBaseFunction("CloseWeaponUpgradeScreen", function(baseFunc, args)
-        for _, func in pairs(JessAspectsCore.WeaponScreenToggle.Actions.Open) do
+        for _, func in pairs(JessAspectsCore.WeaponScreenToggle.Actions.Close) do
             func()
         end
 

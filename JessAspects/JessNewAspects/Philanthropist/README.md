@@ -1,6 +1,11 @@
 ## Heart-Seeking Bow ★ Aspect of Robin Hood
 
-unimplemented.
+*Inspired by... the mod creator themselves!*
+
+> Your **Cast** loads **Bloodstone** into your next **Special**, firing on impact.
+> Levelling bonus unimplemented.
+> *Usually nonviolent, this mod creator does have a flair for the dramatic.*
+
 
 ### TODO
 - [ ] change effect with **deep pockets** vs **golden touch**

@@ -1,11 +1,16 @@
 ## Adamant Rail ★ Aspect of Jess
 
-unimplemented.
+*Inspired by the mod creator themselves, this is a cast-focused variation of the Adamant Rail which makes use of the Flare casts that are typically only used by the Aspect of Beowulf.*
+
+> Your **Cast** loads **Bloodstone** into your next **Special**, firing on impact.
+> Levelling bonus unimplemented.
+> *Usually nonviolent, this mod creator does have a flair for the dramatic.*
 
 ### TODO
-- Determine attack changes, if any
-- **★ Load cast into special**
-- Visuals of lucifer...? also a fallen angel, so it fits
-- Writing Weapon Descriptions
-  - ingame text data
-  - dramatic readme stuff
+- [x] Load cast into special
+- [ ] Visuals of Lucifer
+- [ ] modify cluster bomb so that casts go into the middle bomb
+- [ ] fix helptext for poseidon flare
+- [x] Writing Weapon Descriptions
+  - [x] ingame text data
+  - [x] dramatic readme stuff

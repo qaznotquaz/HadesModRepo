@@ -12,7 +12,7 @@ if JessAspects_temp_MikeTyson.Config.Enabled then
             {
                 Text = {
                     Open = {
-                        MikeFlavor = "\\n{$Keywords.Unimplemented}, {#ItalicFormatDark}Flavor text unwritten.",
+                        MikeFlavor = "{$Keywords.Unimplemented}, {#ItalicFormatDark}Flavor text unwritten.",
                     },
                     Close = {
                         MikeFlavor = ""

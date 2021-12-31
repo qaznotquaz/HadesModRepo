@@ -20,7 +20,7 @@ Each and every one of these aspects is expanded from its normal form, too - they
   - [x] Rarity progression doesn't really expect 5 levels
     - [x] Which boons expect what?
     - [x] Do you want to make them go to 5 levels, or reduce the levels available to upgrade?
-    - [ ] I think it would work best to make duplicate versions of the aspects that can be edited. they will go up to Legendary.
+    - [x] I think it would work best to make duplicate versions of the aspects that can be edited. they will go up to Legendary.
       - completion: 5/6
   - [x] Traits don't expect to need text to display on the weapon aspect selection/upgrade screen. Implement that text.
     - completion: 5/6

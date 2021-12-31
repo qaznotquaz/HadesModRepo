@@ -12,7 +12,7 @@ if JessAspects_temp_Merlin.Config.Enabled then
             {
                 Text = {
                     Open = {
-                        MerlinFlavor = "\\n{$Keywords.Unimplemented}, {#ItalicFormatDark}Flavor text unwritten.",
+                        MerlinFlavor = "{$Keywords.Unimplemented}, {#ItalicFormatDark}Flavor text unwritten.",
                     },
                     Close = {
                         MerlinFlavor = ""

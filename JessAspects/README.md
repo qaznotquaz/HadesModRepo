@@ -4,36 +4,44 @@
 ## Abstract
 I had some ideas for new aspects and wanted to implement them - both as a way to give my two cents to the community, and to get my feet wet with understanding how modding this game really works. Hopefully I'm not getting *too* in over my head!
 
-## Usage
-***★ it works! doesn't do a lot, though ★***
-
-#### Requirements
+## Requirements
 - MagicGonads' [ModUtil](https://www.nexusmods.com/hades/mods/27)
 - PonyWarrior's [Aspect Extender](https://www.nexusmods.com/hades/mods/115)
 - My [MimicUtil](https://www.nexusmods.com/hades/mods/117/)
 
 Install using [ModImporter](https://www.nexusmods.com/hades/mods/26).
 
-to enable/disable particular submodules, comment out their **Include** statement in the [`modfile.txt`](modfile.txt). each module also may have its own configuration options, available from their corresponding `config.lua` file. alternatively, any subfolder or sub-subfolder which has a `modfile.txt` can be used as a self-contained mod.
+As a note, all subcomponents rely on the included [JessAspectsCore](JessAspectsCore)
+
+## Usage
+***★ prototypes are functional! ★***
+
+This mod can be used either as a whole, or as only the pieces you'd like. If you're not worried about only installing some aspects, then you can place the entire [JessAspects](../JessAspects) folder into your `Mods` folder and install it as-is!
+
+If you only want to install particular submodules, you have a few options. For one, you can download the whole package and then comment out the undesired aspects' **Include** statements in the [`modfile.txt`](modfile.txt). For finer control, each module will have a `config.lua` file, and a `modfile.txt`.
+
+Alternatively, you can opt to only download the submodules you would like to use, since each one can function as a self-contained mod. You will need to make sure to install the [JessAspectsCore](JessAspectsCore) if you do this.
 
 ## Aspects
-- *Completed*
+- **Functional New Content**
+  - [Adamant Rail ★ Annie Oakley](JessNewAspects/LittleSureshot) *(prototype)*
+  - [Adamant Rail ★ Aspect of Jess](JessNewAspects/MagicBombs) *(prototype)*
+- **Functional Miscellaneous Content**
   - [Stygian Blade ★ Poseidon's Flourish](BoonsAsAspects)
+  - [Eternal Spear ★ Hades' Call](BoonsAsAspects) *(known bugs)*
   - [Shield of Chaos ★ Chaos' Favor](BoonsAsAspects)
   - [Heart-Seeking Bow ★ Artemis' Cast](BoonsAsAspects)
   - [Twin Fists ★ Demeter's Strike](BoonsAsAspects)
   - [Adamant Rail ★ Hermes' Evasion](BoonsAsAspects)
-- *Under Construction*
-  - [Adamant Rail ★ Annie Oakley](JessNewAspects/LittleSureshot)
-  - [Adamant Rail ★ Aspect of Jess](JessNewAspects/MagicBombs)
-- *Unimplemented*
-  - [Eternal Spear ★ Hades' Call](BoonsAsAspects)
+- **Unimplemented New Ideas**
+  - [Heart-Seeking Bow ★ Robin Hood](JessNewAspects/Philanthropist) *(conceptualized)*
   - [Heart-Seeking Bow ★ Cleopatra](JessNewAspects/temp_Cleopatra)
   - [Twin Fists ★ Mike Tyson](JessNewAspects/temp_MikeTyson)
   - [Eternal Spear ★ Merlin](JessNewAspects/temp_Merlin)
-  - [Heart-Seeking Bow ★ Robin Hood](JessNewAspects/Philanthropist)
-  - [can i make a sword that looks like fists?](MiscConcepts/InaccurateGraphics)
+- **Unimplemented Miscellaneous Ideas**
   - [swap spear/shield charge attack with their special](MiscConcepts/InverseAttacks)
+  - [can i make a sword that looks like fists?](MiscConcepts/InaccurateGraphics)
+  - what about an aspect (or perhaps an entirely new weapon) that lets you "play as" some enemy, NPC, or boss?
 
 ## General TODO
 - [x] Write the README

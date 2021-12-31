@@ -32,7 +32,7 @@
         {
             Name = "CriticalHit_Annie"
             InheritFrom = "CriticalHit"
-            Hue = -0.1
+            Hue = -0.3
         }
     ]
 }

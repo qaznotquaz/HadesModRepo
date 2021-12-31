@@ -208,7 +208,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
             {
                 WeaponName = "GunCritTargetWeapon",
                 EffectName = "CritVulnerability",
-                EffectProperty = "CritVulnerabilityAddition",
+                EffectProperty = "CritMultiplierVulnerabilityAddition",
                 BaseValue = 0.08,
                 ChangeType = "Add",
                 ExtractValue = {
@@ -272,11 +272,6 @@ if JessAspects_LittleSureshot.Config.Enabled then
             {
                 RequiredTrait = "Jess_GunLittleSureshotTrait",
                 RequiredFalseTraits = { "Jess_GunLittleSureshot_MinigunTrait" },
-                WeaponOverrideData = {
-                    GunWeapon = {
-                        ActiveReloadTime = 2.0
-                    }
-                },
                 PropertyChanges = {
                     {
                         WeaponNames = { "GunWeapon", "GunWeaponDash" },
@@ -287,6 +282,13 @@ if JessAspects_LittleSureshot.Config.Enabled then
                         ExtractValue = {
                             ExtractAs = "TooltipDamage",
                         },
+                    },
+                    {
+                        WeaponNames = { "GunWeapon" },
+                        WeaponProperty = "ChargeTimeFrames",
+                        BaseValue = 10,
+                        ChangeType = "Multiply",
+                        ExcludeLinked = true,
                     },
                     {
                         WeaponNames = { "GunWeapon", "GunWeaponDash" },
@@ -304,6 +306,15 @@ if JessAspects_LittleSureshot.Config.Enabled then
                         ProjectileProperty = "Speed",
                         ChangeValue = 7000.0,
                         ChangeType = "Absolute"
+                    },
+                    {
+                        WeaponNames = { "GunWeapon", "GunWeaponDash" },
+                        ProjectileProperty = "ImpactVelocity",
+                        ChangeType = "Add",
+                        BaseMin = 300,
+                        BaseMax = 300,
+                        ExcludeLinked = true,
+                        IgnoreRarity = true,
                     },
 
                     GunWeapon = {

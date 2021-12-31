@@ -20,11 +20,4 @@ if JessAspects_MagicBombs.Config.Enabled then
                 }
             }
     )
-
-    --[[
-    ModUtil.MapSetTable(KeywordList, {
-    })
-
-    ResetKeywords()
-    ]]
 end

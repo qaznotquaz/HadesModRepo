@@ -1,1 +1,16 @@
-if you came looking for actually new stuff, this is the folder you want!
+# New Aspects.
+
+Here's where you'll find the real meat of this mod.
+
+## Aspects
+- **Functioning Prototypes**
+  - [Adamant Rail ★ Annie Oakley](LittleSureshot) *(prototype)*
+  - [Adamant Rail ★ Aspect of Jess](MagicBombs) *(prototype)*
+- **Unimplemented**
+  - [Heart-Seeking Bow ★ Robin Hood](Philanthropist) *(conceptualized)*
+  - [Heart-Seeking Bow ★ Cleopatra](temp_Cleopatra)
+  - [Twin Fists ★ Mike Tyson](temp_MikeTyson)
+  - [Eternal Spear ★ Merlin](temp_Merlin)
+
+### TODO
+- todo items are included in each individual mod

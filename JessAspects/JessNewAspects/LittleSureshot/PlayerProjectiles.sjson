@@ -37,7 +37,7 @@
           Active = true
           CanAffectInvulnerable = false
           TimeModifierFraction = 0
-          CritMultiplierVulnerabilityAddition = 1.0
+          CritVulnerabilityAddition = 1.0
           IsVulnerabilityEffect = true
           FrontFx = "GunWeaponMarkTarget_Annie"
           BackFx = "null"

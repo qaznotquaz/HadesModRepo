@@ -208,7 +208,7 @@ if JessAspects_LittleSureshot.Config.Enabled then
             {
                 WeaponName = "GunCritTargetWeapon",
                 EffectName = "CritVulnerability",
-                EffectProperty = "CritMultiplierVulnerabilityAddition",
+                EffectProperty = "CritVulnerabilityAddition",
                 BaseValue = 0.08,
                 ChangeType = "Add",
                 ExtractValue = {

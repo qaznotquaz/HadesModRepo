@@ -1,7 +1,7 @@
 if JessAspects_Philanthropist.Config.Enabled then
     JessAspects_Philanthropist.Data.BowRobin = {
                 Costs = { 1, 2, 3, 4, 5 },
-                MaxUpgradeLevel = -1,
+                MaxUpgradeLevel = 5,
                 TraitName = "Jess_PhilanthropistTrait",
             }
     table.insert(

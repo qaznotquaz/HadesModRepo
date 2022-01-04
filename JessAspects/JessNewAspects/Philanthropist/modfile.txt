@@ -1,5 +1,6 @@
 -: Heart-Seeking Bow ★ Aspect of Robin Hood :-
 
+::lua appends
 Top Import "config.lua"
 
 Import "Philanthropist.lua"
@@ -10,5 +11,9 @@ Import "TraitData.lua"
 To "Scripts/WeaponUpgradeData.lua"
 Import "WeaponUpgradeData.lua"
 
+To "Scripts/EncounterData.lua"
+Import "EncounterData.lua"
+
+:: SJSON merges
 To "Game/Text/en/HelpText.en.sjson"
 SJSON "HelpText.en.sjson"

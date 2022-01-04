@@ -8,6 +8,41 @@ if JessAspectsCore == nil then
 end
 
 if JessAspects_Philanthropist.Config.Enabled then
+    function JessAspects_Philanthropist.StealMoney()
+        thread( InCombatText, CurrentRun.Hero.ObjectId, "InCombat_Steal", 0.8 )
+        local money = GetTotalHeroTraitValue("StealFromTheRich")
+        GiveRandomConsumables(
+                {
+                    Delay = 1.5,
+                    NotRequiredPickup = true,
+                    LootOptions = {
+                        {
+                            Name = "Money",
+                            MinAmount = money,
+                            MaxAmount = money,
+                        },
+                    },
+                }
+        )
+        CreateAnimation({ Name = "MoneyShower", DestinationId = CurrentRun.Hero.ObjectId })
+    end
+
+    function JessAspects_Philanthropist.StealArrow()
+        thread( InCombatText, CurrentRun.Hero.ObjectId, "InCombat_Steal", 0.8 )
+        AddTraitToHero(
+                {
+                    TraitData = GetProcessedTraitData(
+                            {
+                                Unit = CurrentRun.Hero,
+                                TraitName = "Jess_PhilanthropistBonusArrowsTrait",
+                                Rarity = "Common"
+                            }
+                    )
+                }
+        )
+        CreateAnimation({ Name = "MoneyShower", DestinationId = CurrentRun.Hero.ObjectId })
+    end
+
     ModUtil.MapSetTable(JessAspectsCore.WeaponScreenToggle,
             {
                 Text = {

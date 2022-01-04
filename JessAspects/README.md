@@ -36,7 +36,7 @@ Alternatively, you can opt to only download the submodules you would like to use
 - **Unimplemented New Ideas**
   - [Heart-Seeking Bow ★ Robin Hood](JessNewAspects/Philanthropist) *(conceptualized)*
   - [Heart-Seeking Bow ★ Cleopatra](JessNewAspects/temp_Cleopatra)
-  - [Twin Fists ★ Mike Tyson](JessNewAspects/temp_MikeTyson)
+  - [Twin Fists ★ Mike Tyson](JessNewAspects/Peekaboo)
   - [Eternal Spear ★ Merlin](JessNewAspects/temp_Merlin)
 - **Unimplemented Miscellaneous Ideas**
   - [swap spear/shield charge attack with their special](MiscConcepts/InverseAttacks)

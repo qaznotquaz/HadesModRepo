@@ -1,7 +1,7 @@
 -: Twin Fists ★ Aspect of MikeTyson :-
 
 Top Import "config.lua"
-Import "temp_MikeTyson.lua"
+Import "Peekaboo.lua"
 
 To "Scripts/TraitData.lua"
 Import "TraitData.lua"

@@ -9,7 +9,7 @@ Here's where you'll find the real meat of this mod.
 - **Unimplemented**
   - [Heart-Seeking Bow ★ Robin Hood](Philanthropist) *(conceptualized)*
   - [Heart-Seeking Bow ★ Cleopatra](temp_Cleopatra)
-  - [Twin Fists ★ Mike Tyson](temp_MikeTyson)
+  - [Twin Fists ★ Mike Tyson](Peekaboo)
   - [Eternal Spear ★ Merlin](temp_Merlin)
 
 ### TODO

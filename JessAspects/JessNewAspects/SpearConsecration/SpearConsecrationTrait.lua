@@ -7,7 +7,7 @@ if JessAspectsCore == nil then
     end)
 end
 
-if JessAspects_temp_Merlin.Config.Enabled then
+if JessAspects_SpearConsecration.Config.Enabled then
     ModUtil.MapSetTable(JessAspectsCore.WeaponScreenToggle,
             {
                 Text = {

@@ -10,7 +10,7 @@ Here's where you'll find the real meat of this mod.
   - [Heart-Seeking Bow ★ Robin Hood](Philanthropist) *(conceptualized)*
   - [Heart-Seeking Bow ★ Cleopatra](temp_Cleopatra)
   - [Twin Fists ★ Mike Tyson](Peekaboo)
-  - [Eternal Spear ★ Merlin](temp_Merlin)
+  - [Eternal Spear ★ Merlin](SpearConsecration)
 
 ### TODO
 - todo items are included in each individual mod

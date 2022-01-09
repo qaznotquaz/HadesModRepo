@@ -1,4 +1,4 @@
--: Twin Fists ★ Aspect of MikeTyson :-
+-: Twin Fists ★ Aspect of Mike :-
 
 Top Import "config.lua"
 Import "Peekaboo.lua"

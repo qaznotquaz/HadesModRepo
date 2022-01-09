@@ -1,7 +1,7 @@
 -: Eternal Spear ★ Aspect of Merlin :-
 
 Top Import "config.lua"
-Import "temp_Merlin.lua"
+Import "SpearConsecrationTrait.lua"
 
 To "Scripts/TraitData.lua"
 Import "TraitData.lua"

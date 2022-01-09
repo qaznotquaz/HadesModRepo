@@ -2,7 +2,7 @@
     Texts = [
         "_append"
         {
-          Id = "Jess_temp_MerlinTrait"
+          Id = "Jess_SpearConsecrationTrait"
           DisplayName = "Aspect of Merlin"
           Description = "{$JessAspectsCore.WeaponScreenToggle.Text.Active.MerlinFlavor}"
         }

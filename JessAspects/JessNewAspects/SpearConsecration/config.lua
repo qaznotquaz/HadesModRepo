@@ -1,6 +1,6 @@
-ModUtil.RegisterMod("JessAspects_temp_Merlin")
+ModUtil.RegisterMod("JessAspects_SpearConsecration")
 
-JessAspects_temp_Merlin.Config =
+JessAspects_SpearConsecration.Config =
 {
     Enabled = true
 }

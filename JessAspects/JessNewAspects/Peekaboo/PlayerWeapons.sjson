@@ -1,0 +1,35 @@
+{
+    Weapons = [
+        "_append"
+        {
+            Name = "PeekabooEmpowerApplicator"
+            InheritFrom = "1_BaseMagicWeapon"
+            Type = "GUN"
+            Projectile = "null"
+            FullyAutomatic = true
+            AutoLock = true
+            FireFx = "null"
+            IgnoreOwnerAttackDisabled = true
+            SilentImpact = true
+            Effects = [
+                {
+                    Name = "FistWeaponDamageBonus"
+                    Modifier = 0
+                    CanAffectInvulnerable = true
+                    FrontFx = "ShieldEmpowerFront"
+                    BackFx = "ShieldEmpowerBack"
+                    FlashFrontFxWhenExpiring = true
+                    OnlyAffectName = "_PlayerUnit"
+                }
+                {
+                    Name = "PerfectDashDodgeBonus"
+                    OnlyAffectName = "_PlayerUnit"
+                    ExtendDurationOnReapply = true
+                    Duration = 2.0
+                    DodgeChance = 0.5
+                    Active = true
+                }
+            ]
+        }
+    ]
+}

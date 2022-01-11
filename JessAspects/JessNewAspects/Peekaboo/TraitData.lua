@@ -1,7 +1,30 @@
 if JessAspects_Peekaboo.Config.Enabled then
     TraitData.Jess_PeekabooTrait = {
         InheritFrom = { "WeaponEnchantmentTrait" },
-        PropertyChanges = { }
+        RequiredWeapon = "FistWeapon",
+        PreEquipWeapons = { "PeekabooEmpowerApplicator" },
+        PropertyChanges =
+        {
+            {
+                WeaponName = "PeekabooEmpowerApplicator",
+                EffectName = "FistWeaponDamageBonus",
+                EffectProperty = "Modifier",
+                BaseValue = 0.4,
+                ChangeType = "Add",
+                ExtractValue =
+                {
+                    ExtractAs = "TooltipDamage",
+                    Format = "Percent"
+                }
+            },
+            {
+                WeaponName = "PeekabooEmpowerApplicator",
+                EffectName = "FistWeaponDamageBonus",
+                EffectProperty = "Duration",
+                ChangeValue = 999,
+                ChangeType = "Absolute"
+            },
+        },
     }
 
     MimicUtil.TotalMimicWeaponAppearance(

@@ -30,7 +30,7 @@ if JessAspectsCore.config.Enabled then
             Close = {
                 -- SampleWeaponAspectTrait = ""
                 AspectOrPom1 = "{$TooltipData.DisplayDelta1}",
-                AspectOrPom2 = "{$TooltipData.AspectExtract2}"
+                AspectOrPom2 = "{$TooltipData.DisplayDelta2}"
             }
         },
         Actions = {

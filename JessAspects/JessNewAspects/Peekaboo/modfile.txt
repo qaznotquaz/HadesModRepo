@@ -1,6 +1,8 @@
 -: Twin Fists ★ Aspect of Mike :-
 
+:: lua appends
 Top Import "config.lua"
+
 Import "Peekaboo.lua"
 
 To "Scripts/TraitData.lua"
@@ -8,6 +10,16 @@ Import "TraitData.lua"
 
 To "Scripts/WeaponUpgradeData.lua"
 Import "WeaponUpgradeData.lua"
+
+To "Scripts/WeaponData.lua"
+Import "WeaponData.lua"
+
+To "Scripts/Powers.lua"
+Import "Powers.lua"
+
+:: sjson merges
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "PlayerWeapons.sjson"
 
 To "Game/Text/en/HelpText.en.sjson"
 SJSON "HelpText.en.sjson"

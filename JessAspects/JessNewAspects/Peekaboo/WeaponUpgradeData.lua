@@ -1,7 +1,7 @@
 if JessAspects_Peekaboo.Config.Enabled then
     JessAspects_Peekaboo.Data.FistMikeTyson = {
                 Costs = { 1, 2, 3, 4, 5 },
-                MaxUpgradeLevel = -1,
+                MaxUpgradeLevel = 5,
                 TraitName = "Jess_PeekabooTrait",
             }
     table.insert(

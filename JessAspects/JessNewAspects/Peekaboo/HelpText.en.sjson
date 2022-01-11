@@ -2,7 +2,7 @@
     Texts = [
         "_append"
         {
-          Id = "Jess_Peekaboo"
+          Id = "Jess_PeekabooTrait"
           DisplayName = "Aspect of Mike Tyson"
           Description = "{$JessAspectsCore.WeaponScreenToggle.Text.Active.MikeFlavor}"
         }

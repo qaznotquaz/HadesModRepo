@@ -8,7 +8,7 @@
         }
         {
             Id = "Jess_GunLittleSureshotTrait_Delta"
-            DisplayName = "Aspect of Annie"
+            InheritFrom = "Jess_GunLittleSureshotTrait"
             Description = "Your single-shot rifle's {$Keywords.Crit} dislodges {!Icons.Ammo} from foes. \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Crit} {$Keywords.Attack} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Annie_SharpAim} Bonus {$Keywords.Crit} Chance: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta2}{#PreviousFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.LittleSureshotFlavor}"
         }
 

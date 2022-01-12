@@ -13,7 +13,7 @@ if JessAspects_Peekaboo.Config.Enabled then
                 ChangeType = "Add",
                 ExtractValue =
                 {
-                    ExtractAs = "TooltipDamage",
+                    ExtractAs = "AspectExtract1",
                     Format = "Percent"
                 }
             },

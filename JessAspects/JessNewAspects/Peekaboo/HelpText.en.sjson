@@ -2,9 +2,14 @@
     Texts = [
         "_append"
         {
-          Id = "Jess_PeekabooTrait"
-          DisplayName = "Aspect of Mike Tyson"
-          Description = "{$JessAspectsCore.WeaponScreenToggle.Text.Active.MikeFlavor}"
+            Id = "Jess_PeekabooTrait"
+            DisplayName = "Aspect of Mike Tyson"
+            Description = "Dashing just before getting hit empowers your next {#UpgradeFormat}5{#PreviousFormat} Attacks \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Attack} Bonus: \Column 380 {#UpgradeFormat}{$JessAspectsCore.WeaponScreenToggle.Text.Active.AspectOrPom1:P} \n. {$JessAspectsCore.WeaponScreenToggle.Text.Active.MikeFlavor}"
+        }
+        {
+            Id = "Jess_PeekabooTrait_Delta"
+            InheritFrom = "Jess_PeekabooTrait"
+            Description = "Dashing just before getting hit empowers your next {#UpgradeFormat}5{#PreviousFormat} Attacks \n {!Icons.Bullet}{#PropertyFormat}{$Keywords.Attack} Bonus: \Column 380 {#UpgradeFormat}{$TooltipData.DisplayDelta1} \n. {$JessAspectsCore.WeaponScreenToggle.Text.Active.MikeFlavor}"
         }
     ]
 }

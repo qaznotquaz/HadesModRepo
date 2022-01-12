@@ -11,8 +11,6 @@ if JessAspects_Peekaboo.Config.Enabled then
     }
 
     function PeekabooDamageBonusApply(triggerArgs)
-        DebugPrint({Text = "damage bonus supposedly applied"})
-
         if not triggerArgs.Reapplied then
             local validWeapons = AddLinkedWeapons(WeaponSets.HeroPhysicalWeapons)
             AddLimitedWeaponBonus({ AsMultiplier = true, EffectName = triggerArgs.EffectName, Amount = 5, DamageBonus = triggerArgs.Modifier, WeaponNames = validWeapons })
